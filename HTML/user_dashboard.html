@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Ndola Land System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dashboard-page-body">
+    <header class="dashboard-header">
+        <nav class="dashboard-nav">
+            <div class="logo">Ndola Land Systems</div>
+            <div>
+                <a href="homepage.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="#" id="logoutBtn">Logout</a>
+            </div>
+        </nav>
+        <button class="dashboard-menu-toggle" id="sidebarToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="dashboard-hero-content">
+            <h1 id="dashboard-welcome-msg">Welcome to Your Dashboard!</h1>
+        </div>
+    </header>
+
+    <div class="dashboard-wrapper">
+        <aside class="sidebar" id="dashboardSidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#profile"><i class="fas fa-user"></i> View Profile</a></li>
+                    <li><a href="#edit-profile"><i class="fas fa-edit"></i> Edit Profile</a></li>
+                    <li><a href="#payments"><i class="fas fa-dollar-sign"></i> Make Payments</a></li>
+                    <li><a href="register_land.html"><i class="fas fa-map-marked-alt"></i> Register Land</a></li>
+                    <li><a href="#view-lands"><i class="fas fa-eye"></i> View Registered Lands</a></li>
+                    <li><a href="https://www.property-zm.com/" target="_blank"><i class="fas fa-handshake"></i> Buy Land</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="dashboard-main-content">
+            <div class="dashboard-container">
+                <section id="profile" class="dashboard-section">
+                    <h2 class="dashboard-section-title">Your Profile</h2>
+                    <div class="info-card">
+                        <p><strong>Email:</strong> <span id="user-email">Loading...</span></p>
+                        <p><strong>Location:</strong> <span id="user-location">Loading...</span></p>
+                        <p><strong>Phone Number:</strong> <span id="user-phone">Loading...</span></p>
+                    </div>
+                </section>
+
+                <section id="edit-profile" class="dashboard-section">
+                    <h2 class="dashboard-section-title">Edit Profile</h2>
+                    <div class="info-card">
+                        <p>Content for editing profile will go here.</p>
+                    </div>
+                </section>
+
+                <section id="payments" class="dashboard-section">
+                    <h2 class="dashboard-section-title">Make Payments</h2>
+                    <div class="info-card">
+                        <p>Content for making payments will go here.</p>
+                    </div>
+                </section>
+
+                <section id="view-lands" class="dashboard-section">
+                    <h2 class="dashboard-section-title">View Registered Lands</h2>
+                    <div class="info-card">
+                        <p>Content for viewing registered lands will go here.</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-column contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info@yourcompany.com">info@yourcompany.com</a></p>
+                <p>Phone: +260 971 123 456</p>
+                <p>Address: 123 Land Ave, Lusaka, Zambia</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">News & Blog</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Careers</h3>
+                <ul>
+                    <li><a href="#">Job Openings</a></li>
+                    <li><a href="#">Why Work With Us?</a></li>
+                    <li><a href="#">Internship Programs</a></li>
+                </ul>
+            </div>
+            <div class="footer-column social-icons-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Your Company Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="user_dashboard.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarToggle = document.getElementById('sidebarToggle');
+            const dashboardSidebar = document.getElementById('dashboardSidebar');
+
+            if (sidebarToggle && dashboardSidebar) {
+                sidebarToggle.addEventListener('click', function() {
+                    dashboardSidebar.classList.toggle('sidebar-open');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

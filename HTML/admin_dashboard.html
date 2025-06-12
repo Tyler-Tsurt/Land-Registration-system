@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Ndola Land System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dashboard-page-body">
+    <header class="dashboard-header">
+        <nav class="dashboard-nav">
+            <div class="logo">Ndola Land Systems (Admin)</div>
+            <div>
+                <a href="homepage.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="#" id="logoutBtn">Logout</a>
+            </div>
+        </nav>
+        <button class="dashboard-menu-toggle" id="sidebarToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="dashboard-hero-content">
+            <h1 id="dashboard-welcome-msg">Welcome, Admin!</h1>
+        </div>
+    </header>
+
+    <div class="dashboard-wrapper">
+        <aside class="sidebar" id="dashboardSidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#profile"><i class="fas fa-user-shield"></i> Admin Profile</a></li>
+                    <li><a href="#user-management"><i class="fas fa-users"></i> User Management</a></li>
+                    <li><a href="#applications"><i class="fas fa-file-alt"></i> View Applications</a></li>
+                    <li><a href="#reports"><i class="fas fa-chart-line"></i> Reports</a></li>
+                    <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+                    <li><a href="https://www.property-zm.com/" target="_blank"><i class="fas fa-handshake"></i> Buy Land (External)</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="dashboard-main-content">
+            <div class="dashboard-container">
+                <section id="profile" class="dashboard-section">
+                    <h2 class="dashboard-section-title">Admin Profile</h2>
+                    <div class="info-card">
+                        <p><strong>Email:</strong> <span id="admin-email">Loading...</span></p>
+                        <p>This section will display admin-specific profile information.</p>
+                    </div>
+                </section>
+
+                <section id="user-management" class="dashboard-section">
+                    <h2 class="dashboard-section-title">User Management</h2>
+                    <div class="info-card">
+                        <p><strong>Total Registered Users:</strong> <span id="total-users">Loading...</span></p>
+                        <p><strong>Recent Users:</strong> <span id="recent-users">Loading...</span></p>
+                        <p>This is where admin users can manage user accounts.</p>
+                    </div>
+                </section>
+
+                <section id="applications" class="dashboard-section">
+                    <h2 class="dashboard-section-title">View Applications</h2>
+                    <div class="info-card">
+                        <p>This section will display all land applications for review.</p>
+                    </div>
+                </section>
+
+                <section id="reports" class="dashboard-section">
+                    <h2 class="dashboard-section-title">Reports</h2>
+                    <div class="info-card">
+                        <p>This section will provide system reports and analytics.</p>
+                    </div>
+                </section>
+
+                <section id="settings" class="dashboard-section">
+                    <h2 class="dashboard-section-title">Settings</h2>
+                    <div class="info-card">
+                        <p>This section will allow configuration of system settings.</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-column contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info@yourcompany.com">info@yourcompany.com</a></p>
+                <p>Phone: +260 971 123 456</p>
+                <p>Address: 123 Land Ave, Lusaka, Zambia</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">News & Blog</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Careers</h3>
+                <ul>
+                    <li><a href="#">Job Openings</a></li>
+                    <li><a href="#">Why Work With Us?</a></li>
+                    <li><a href="#">Internship Programs</a></li>
+                </ul>
+            </div>
+            <div class="footer-column social-icons-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Your Company Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="admin_dashboard.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarToggle = document.getElementById('sidebarToggle');
+            const dashboardSidebar = document.getElementById('dashboardSidebar');
+
+            if (sidebarToggle && dashboardSidebar) {
+                sidebarToggle.addEventListener('click', function() {
+                    dashboardSidebar.classList.toggle('sidebar-open');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+/* Dashboard Specific Styles */
+.dashboard-page-body {
+    background-color: #f4f4f4; /* Light background for dashboard pages */
+    color: #333; /* Dark text for readability */
+    min-height: 100vh; /* Ensure full height */
+    display: flex;
+    flex-direction: column; /* Stack header, wrapper, footer */
+}
+
+.dashboard-header {
+    background-color: #222; /* Dark header background */
+    color: white;
+    padding-bottom: 50px; /* Space for content below nav */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative; /* Needed for positioning the menu toggle */
+}
+
+.dashboard-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.3); /* Slightly transparent nav background */
+    box-sizing: border-box;
+}
+
+.dashboard-nav .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #00bf8f;
+}
+
+.dashboard-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.dashboard-nav a:hover {
+    color: #009973;
+}
+
+/* Hamburger menu toggle for dashboards */
+.dashboard-menu-toggle {
+    display: none; /* Hidden by default on larger screens */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8em;
+    cursor: pointer;
+    z-index: 10; /* Ensure it's on top */
+    position: absolute; /* Position relative to .dashboard-header */
+    top: 20px;
+    right: 20px;
+}
+
+.dashboard-hero-content {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.dashboard-hero-content h1 {
+    font-size: 3em;
+    color: #00bf8f;
+    margin-bottom: 10px;
+}
+
+/* Dashboard Wrapper for Sidebar and Main Content */
+.dashboard-wrapper {
+    display: flex;
+    flex-grow: 1; /* Allows the wrapper to take available height */
+    width: 100%;
+    max-width: 1200px; /* Max width for the entire dashboard content area */
+    margin: 20px auto; /* Center the wrapper */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden; /* Ensures rounded corners are applied correctly */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px; /* Fixed width for the sidebar */
+    background-color: #333; /* Dark background for sidebar */
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    flex-shrink: 0; /* Prevents sidebar from shrinking */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for show/hide */
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    margin-bottom: 10px;
+}
+
+.sidebar-nav a {
+    display: block; /* Make the entire area clickable */
+    color: #eee;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-nav a:hover {
+    background-color: #00bf8f; /* Green on hover */
+    color: white;
+}
+
+.sidebar-nav a i {
+    margin-right: 10px; /* Space between icon and text */
+    width: 20px; /* Ensure consistent icon alignment */
+    text-align: center;
+}
+
+/* Main Content Area */
+.dashboard-main-content {
+    flex-grow: 1; /* Allows main content to take remaining space */
+    padding: 40px 20px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Enable scrolling for main content if it overflows */
+}
+
+.dashboard-container {
+    max-width: 900px; /* Max width for content within the main area */
+    margin: 0 auto;
+}
+
+.dashboard-section {
+    margin-bottom: 40px; /* Space between sections */
+    padding-bottom: 20px; /* Padding at bottom of section */
+    border-bottom: 1px solid #eee; /* Separator between sections */
+}
+
+.dashboard-section:last-child {
+    margin-bottom: 0;
+    border-bottom: none; /* No border for the last section */
+}
+
+.dashboard-section-title {
+    color: #00bf8f;
+    font-size: 1.8em;
+    margin-top: 0; /* Reset margin-top for sections */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+.info-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #555;
+    line-height: 1.6;
+}
+
+.info-card p {
+    margin-bottom: 10px;
+}
+
+.info-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive Adjustments for Dashboards */
+@media (max-width: 1024px) {
+    .dashboard-hero-content h1 {
+        font-size: 2.5em;
+    }
+    .dashboard-section-title {
+        font-size: 1.6em;
+    }
+    .sidebar {
+        width: 200px; /* Slightly smaller sidebar on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-menu-toggle {
+        display: block; /* Show hamburger icon */
+    }
+
+    .dashboard-header {
+        padding-bottom: 30px;
+    }
+    .dashboard-hero-content h1 {
+        font-size: 2em;
+    }
+    .dashboard-section-title {
+        font-size: 1.4em;
+    }
+    .dashboard-wrapper {
+        flex-direction: column; /* Stack sidebar and main content vertically */
+        margin: 10px auto; /* Adjust margin for smaller screens */
+        border-radius: 0; /* Remove rounded corners for full width */
+        box-shadow: none; /* Remove shadow */
+    }
+    .sidebar {
+        width: 100%; /* Full width sidebar on mobile */
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Shadow at bottom of sidebar */
+        transform: translateX(-100%); /* Hide sidebar off-screen by default */
+        position: absolute; /* Take out of flow to allow main content to occupy full width */
+        height: auto; /* Allow height to adjust to content */
+        max-height: 80vh; /* Limit height to avoid overflowing viewport */
+        overflow-y: auto; /* Enable scrolling if content is too long */
+        top: 0;
+        left: 0;
+        z-index: 9; /* Ensure sidebar is above main content when open */
+        border-radius: 0 0 12px 0; /* Rounded bottom-right corner when open */
+    }
+    .sidebar.sidebar-open {
+        transform: translateX(0); /* Slide sidebar into view */
+    }
+    .sidebar-nav ul {
+        display: flex; /* Make sidebar links horizontal */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .sidebar-nav li {
+        margin: 5px 10px; /* Adjust spacing for horizontal links */
+    }
+    .sidebar-nav a {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+    .sidebar-nav a i {
+        margin-right: 5px;
+        width: auto;
+    }
+    .dashboard-main-content {
+        padding: 30px 15px;
+        width: 100%; /* Main content takes full width when sidebar is hidden */
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-hero-content h1 {
+        font-size: 1.8em;
+    }
+    .dashboard-section-title {
+        font-size: 1.2em;
+    }
+    .dashboard-main-content {
+        padding: 20px 10px;
+    }
+    .info-card {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+    .sidebar-nav li {
+        margin: 5px 5px;
+    }
+    .sidebar-nav a {
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
+    .dashboard-menu-toggle {
+        font-size: 1.5em;
+        top: 15px;
+        right: 15px;
+    }
+}

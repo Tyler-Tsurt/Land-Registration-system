@@ -1,0 +1,623 @@
+/* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Using Inter font for a modern look */
+    color: white; /* Default text color for elements on dark backgrounds */
+    background-color: #000; /* Default background for the entire page */
+    height: 100%; /* Ensures body takes full viewport height */
+    overflow-x: hidden; /* Prevents horizontal scrollbar */
+}
+
+/* Header Section Styling (Video Background) */
+.video-header {
+    position: relative; /* Establishes positioning context for children */
+    height: 100vh; /* Takes full viewport height */
+    overflow: hidden; /* Hides any overflowing content */
+    display: flex; /* Enables Flexbox for layout */
+    flex-direction: column; /* Stacks children vertically */
+    justify-content: space-between; /* Pushes nav to top, content to center, and footer to bottom if present */
+    align-items: center; /* Centers items horizontally within the flex container */
+    text-align: center; /* Centers text within the header content */
+    padding: 20px; /* Padding for overall section content */
+    box-sizing: border-box; /* Includes padding in the element's total width and height */
+}
+
+/* Style for smaller header on other pages */
+.video-header.small-header {
+    height: 40vh; /* Shorter header for internal pages */
+    min-height: 250px; /* Minimum height to ensure content is visible */
+    justify-content: flex-end; /* Push content to the bottom of the header */
+    padding-bottom: 40px; /* Add padding at the bottom */
+}
+
+.video-header video {
+    position: absolute; /* Positions the video relative to its parent (.video-header) */
+    top: 0;
+    left: 0;
+    width: 100%; /* Makes video fill the width */
+    height: 100%; /* Makes video fill the height */
+    object-fit: cover; /* Ensures video covers the entire area without distortion */
+    filter: brightness(40%); /* Darkens the video for better text readability */
+    z-index: -2; /* Puts the video behind other content */
+}
+
+/* Overlay for the video to enhance text readability */
+.header-overlay {
+    position: absolute; /* Positions the overlay relative to its parent (.video-header) */
+    top: 0;
+    left: 0;
+    height: 100%; /* Fills parent height */
+    width: 100%; /* Fills parent width */
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+    z-index: -1; /* Puts the overlay between the video and content */
+}
+
+/* Navigation Bar Styling */
+nav {
+    position: relative; /* Positions nav relative to the flex flow of .video-header */
+    width: 100%; /* Takes full width of its parent */
+    display: flex; /* Enables Flexbox for nav items */
+    justify-content: space-between; /* Spreads logo and links to opposite ends */
+    align-items: center; /* Vertically aligns nav items */
+    padding: 20px 40px; /* Padding around nav content */
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background for the nav bar */
+    z-index: 3; /* Ensures nav is on top of other header content */
+    box-sizing: border-box; /* Includes padding in width */
+}
+
+nav .logo {
+    font-size: 1.8em; /* Larger font size for the logo */
+    font-weight: bold; /* Bold text */
+    color: #00bf8f; /* Green color for Zambia */
+}
+
+nav a {
+    color: white; /* White text for nav links */
+    text-decoration: none; /* Removes underline from links */
+    margin-left: 20px; /* Space between nav links */
+    font-weight: 600; /* Semi-bold font weight */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+nav a:hover {
+    color: #009973; /* Darker green on hover */
+}
+
+/* Main Content Styling within the Header/Hero Section */
+.content {
+    position: relative; /* Establishes positioning context */
+    z-index: 2; /* Ensures content is above video and overlay */
+    height: 100%; /* Allows content to take available height in flex container */
+    display: flex; /* Enables Flexbox for content elements */
+    flex-direction: column; /* Stacks content elements vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    text-align: center; /* Centers text within the content box */
+    padding: 20px; /* Padding around the content */
+    max-width: 900px; /* Limits the maximum width of the content */
+    margin: auto; /* Centers the content block horizontally within its parent */
+    box-sizing: border-box; /* Includes padding in width */
+}
+
+.content h1 {
+    font-size: 3.5em; /* Large heading for prominence */
+    margin-bottom: 20px; /* Space below the heading */
+    font-weight: bold; /* Bold font weight */
+    color: #00bf8f; /* Green color for Zambia */
+}
+
+.content p {
+    font-size: 1.3em; /* Readable paragraph font size */
+    line-height: 1.8; /* Good line spacing for readability */
+    margin-bottom: 40px; /* Space below the paragraph */
+}
+
+/* Styling for general buttons (like "Learn More") */
+.content .btn {
+    background-color: #00bf8f; /* Green button color */
+    color: white; /* White text on button */
+    padding: 15px 35px; /* Padding inside the button */
+    border: none; /* No border */
+    border-radius: 50px; /* Pill-shaped button */
+    font-size: 1.1em; /* Font size for button text */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    text-decoration: none; /* Removes underline from button links */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects */
+    display: inline-block; /* Allows padding and margin, and centers with text-align */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.content .btn:hover {
+    background-color: #009973; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+
+
+
+/*why regiter*/
+.info-section {
+    position: relative;
+    background-image: url('zambia.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px; 
+    text-align: center; 
+    border-radius: 1px; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    max-width: 100%; 
+    margin: 0%auto;
+    box-sizing: border-box; 
+    color: white; 
+}
+
+.info-section .info-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Inner overlay for text readability on the info section background image */
+.info-section .info-overlay {
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 40px 20px;
+    border-radius: 10px; 
+}
+
+.info-section h2 {
+    font-size: 2.5em; 
+    margin-bottom: 20px; 
+    color: #00bf8f; 
+}
+
+.info-section p {
+    font-size: 1.1em; 
+    line-height: 1.7; 
+    margin-bottom: 30px;
+}
+
+/* Styling for the specific "Register Now" button in the info section */
+.register-button {
+    background-color: #00bf8f; /* Green color from your image */
+    color: white; /* White text on button */
+    padding: 15px 35px; /* Padding inside the button */
+    border: none; /* No border */
+    border-radius: 10px; 
+    font-size: 1.1em; /* Font size for button text */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    text-decoration: none; /* Removes underline from button links */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects */
+    display: inline-block; /* Allows padding and margin, and centers with text-align */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.register-button:hover {
+    background-color: #009973; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Footer Section Styling */
+.site-footer {
+    background-color: #222;
+    color: #eee;
+    padding: 30px 10px; 
+    font-size: 0.95em; /* Slightly smaller font size */
+    line-height: 1.6; /* Good line spacing */
+    text-align: center; /* Centers text for the entire footer on small screens */
+    border-top-left-radius: 1px; /* Rounded top-left corner */
+    border-top-right-radius: 1px; /* Rounded top-right corner */
+    margin-top: 0px; /* Space above the footer */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2); /* Shadow above footer for separation */
+}
+
+.site-footer .footer-content {
+    display: flex; /* Enables Flexbox for footer columns */
+    flex-wrap: wrap; /* Allows columns to wrap onto the next line on smaller screens */
+    justify-content: space-around; /* Distributes space around the columns */
+    max-width: 1200px; /* Limits the maximum width of the footer content */
+    margin: 0 auto; /* Centers the footer content horizontally */
+    text-align: left; /* Default text alignment for content within columns */
+}
+
+.site-footer .footer-column {
+    flex: 1; /* Allows columns to grow and shrink, distributing space equally */
+    min-width: 250px; /* Minimum width for columns before they wrap */
+    margin: 0 15px 30px 15px; /* Spacing between columns and bottom margin */
+    box-sizing: border-box; /* Includes padding in width */
+}
+
+.site-footer h3 {
+    color: #fff; /* White color for footer headings */
+    font-size: 1.2em; /* Font size for headings */
+    margin-bottom: 15px; /* Space below headings */
+    border-bottom: 2px solid #00bf8f; /* Green underline for headings */
+    padding-bottom: 8px; /* Padding below heading text and above the underline */
+    display: inline-block; /* Makes the border-bottom only as wide as the text */
+}
+
+.site-footer ul {
+    list-style: none; /* Removes bullet points from lists */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
+.site-footer ul li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+.site-footer ul li a {
+    color: #bbb; /* Light grey color for footer links */
+    text-decoration: none; /* Removes underline from links */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.site-footer ul li a:hover {
+    color: #00bf8f; /* Green highlight on hover */
+}
+
+.site-footer .contact-info p {
+    margin-bottom: 10px; /* Space between contact info paragraphs */
+    color: #bbb; /* Light grey color for contact info text */
+}
+
+.site-footer .social-icons {
+    margin-top: 15px; /* Space above social icons */
+}
+
+.site-footer .social-icons a {
+    color: #bbb; /* Light grey color for social icons */
+    font-size: 1.8em; /* Larger icons */
+    margin-right: 18px; /* Space between icons */
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects */
+}
+
+.site-footer .social-icons a:last-child {
+    margin-right: 0; /* No margin on the last icon */
+}
+
+.site-footer .social-icons a:hover {
+    color: #00bf8f; /* Green highlight on hover */
+    transform: translateY(-3px); /* Pop effect on hover */
+}
+
+.site-footer .footer-bottom {
+    margin-top: 30px; /* Space above the copyright section */
+    padding-top: 20px; /* Padding above copyright text */
+    border-top: 1px solid #333; /* Separator line above copyright */
+    font-size: 0.85em; /* Smaller font size for copyright */
+    color: #aaa; /* Lighter grey for copyright text */
+}
+
+/* Styles for Registration and Login Pages */
+.form-page-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures the form container is vertically centered */
+    background-color: #1a1a1a; /* Dark background for form pages */
+    color: #fff; /* White text for form pages */
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
+    padding: 20px; /* Add padding around the form container */
+}
+
+.form-container {
+    background-color: #2a2a2a; /* Slightly lighter dark background for the form box */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5); /* More prominent shadow */
+    width: 100%;
+    max-width: 500px; /* Max width for the form container */
+    box-sizing: border-box;
+    text-align: center; /* Center form title and footer text */
+}
+
+.form-title {
+    color: #00bf8f; /* Green color for form titles */
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Align labels and inputs to the left */
+}
+
+.form-group label {
+    display: block; /* Make label take full width */
+    margin-bottom: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #eee; /* Light grey for labels */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #444; /* Darker border */
+    border-radius: 8px; /* Rounded input fields */
+    background-color: #333; /* Darker background for inputs */
+    color: #fff; /* White text input */
+    font-size: 1em;
+    outline: none; /* Remove outline on focus */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #00bf8f; /* Green border on focus */
+    box-shadow: 0 0 0 3px rgba(0, 191, 143, 0.3); /* Green glow on focus */
+}
+
+.form-group input::placeholder {
+    color: #888; /* Placeholder text color */
+}
+
+.submit-button {
+    background-color: #00bf8f; /* Green submit button */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px; /* Pill-shaped button */
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%; /* Full width button */
+    margin-top: 20px; /* Space above button */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button:hover {
+    background-color: #009973; /* Darker green on hover */
+    transform: translateY(-2px);
+}
+
+.form-footer-text {
+    margin-top: 20px;
+    font-size: 0.95em;
+    color: #bbb; /* Light grey text */
+}
+
+.form-footer-text a {
+    color: #00bf8f; /* Green links in footer text */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.form-footer-text a:hover {
+    color: #009973; /* Darker green on hover */
+    text-decoration: underline;
+}
+
+/* Styles for the About Page Content */
+.about-page-body {
+    background-color: #f4f4f4; /* Light background for the about page content */
+    color: #333; /* Dark text for readability */
+}
+
+.about-content-section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-heading {
+    color: #00bf8f; /* Green color for about page headings */
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee; /* Light grey underline */
+    padding-bottom: 10px;
+}
+
+.about-content-section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555; /* Slightly lighter dark text for paragraphs */
+}
+
+.about-content-section ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.about-content-section ul li {
+    margin-bottom: 10px;
+    font-size: 1.05em;
+}
+
+.about-content-section ul li strong {
+    color: #333; /* Darker strong text */
+}
+
+/* Responsive Adjustments */
+
+/* For screens up to 1024px (e.g., smaller desktops, large tablets) */
+@media (max-width: 1024px) {
+    .video-header .content h1 {
+        font-size: 2.8em;
+    }
+    .video-header .content p {
+        font-size: 1.1em;
+    }
+    .content .btn {
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+    .info-section h2 {
+        font-size: 2em;
+    }
+    .info-section p {
+        font-size: 1em;
+    }
+    .register-button {
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+    .about-heading {
+        font-size: 1.8em;
+    }
+    .about-content-section p, .about-content-section ul li {
+        font-size: 1em;
+    }
+}
+
+/* For screens up to 768px (e.g., tablets) */
+@media (max-width: 768px) {
+    .video-header {
+        height: 80vh; /* Adjust height for tablets */
+    }
+    .video-header.small-header {
+        height: 30vh; /* Adjust smaller header height */
+        padding-bottom: 30px;
+    }
+    .video-header .content h1 {
+        font-size: 2em;
+    }
+    .video-header .content p {
+        font-size: 0.95em;
+    }
+    nav {
+        padding: 15px 20px;
+    }
+    nav .logo {
+        font-size: 1.5em;
+    }
+    nav a {
+        margin-left: 15px;
+    }
+    .content .btn {
+        padding: 10px 25px;
+        font-size: 0.9em;
+    }
+
+    .info-section {
+        padding: 40px 15px;
+        margin: 30px auto;
+    }
+    .info-section h2 {
+        font-size: 1.8em;
+    }
+    .info-section p {
+        font-size: 0.9em;
+    }
+    .register-button {
+        padding: 10px 25px;
+        font-size: 0.9em;
+    }
+
+    .site-footer .footer-content {
+        flex-direction: column; /* Stacks columns vertically on smaller screens */
+        align-items: center; /* Centers columns */
+    }
+
+    .site-footer .footer-column {
+        min-width: unset; /* Removes minimum width constraint */
+        width: 100%; /* Allows columns to take full width */
+        margin: 0 0 30px 0; /* Adjusts margins for stacked layout */
+        text-align: center; /* Centers text within columns */
+    }
+
+    .site-footer h3 {
+        border-bottom: none; /* Removes the underline from headings on mobile */
+        padding-bottom: 0;
+    }
+    .site-footer .social-icons a {
+        margin: 0 10px; /* Adjusts spacing for mobile social icons */
+    }
+    .about-content-section {
+        padding: 40px 15px;
+        margin: 30px auto;
+    }
+    .about-heading {
+        font-size: 1.5em;
+    }
+    .about-content-section p, .about-content-section ul li {
+        font-size: 0.95em;
+    }
+}
+
+/* For screens up to 480px (e.g., mobile phones) */
+@media (max-width: 480px) {
+    .video-header {
+        height: 70vh; /* Further adjusts height for mobile */
+    }
+    .video-header.small-header {
+        height: 25vh; /* Adjust smaller header height for mobile */
+        padding-bottom: 20px;
+    }
+    .video-header .content h1 {
+        font-size: 1.6em;
+    }
+    .video-header .content p {
+        font-size: 0.85em;
+    }
+    nav {
+        flex-direction: column; /* Stacks nav items (logo and links) vertically */
+        padding: 10px;
+    }
+    nav .logo {
+        margin-bottom: 10px; /* Space below logo when stacked */
+    }
+    nav div:last-child { /* Targets the div containing nav links */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav a {
+        margin: 5px 10px; /* Adjusts spacing for stacked links */
+    }
+    .content .btn {
+        padding: 8px 20px;
+        font-size: 0.8em;
+    }
+
+    .info-section {
+        padding: 30px 10px;
+        margin: 20px auto;
+    }
+    .info-section h2 {
+        font-size: 1.5em;
+    }
+    .info-section p {
+        font-size: 0.85em;
+        margin-bottom: 20px;
+    }
+    .register-button {
+        padding: 8px 20px;
+        font-size: 0.85em;
+    }
+    .site-footer {
+        padding: 30px 15px;
+    }
+    .about-content-section {
+        padding: 30px 10px;
+        margin: 20px auto;
+    }
+    .about-heading {
+        font-size: 1.3em;
+    }
+    .about-content-section p, .about-content-section ul li {
+        font-size: 0.9em;
+    }
+}

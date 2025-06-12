@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Land - Ndola Land System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dashboard-page-body">
+    <header class="dashboard-header">
+        <nav class="dashboard-nav">
+            <div class="logo">Ndola Land Systems</div>
+            <div>
+                <a href="homepage.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="#" id="logoutBtn">Logout</a>
+            </div>
+        </nav>
+        <div class="dashboard-hero-content">
+            <h1>Register Your Land</h1>
+        </div>
+    </header>
+
+    <div class="dashboard-wrapper">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="user_dashboard.html#profile"><i class="fas fa-user"></i> View Profile</a></li>
+                    <li><a href="user_dashboard.html#edit-profile"><i class="fas fa-edit"></i> Edit Profile</a></li>
+                    <li><a href="user_dashboard.html#payments"><i class="fas fa-dollar-sign"></i> Make Payments</a></li>
+                    <li><a href="register_land.html" class="active"><i class="fas fa-map-marked-alt"></i> Register Land</a></li>
+                    <li><a href="user_dashboard.html#view-lands"><i class="fas fa-eye"></i> View Registered Lands</a></li>
+                    <li><a href="https://www.property-zm.com/" target="_blank"><i class="fas fa-handshake"></i> Buy Land</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="dashboard-main-content">
+            <div class="dashboard-container">
+                <section id="register-land-form" class="dashboard-section">
+                    <h2 class="dashboard-section-title">Land Application Form</h2>
+                    <div class="info-card">
+                        <form id="landApplicationForm" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="land-location">Land Location (e.g., Plot Number, Street, Area)</label>
+                                <input type="text" id="land-location" name="landLocation" placeholder="Enter land location details" required>
+                                <div class="error-message" id="land-location-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="land-pictures">Pictures of the Land (Optional)</label>
+                                <input type="file" id="land-pictures" name="pictures" accept="image/*" multiple>
+                                <div class="error-message" id="land-pictures-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Required Documents</label>
+                                <p class="form-help-text">Please upload the following mandatory documents:</p>
+                                
+                                <label for="national-id">National ID / Passport (Mandatory)</label>
+                                <input type="file" id="national-id" name="documents" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required>
+                                <div class="error-message" id="national-id-error"></div>
+
+                                <label for="proof-of-ownership">Proof of Previous Ownership (Mandatory)</label>
+                                <input type="file" id="proof-of-ownership" name="documents" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required>
+                                <div class="error-message" id="proof-of-ownership-error"></div>
+
+                                <label for="site-plan">Site Plan (Mandatory)</label>
+                                <input type="file" id="site-plan" name="documents" accept=".pdf,.jpg,.jpeg,.png" required>
+                                <div class="error-message" id="site-plan-error"></div>
+
+                                <p class="form-help-text">Optional Documents:</p>
+                                <label for="utility-bill">Utility Bill (Optional)</label>
+                                <input type="file" id="utility-bill" name="documents" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+                                <div class="error-message" id="utility-bill-error"></div>
+
+                                <label for="other-docs">Other Supporting Documents (Optional)</label>
+                                <input type="file" id="other-docs" name="documents" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" multiple>
+                                <div class="error-message" id="other-docs-error"></div>
+                            </div>
+                            
+                            <div class="form-message" id="form-message"></div>
+                            <button type="submit" class="submit-button">Submit Application</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-column contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info@yourcompany.com">info@yourcompany.com</a></p>
+                <p>Phone: +260 971 123 456</p>
+                <p>Address: 123 Land Ave, Lusaka, Zambia</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">News & Blog</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Careers</h3>
+                <ul>
+                    <li><a href="#">Job Openings</a></li>
+                    <li><a href="#">Why Work With Us?</a></li>
+                    <li><a href="#">Internship Programs</a></li>
+                </ul>
+            </div>
+            <div class="footer-column social-icons-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Your Company Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="register_land.js"></script>
+</body>
+</html>
