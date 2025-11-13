@@ -1,0 +1,483 @@
+{
+  "count": 10,
+  "results": [
+    {
+      "conflict_id": 243,
+      "application_id": 106,
+      "application_ref": "TA251105081550307160",
+      "title": "Conflict with parcel TEST-20251105081550303677 (owner_duplicate)",
+      "description": "Detected potential conflict between application TA251105081550307160 and parcel TEST-20251105081550303677. Reason: owner_duplicate.",
+      "conflict_type": "owner_duplicate",
+      "overlap_percentage": null,
+      "confidence_score": 0.6,
+      "detected_by_ai": true,
+      "created_at": "2025-11-05 06:15:50.315128",
+      "parcel": {
+        "parcel_id": 106,
+        "parcel_number": "TEST-20251105081550303677",
+        "owner_name": "Test Owner"
+      },
+      "parcel_geojson": null
+    },
+    {
+      "conflict_id": 240,
+      "application_id": 104,
+      "application_ref": "TA251105081550100385",
+      "title": "Conflict with parcel Plot 3736 (spatial_overlap)",
+      "description": "Detected potential conflict between application TA251105081550100385 and parcel Plot 3736. Reason: spatial_overlap.",
+      "conflict_type": "spatial_overlap",
+      "overlap_percentage": 0.0043813147672344295,
+      "confidence_score": 0.203943183290511,
+      "detected_by_ai": true,
+      "created_at": "2025-11-05 06:15:50.156318",
+      "parcel": {
+        "parcel_id": 89,
+        "parcel_number": "Plot 3736",
+        "owner_name": "Joseph Chanda"
+      },
+      "parcel_geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              28.660175906,
+              -12.911836134
+            ],
+            [
+              28.693097861,
+              -12.923904609
+            ],
+            [
+              28.682407416,
+              -12.955747478
+            ],
+            [
+              28.660175906,
+              -12.975498031
+            ],
+            [
+              28.628918707,
+              -12.960958461
+            ],
+            [
+              28.627552348,
+              -12.92407689
+            ],
+            [
+              28.660175906,
+              -12.911836134
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "conflict_id": 242,
+      "application_id": 104,
+      "application_ref": "TA251105081550100385",
+      "title": "Conflict with parcel TEST-20251105081550088240 (spatial_overlap)",
+      "description": "Detected potential conflict between application TA251105081550100385 and parcel TEST-20251105081550088240. Reason: spatial_overlap.",
+      "conflict_type": "spatial_overlap",
+      "overlap_percentage": 0.24999999999986677,
+      "confidence_score": 0.42499999999988014,
+      "detected_by_ai": true,
+      "created_at": "2025-11-05 06:15:50.156318",
+      "parcel": {
+        "parcel_id": 105,
+        "parcel_number": "TEST-20251105081550088240",
+        "owner_name": "Test Owner"
+      },
+      "parcel_geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              28.63,
+              -12.98
+            ],
+            [
+              28.64,
+              -12.98
+            ],
+            [
+              28.64,
+              -12.97
+            ],
+            [
+              28.63,
+              -12.97
+            ],
+            [
+              28.63,
+              -12.98
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "conflict_id": 241,
+      "application_id": 104,
+      "application_ref": "TA251105081550100385",
+      "title": "Conflict with parcel Plot 7244 (spatial_overlap)",
+      "description": "Detected potential conflict between application TA251105081550100385 and parcel Plot 7244. Reason: spatial_overlap.",
+      "conflict_type": "spatial_overlap",
+      "overlap_percentage": 0.03968952007574761,
+      "confidence_score": 0.23572056806817288,
+      "detected_by_ai": true,
+      "created_at": "2025-11-05 06:15:50.156318",
+      "parcel": {
+        "parcel_id": 90,
+        "parcel_number": "Plot 7244",
+        "owner_name": "David Mbewe"
+      },
+      "parcel_geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              28.653841431,
+              -12.956631867
+            ],
+            [
+              28.669491715,
+              -12.973049247
+            ],
+            [
+              28.674628797,
+              -12.994086534
+            ],
+            [
+              28.653841431,
+              -13.004321506
+            ],
+            [
+              28.637724082,
+              -12.991390298
+            ],
+            [
+              28.637425062,
+              -12.972606947
+            ],
+            [
+              28.653841431,
+              -12.956631867
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "conflict_id": 178,
+      "application_id": 104,
+      "application_ref": "TA251105081550100385",
+      "title": "Conflict with parcel Plot 8468 (spatial_overlap)",
+      "description": "Detected potential conflict between application TA251105081550100385 and parcel Plot 8468. Reason: spatial_overlap.",
+      "conflict_type": "spatial_overlap",
+      "overlap_percentage": 0.0908175809096795,
+      "confidence_score": 0.28173582281871157,
+      "detected_by_ai": true,
+      "created_at": "2025-11-05 06:15:50.148279",
+      "parcel": {
+        "parcel_id": 6,
+        "parcel_number": "Plot 8468",
+        "owner_name": "Emmanuel Lungu"
+      },
+      "parcel_geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              28.64330745,
+              -12.954192165
+            ],
+            [
+              28.668038675,
+              -12.96681075
+            ],
+            [
+              28.653904643,
+              -12.989432197
+            ],
+            [
+              28.632716036,
+              -12.989424242
+            ],
+            [
+              28.619090208,
+              -12.966977753
+            ],
+            [
+              28.64330745,
+              -12.954192165
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "conflict_id": 179,
+      "application_id": 104,
+      "application_ref": "TA251105081550100385",
+      "title": "Conflict with parcel Plot 7481 (spatial_overlap)",
+      "description": "Detected potential conflict between application TA251105081550100385 and parcel Plot 7481. Reason: spatial_overlap.",
+      "conflict_type": "spatial_overlap",
+      "overlap_percentage": 0.01480471113699193,
+      "confidence_score": 0.21332424002329275,
+      "detected_by_ai": true,
+      "created_at": "2025-11-05 06:15:50.148279",
+      "parcel": {
+        "parcel_id": 7,
+        "parcel_number": "Plot 7481",
+        "owner_name": "Alice Banda"
+      },
+      "parcel_geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              28.637273918,
+              -12.938030873
+            ],
+            [
+              28.645213375,
+              -12.944414829
+            ],
+            [
+              28.651370927,
+              -12.952354286
+            ],
+            [
+              28.647925067,
+              -12.963005435
+            ],
+            [
+              28.637273918,
+              -12.966959985
+            ],
+            [
+              28.629348378,
+              -12.960279826
+            ],
+            [
+              28.625676924,
+              -12.952354286
+            ],
+            [
+              28.626951578,
+              -12.942031946
+            ],
+            [
+              28.637273918,
+              -12.938030873
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "conflict_id": 180,
+      "application_id": 104,
+      "application_ref": "TA251105081550100385",
+      "title": "Conflict with parcel Plot 6968 (spatial_overlap)",
+      "description": "Detected potential conflict between application TA251105081550100385 and parcel Plot 6968. Reason: spatial_overlap.",
+      "conflict_type": "spatial_overlap",
+      "overlap_percentage": 0.04277659693443224,
+      "confidence_score": 0.23849893724098903,
+      "detected_by_ai": true,
+      "created_at": "2025-11-05 06:15:50.148279",
+      "parcel": {
+        "parcel_id": 10,
+        "parcel_number": "Plot 6968",
+        "owner_name": "Grace Mwape"
+      },
+      "parcel_geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              28.652412787,
+              -12.93984558
+            ],
+            [
+              28.676496403,
+              -12.952496092
+            ],
+            [
+              28.666593002,
+              -12.979838725
+            ],
+            [
+              28.642082635,
+              -12.974539568
+            ],
+            [
+              28.634264764,
+              -12.954424683
+            ],
+            [
+              28.652412787,
+              -12.93984558
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "conflict_id": 176,
+      "application_id": 104,
+      "application_ref": "TA251105081550100385",
+      "title": "Conflict with parcel Plot 1959 (spatial_overlap)",
+      "description": "Detected potential conflict between application TA251105081550100385 and parcel Plot 1959. Reason: spatial_overlap.",
+      "conflict_type": "spatial_overlap",
+      "overlap_percentage": 0.049636469665712175,
+      "confidence_score": 0.24467282269914098,
+      "detected_by_ai": true,
+      "created_at": "2025-11-05 06:15:50.148279",
+      "parcel": {
+        "parcel_id": 3,
+        "parcel_number": "Plot 1959",
+        "owner_name": "Faith Sililo"
+      },
+      "parcel_geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              28.634935532,
+              -12.966343477
+            ],
+            [
+              28.652041803,
+              -12.98146525
+            ],
+            [
+              28.644800946,
+              -13.000601993
+            ],
+            [
+              28.625126716,
+              -13.000524092
+            ],
+            [
+              28.614111505,
+              -12.980257278
+            ],
+            [
+              28.634935532,
+              -12.966343477
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "conflict_id": 177,
+      "application_id": 104,
+      "application_ref": "TA251105081550100385",
+      "title": "Conflict with parcel Plot 9278 (spatial_overlap)",
+      "description": "Detected potential conflict between application TA251105081550100385 and parcel Plot 9278. Reason: spatial_overlap.",
+      "conflict_type": "spatial_overlap",
+      "overlap_percentage": 0.09117941591889238,
+      "confidence_score": 0.2820614743270031,
+      "detected_by_ai": true,
+      "created_at": "2025-11-05 06:15:50.148279",
+      "parcel": {
+        "parcel_id": 4,
+        "parcel_number": "Plot 9278",
+        "owner_name": "Grace Chanda"
+      },
+      "parcel_geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              28.651750233,
+              -12.948265664
+            ],
+            [
+              28.668013886,
+              -12.957310364
+            ],
+            [
+              28.670357219,
+              -12.974527118
+            ],
+            [
+              28.659129676,
+              -12.985603767
+            ],
+            [
+              28.643899364,
+              -12.986582692
+            ],
+            [
+              28.635594396,
+              -12.973967659
+            ],
+            [
+              28.63736746,
+              -12.958810316
+            ],
+            [
+              28.651750233,
+              -12.948265664
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "conflict_id": 174,
+      "application_id": 104,
+      "application_ref": "TA251105081550100385",
+      "title": "Conflict with parcel Plot 3828 (spatial_overlap)",
+      "description": "Detected potential conflict between application TA251105081550100385 and parcel Plot 3828. Reason: spatial_overlap.",
+      "conflict_type": "spatial_overlap",
+      "overlap_percentage": 0.1085316210428866,
+      "confidence_score": 0.29767845893859796,
+      "detected_by_ai": true,
+      "created_at": "2025-11-05 06:15:50.148279",
+      "parcel": {
+        "parcel_id": 1,
+        "parcel_number": "Plot 3828",
+        "owner_name": "Isaac Mutale"
+      },
+      "parcel_geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              28.651256503,
+              -12.951421517
+            ],
+            [
+              28.662260733,
+              -12.962169359
+            ],
+            [
+              28.66441186,
+              -12.976117903
+            ],
+            [
+              28.651256503,
+              -12.983490035
+            ],
+            [
+              28.638113161,
+              -12.976110967
+            ],
+            [
+              28.6401099,
+              -12.96208716
+            ],
+            [
+              28.651256503,
+              -12.951421517
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

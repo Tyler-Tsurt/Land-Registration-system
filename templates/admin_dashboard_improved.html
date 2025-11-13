@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Ndola Land Registry System</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <style>
+        .conflict-badge {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .application-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        
+        .application-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .application-card.status-pending {
+            border-left-color: #ffc107;
+        }
+        
+        .application-card.status-approved {
+            border-left-color: #28a745;
+        }
+        
+        .application-card.status-conflict {
+            border-left-color: #dc3545;
+        }
+        
+        .application-card.status-rejected {
+            border-left-color: #6c757d;
+        }
+        
+        .comment-section {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 10px 12px;
+            margin-top: 10px;
+            max-width: 280px;
+        }
+        
+        [data-theme="dark"] .comment-section {
+            background: #2d3748;
+            color: #e2e8f0;
+        }
+        
+        [data-theme="dark"] .comment-section small {
+            color: #cbd5e0 !important;
+        }
+        
+        .conflict-indicator {
+            position: relative;
+        }
+        
+        .conflict-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #dc3545;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        
+        .ai-score-bar {
+            height: 6px;
+            background: #e9ecef;
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        
+        .ai-score-fill {
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+        
+        .score-low { background: #28a745; }
+        .score-medium { background: #ffc107; }
+        .score-high { background: #dc3545; }
+        
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-tab {
+            padding: 8px 16px;
+            border: 2px solid #dee2e6;
+            border-radius: 20px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .filter-tab:hover {
+            border-color: #0d6efd;
+            color: #0d6efd;
+        }
+        
+        .filter-tab.active {
+            background: #0d6efd;
+            color: white;
+            border-color: #0d6efd;
+        }
+        
+        .quick-comment-form {
+            display: none;
+        }
+        
+        .quick-comment-form.show {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Enhanced search bar styling */
+        #searchInput {
+            transition: all 0.3s ease;
+        }
+        
+        #searchInput:focus {
+            box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+        }
+        
+        .input-group:focus-within {
+            box-shadow: 0 0 8px rgba(13, 110, 253, 0.2);
+            border-radius: 0.375rem;
+        }
+        
+        .input-group-text {
+            border: 1px solid #ced4da;
+            transition: all 0.2s ease;
+        }
+        
+        .input-group:focus-within .input-group-text {
+            border-color: #86b7fe;
+        }
+        
+        /* Compact button group styling */
+        .btn-group-sm .btn {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .btn-group-sm .btn i {
+            font-size: 0.875rem;
+        }
+        
+        /* Make action buttons fit better */
+        .application-card .btn-group {
+            flex-wrap: nowrap;
+            gap: 2px;
+        }
+        
+        .application-card .btn-group form {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='images/zm.png') }}" alt="Zambia Coat of Arms" height="35" class="me-2">
+                Ndola Land Registry
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('index') }}">
+                            <i class="fas fa-home me-1"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">
+                            <i class="fas fa-info-circle me-1"></i>About
+                        </a>
+                    </li>
+                    <li class="nav-item" id="auth-nav"></li>
+                    <li class="nav-item d-flex align-items-center ms-2">
+                        <button id="theme-toggle" class="btn btn-sm theme-toggle-btn">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    <header class="bg-primary text-white py-4">
+        <div class="container">
+            <h1 class="display-5"><i class="fas fa-tachometer-alt me-2"></i>Admin Dashboard</h1>
+            <p class="lead">AI-Powered Land Registration Management System</p>
+        </div>
+    </header>
+
+    <section class="py-4">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="text-muted mb-1">Pending Review</h6>
+                                    <h2 class="mb-0 text-warning">{{ pending_count }}</h2>
+                                </div>
+                                <i class="fas fa-clock fa-3x text-warning opacity-25"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="text-muted mb-1">Approved</h6>
+                                    <h2 class="mb-0 text-success">{{ approved_count }}</h2>
+                                </div>
+                                <i class="fas fa-check-circle fa-3x text-success opacity-25"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="text-muted mb-1">Conflicts</h6>
+                                    <h2 class="mb-0 text-danger">{{ conflict_count }}</h2>
+                                </div>
+                                <i class="fas fa-exclamation-triangle fa-3x text-danger opacity-25"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="text-muted mb-1">Total Applications</h6>
+                                    <h2 class="mb-0 text-info">{{ total_count }}</h2>
+                                </div>
+                                <i class="fas fa-file-alt fa-3x text-info opacity-25"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-5">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3 mb-4">
+                    <div class="card shadow-sm mb-3">
+                        <div class="card-header bg-primary text-white">
+                            <i class="fas fa-robot me-2"></i>AI Detection Stats
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <small class="text-muted">Document Duplicates</small>
+                                    <span class="badge bg-danger">{{ ai_alerts.document_duplicates }}</span>
+                                </div>
+                                <div class="progress" style="height: 5px;">
+                                    <div class="progress-bar bg-danger" style="width: {{ min(100, ai_alerts.document_duplicates * 10) }}%"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <small class="text-muted">Content Duplicates</small>
+                                    <span class="badge bg-warning text-dark">{{ ai_alerts.content_duplicates }}</span>
+                                </div>
+                                <div class="progress" style="height: 5px;">
+                                    <div class="progress-bar bg-warning" style="width: {{ min(100, ai_alerts.content_duplicates * 10) }}%"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <small class="text-muted">Spatial Overlaps</small>
+                                    <span class="badge bg-danger">{{ ai_alerts.spatial_overlaps }}</span>
+                                </div>
+                                <div class="progress" style="height: 5px;">
+                                    <div class="progress-bar bg-danger" style="width: {{ min(100, ai_alerts.spatial_overlaps * 10) }}%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <small class="text-muted">High-Risk Cases</small>
+                                    <span class="badge bg-danger">{{ ai_alerts.fraud_alerts }}</span>
+                                </div>
+                                <div class="progress" style="height: 5px;">
+                                    <div class="progress-bar bg-danger" style="width: {{ min(100, ai_alerts.fraud_alerts * 20) }}%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <i class="fas fa-bolt me-2"></i>Quick Actions
+                        </div>
+                        <div class="card-body p-2">
+                            <div class="d-grid gap-2">
+                                <a href="{{ url_for('generate_report') }}" class="btn btn-outline-success btn-sm">
+                                    <i class="fas fa-file-pdf me-2"></i>Generate Report
+                                </a>
+                                <a href="{{ url_for('admin_notifications') }}" class="btn btn-outline-secondary btn-sm">
+                                    <i class="fas fa-bell me-2"></i>Notifications
+                                </a>
+                                {% if current_user.role == 'super_admin' %}
+                                <a href="{{ url_for('ai_training_data') }}" class="btn btn-outline-info btn-sm">
+                                    <i class="fas fa-database me-2"></i>View Training Data
+                                </a>
+                                <form method="post" action="{{ url_for('retrain_ai') }}" style="display:inline;">
+                                    <button type="submit" class="btn btn-outline-danger btn-sm w-100" onclick="return confirm('Are you sure you want to retrain the AI model? This may take some time.')">
+                                        <i class="fas fa-brain me-2"></i>Retrain AI
+                                    </button>
+                                </form>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="col-lg-9">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-white">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                                <h5 class="mb-0">
+                                    <i class="fas fa-clipboard-list me-2"></i>All Applications
+                                </h5>
+                                <form method="get" class="d-flex gap-2" style="min-width: 350px; position: relative;">
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-white border-end-0">
+                                            <i class="fas fa-search text-muted"></i>
+                                        </span>
+                                        <input type="text" name="search" id="searchInput" value="{{ request.args.get('search','') }}" 
+                                               class="form-control border-start-0 ps-0" 
+                                               placeholder="Search by reference, name, NRC, location..."
+                                               autocomplete="off"
+                                               title="Press Ctrl+K to focus search">
+                                        {% if request.args.get('search') %}
+                                        <a href="{{ url_for('admin_dashboard') }}" class="input-group-text bg-white border-start-0 text-decoration-none" title="Clear search">
+                                            <i class="fas fa-times text-muted"></i>
+                                        </a>
+                                        {% endif %}
+                                        <button class="btn btn-primary" type="submit">
+                                            Search
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            
+                            <!-- Filter Tabs -->
+                            <div class="filter-tabs mt-3">
+                                <div class="filter-tab {% if not request.args.get('filter') %}active{% endif %}" 
+                                     onclick="window.location.href='{{ url_for('admin_dashboard', page=1) }}'">
+                                    <i class="fas fa-list me-1"></i>All ({{ total_count }})
+                                </div>
+                                <div class="filter-tab {% if request.args.get('filter') == 'pending' %}active{% endif %}" 
+                                     onclick="window.location.href='{{ url_for('admin_dashboard', filter='pending', page=1) }}'">
+                                    <i class="fas fa-clock me-1"></i>Pending ({{ pending_count }})
+                                </div>
+                                <div class="filter-tab {% if request.args.get('filter') == 'conflict' %}active{% endif %}" 
+                                     onclick="window.location.href='{{ url_for('admin_dashboard', filter='conflict', page=1) }}'">
+                                    <i class="fas fa-exclamation-triangle me-1"></i>Conflicts ({{ conflict_count }})
+                                </div>
+                                <div class="filter-tab {% if request.args.get('filter') == 'approved' %}active{% endif %}" 
+                                     onclick="window.location.href='{{ url_for('admin_dashboard', filter='approved', page=1) }}'">
+                                    <i class="fas fa-check me-1"></i>Approved ({{ approved_count }})
+                                </div>
+                                <div class="filter-tab {% if request.args.get('filter') == 'rejected' %}active{% endif %}" 
+                                     onclick="window.location.href='{{ url_for('admin_dashboard', filter='rejected', page=1) }}'">
+                                    <i class="fas fa-times me-1"></i>Rejected
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-body p-0">
+                            {% if applications %}
+                                {% for app in applications %}
+                                <div class="application-card status-{{ app.status }} border-bottom p-3">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8">
+                                            <div class="d-flex align-items-start gap-3">
+                                                <div class="conflict-indicator">
+                                                    <i class="fas fa-file-alt fa-2x text-muted"></i>
+                                                    {% set conflict_list = conflicts_map.get(app.id, []) %}
+                                                    {% if conflict_list|length > 0 %}
+                                                        <span class="conflict-count conflict-badge" 
+                                                              onclick="showConflictDetails({{ app.id }}, {{ conflict_list|tojson }})" 
+                                                              style="cursor: pointer;"
+                                                              title="Click to view conflicting applications">
+                                                            {{ conflict_list|length }}
+                                                        </span>
+                                                    {% endif %}
+                                                </div>
+                                                
+                                                <div class="flex-grow-1">
+                                                    <h6 class="mb-1">
+                                                        <strong>{{ app.reference_number }}</strong>
+                                                        <span class="badge bg-{{ 'warning' if app.status == 'pending' else 'success' if app.status == 'approved' else 'danger' if app.status == 'conflict' else 'secondary' }} ms-2">
+                                                            {{ app.status|capitalize }}
+                                                        </span>
+                                                        {% if app.payment_status == 'paid' %}
+                                                        <span class="badge bg-success ms-1" title="Payment Verified">
+                                                            <i class="fas fa-check-circle"></i> Paid
+                                                        </span>
+                                                        {% endif %}
+                                                    </h6>
+                                                    
+                                                    <div class="text-muted small mb-2">
+                                                        <i class="fas fa-user me-1"></i>{{ app.applicant_name }}
+                                                        <span class="mx-2">|</span>
+                                                        <i class="fas fa-map-marker-alt me-1"></i>{{ app.land_location[:50] }}{% if app.land_location|length > 50 %}...{% endif %}
+                                                        <span class="mx-2">|</span>
+                                                        <i class="fas fa-calendar me-1"></i>{{ app.submitted_at.strftime('%Y-%m-%d') }}
+                                                    </div>
+                                                    
+                                                    {% if app.ai_processed %}
+                                                    <div>
+                                                        <small class="text-muted">AI Conflict Score:</small>
+                                                        <div class="ai-score-bar">
+                                                            <div class="ai-score-fill {% if app.ai_conflict_score > 0.7 %}score-high{% elif app.ai_conflict_score > 0.4 %}score-medium{% else %}score-low{% endif %}" 
+                                                                 style="width: {{ (app.ai_conflict_score * 100)|round|int }}%">
+                                                            </div>
+                                                        </div>
+                                                        <small class="text-muted">{{ "%.1f"|format(app.ai_conflict_score * 100) }}% risk</small>
+                                                    </div>
+                                                    {% else %}
+                                                    <span class="badge bg-secondary">
+                                                        <i class="fas fa-robot me-1"></i>Not Analyzed
+                                                    </span>
+                                                    {% endif %}
+                                                    
+                                                    {% set doc_sum = docs_summary.get(app.id, {}) %}
+                                                    {% if doc_sum and doc_sum.duplicates > 0 %}
+                                                    <div class="mt-2">
+                                                        <span class="badge bg-warning text-dark">
+                                                            <i class="fas fa-exclamation-triangle me-1"></i>
+                                                            {{ doc_sum.duplicates }} duplicate document(s) detected
+                                                        </span>
+                                                    </div>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-4 text-end">
+                                            <div class="btn-group btn-group-sm" role="group">
+                                                <a href="{{ url_for('review_application', app_id=app.id) }}" 
+                                                   class="btn btn-primary btn-sm" title="View">
+                                                    <i class="fas fa-eye"></i>
+                                                </a>
+                                                
+                                                {% if not app.ai_processed %}
+                                                <form method="post" action="{{ url_for('run_ai_analysis', app_id=app.id) }}" style="display:inline;">
+                                                    <button type="submit" class="btn btn-warning btn-sm" title="AI">
+                                                        <i class="fas fa-robot"></i>
+                                                    </button>
+                                                </form>
+                                                {% endif %}
+                                                
+                                                <button type="button" class="btn btn-secondary btn-sm" 
+                                                        onclick="toggleCommentForm({{ app.id }})" title="Comment">
+                                                    <i class="fas fa-comment"></i>
+                                                </button>
+                                                
+                                                {% if app.status != 'approved' and app.status != 'rejected' %}
+                                                <form method="post" action="{{ url_for('approve_application', app_id=app.id) }}" style="display:inline;">
+                                                    <button type="submit" class="btn btn-success btn-sm" title="Approve">
+                                                        <i class="fas fa-check"></i>
+                                                    </button>
+                                                </form>
+                                                <form method="post" action="{{ url_for('reject_application', app_id=app.id) }}" style="display:inline;">
+                                                    <button type="submit" class="btn btn-danger btn-sm" title="Reject" 
+                                                            onclick="return confirm('Are you sure you want to reject this application?')">
+                                                        <i class="fas fa-times"></i>
+                                                    </button>
+                                                </form>
+                                                {% endif %}
+                                            </div>
+                                            
+                                            <!-- Quick Comment Form -->
+                                            <div class="quick-comment-form mt-3" id="comment-form-{{ app.id }}">
+                                                <form method="post" action="{{ url_for('add_comment', app_id=app.id) }}">
+                                                    <div class="input-group input-group-sm">
+                                                        <input type="text" name="comment" class="form-control" 
+                                                               placeholder="Add a comment..." required>
+                                                        <button type="submit" class="btn btn-primary">
+                                                            <i class="fas fa-paper-plane"></i>
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            
+                                            {% if app.admin_comments %}
+                                            <div class="comment-section mt-2">
+                                                <small class="text-muted d-block mb-1">
+                                                    <i class="fas fa-comment-dots me-1"></i>Last Comment:
+                                                </small>
+                                                <small>{{ app.admin_comments[:100] }}{% if app.admin_comments|length > 100 %}...{% endif %}</small>
+                                            </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            {% else %}
+                                <div class="p-5 text-center text-muted">
+                                    <i class="fas fa-inbox fa-3x mb-3"></i>
+                                    <p>No applications found.</p>
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        {% if pagination.pages > 1 %}
+                        <div class="card-footer bg-white">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="text-muted small">
+                                    Showing {{ (pagination.page - 1) * pagination.per_page + 1 }} 
+                                    to {{ min(pagination.page * pagination.per_page, pagination.total) }} 
+                                    of {{ pagination.total }} applications
+                                </div>
+                                <nav>
+                                    <ul class="pagination pagination-sm mb-0">
+                                        {% if pagination.has_prev %}
+                                        <li class="page-item">
+                                            <a class="page-link" href="{{ url_for('admin_dashboard', page=pagination.prev_num, filter=request.args.get('filter'), search=request.args.get('search')) }}">
+                                                <i class="fas fa-chevron-left"></i>
+                                            </a>
+                                        </li>
+                                        {% else %}
+                                        <li class="page-item disabled">
+                                            <span class="page-link"><i class="fas fa-chevron-left"></i></span>
+                                        </li>
+                                        {% endif %}
+                                        
+                                        {% for p in range(max(1, pagination.page - 2), min(pagination.pages + 1, pagination.page + 3)) %}
+                                        <li class="page-item {% if p == pagination.page %}active{% endif %}">
+                                            <a class="page-link" href="{{ url_for('admin_dashboard', page=p, filter=request.args.get('filter'), search=request.args.get('search')) }}">{{ p }}</a>
+                                        </li>
+                                        {% endfor %}
+                                        
+                                        {% if pagination.has_next %}
+                                        <li class="page-item">
+                                            <a class="page-link" href="{{ url_for('admin_dashboard', page=pagination.next_num, filter=request.args.get('filter'), search=request.args.get('search')) }}">
+                                                <i class="fas fa-chevron-right"></i>
+                                            </a>
+                                        </li>
+                                        {% else %}
+                                        <li class="page-item disabled">
+                                            <span class="page-link"><i class="fas fa-chevron-right"></i></span>
+                                        </li>
+                                        {% endif %}
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container d-flex justify-content-between flex-wrap">
+            <div>
+                <h5>Ndola Land Registry System</h5>
+                <p class="mb-0">Powered by AI and GIS Technology</p>
+            </div>
+            <div class="text-end">
+                <p class="mb-0">&copy; {{ current_year }} Ministry of Lands, Zambia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Conflict Details Modal -->
+    <div class="modal fade" id="conflictModal" tabindex="-1" aria-labelledby="conflictModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title" id="conflictModalLabel">
+                        <i class="fas fa-exclamation-triangle me-2"></i>Conflicting Applications
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="conflictModalBody">
+                    <div class="text-center py-4">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // Enhanced search with debouncing
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput) {
+            let searchTimeout;
+            searchInput.addEventListener('input', function(e) {
+                clearTimeout(searchTimeout);
+                const query = e.target.value.trim();
+                
+                // Auto-submit after 800ms of no typing (optional)
+                if (query.length >= 3) {
+                    searchTimeout = setTimeout(() => {
+                        // Could implement live search results here
+                    }, 800);
+                }
+            });
+            
+            // Focus search on Ctrl+K or Cmd+K
+            document.addEventListener('keydown', function(e) {
+                if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                    e.preventDefault();
+                    searchInput.focus();
+                    searchInput.select();
+                }
+            });
+        }
+    });
+    
+    function showConflictDetails(appId, conflicts) {
+        const modalBody = document.getElementById('conflictModalBody');
+        
+        if (!conflicts || conflicts.length === 0) {
+            modalBody.innerHTML = '<p class="text-muted">No conflicts found.</p>';
+            return;
+        }
+        
+        let html = `
+            <div class="alert alert-warning">
+                <strong>Application has ${conflicts.length} conflict(s)</strong><br>
+                <small>These are applications that may overlap or conflict with this one.</small>
+            </div>
+        `;
+        
+        // Fetch detailed information for each conflicting application
+        fetch('/api/get_conflict_applications', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ conflicts: conflicts })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.applications && data.applications.length > 0) {
+                html += '<div class="list-group">';
+                data.applications.forEach(app => {
+                    const conflictInfo = conflicts.find(c => c.conflicting_app_id === app.id) || {};
+                    const confidence = conflictInfo.confidence ? (conflictInfo.confidence * 100).toFixed(1) : 'N/A';
+                    const conflictType = conflictInfo.type || 'Unknown';
+                    
+                    html += `
+                        <div class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-1">
+                                        <strong>${app.reference_number}</strong>
+                                        <span class="badge bg-${app.status === 'approved' ? 'success' : app.status === 'pending' ? 'warning' : 'secondary'} ms-2">
+                                            ${app.status}
+                                        </span>
+                                    </h6>
+                                    <p class="mb-1">
+                                        <i class="fas fa-user me-1"></i>${app.applicant_name}<br>
+                                        <i class="fas fa-map-marker-alt me-1"></i>${app.land_location}<br>
+                                        <i class="fas fa-calendar me-1"></i>${app.submitted_at}
+                                    </p>
+                                    <small class="text-muted">
+                                        <strong>Conflict Type:</strong> ${conflictType.replace('_', ' ').toUpperCase()}<br>
+                                        <strong>Confidence:</strong> ${confidence}%
+                                    </small>
+                                </div>
+                                <div>
+                                    <a href="/admin/application/${app.id}/review" class="btn btn-sm btn-primary" target="_blank">
+                                        <i class="fas fa-eye"></i> View
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                html += '</div>';
+            } else {
+                html += '<p class="text-muted">Unable to load conflicting application details.</p>';
+            }
+            modalBody.innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error loading conflicts:', error);
+            modalBody.innerHTML = '<div class="alert alert-danger">Failed to load conflict details.</div>';
+        });
+        
+        const modal = new bootstrap.Modal(document.getElementById('conflictModal'));
+        modal.show();
+    }
+    
+    function toggleCommentForm(appId) {
+        const form = document.getElementById('comment-form-' + appId);
+        if (form.classList.contains('show')) {
+            form.classList.remove('show');
+        } else {
+            // Hide all other forms
+            document.querySelectorAll('.quick-comment-form').forEach(f => f.classList.remove('show'));
+            form.classList.add('show');
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const authNav = document.getElementById('auth-nav');
+        fetch('/api/check-auth', { method: 'GET', credentials: 'same-origin' })
+        .then(response => response.json())
+        .then(data => {
+            if (data.authenticated) {
+                authNav.innerHTML = `
+                    <a class="nav-link" href="{{ url_for('logout') }}">
+                        <i class="fas fa-sign-out-alt me-1"></i>Logout
+                    </a>`;
+            } else {
+                authNav.innerHTML = `
+                    <a class="nav-link" href="{{ url_for('login') }}">
+                        <i class="fas fa-sign-in-alt me-1"></i>Login
+                    </a>`;
+            }
+        })
+        .catch(() => {
+            authNav.innerHTML = `
+                <a class="nav-link" href="{{ url_for('login') }}">
+                    <i class="fas fa-sign-in-alt me-1"></i>Login
+                </a>`;
+        });
+    });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Apply stored theme
+        (function(){try{var s=localStorage.getItem('ndola_theme'); if(s==='dark'||(!s&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.setAttribute('data-theme','dark');}catch(e){} })();
+
+        // Theme-toggle handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle) {
+                function updateIcon() {
+                    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+                    themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+                }
+
+                themeToggle.addEventListener('click', function() {
+                    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+                    if (isDark) {
+                        document.documentElement.removeAttribute('data-theme');
+                        localStorage.setItem('ndola_theme', 'light');
+                    } else {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('ndola_theme', 'dark');
+                    }
+                    updateIcon();
+                });
+
+                updateIcon(); // set initial icon
+            }
+        });
+    </script>
+</body>
+</html>

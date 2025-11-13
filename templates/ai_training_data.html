@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>AI Training Data</h2>
+    <hr>
+
+    <div class="card">
+        <div class="card-header">
+            <h4>Documents</h4>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Document ID</th>
+                        <th>Application ID</th>
+                        <th>Document Type</th>
+                        <th>Extracted Text</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in training_data %}
+                        <tr>
+                            <td>{{ item.document_id }}</td>
+                            <td>{{ item.application_id }}</td>
+                            <td>{{ item.document_type }}</td>
+                            <td>{{ item.text|truncate(200) }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <a href="{{ url_for('admin_dashboard') }}" class="btn btn-secondary mt-3">Back to Dashboard</a>
+</div>
+{% endblock %}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Conflict Preview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+e2qk7bX1z7v+gV5Q0Yw4uQvZ0vM2wI1P0x0p8XcM=" crossorigin=""/>
+  <style> #map{height:90vh;width:100%;} body{margin:0;font-family:sans-serif} .legend{background:white;padding:6px;border-radius:4px}</style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o9N1j8G+6kQqk6x4p3K0gq1b6x3k2yGqF2xvVfQ4n6A=" crossorigin=""></script>
+  <script>
+    // Load static JSON exported by the backend
+    const url = './export_conflicts_sample.json';
+
+    // Initialize map centered on Ndola (from .env)
+    const map = L.map('map').setView([ -12.9640, 28.6367 ], 12);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    function colorForConfidence(c) {
+      if (c === null) return '#999999';
+      if (c >= 0.6) return '#ff0000';
+      if (c >= 0.3) return '#ff8c00';
+      return '#ffd700';
+    }
+
+    fetch(url)
+      .then(r => r.json())
+      .then(data => {
+        if (!data || !data.results) return;
+        data.results.forEach(item => {
+          const geo = item.parcel_geojson;
+          const conf = item.confidence_score;
+          const title = item.title + '\nConfidence: ' + (conf !== null ? conf.toFixed(3) : 'n/a') + '\nOverlap: ' + (item.overlap_percentage !== null ? (item.overlap_percentage*100).toFixed(2)+'%' : 'n/a');
+
+          if (geo && geo.type === 'Polygon') {
+            const coords = geo.coordinates[0].map(c => [c[1], c[0]]); // GeoJSON lon,lat -> lat,lon
+            const poly = L.polygon(coords, {color: colorForConfidence(conf), weight:2, fillOpacity: 0.25}).addTo(map);
+            poly.bindPopup(`<strong>${item.parcel.parcel_number}</strong><br/>${item.parcel.owner_name || ''}<br/>${title.replace(/\n/g,'<br/>')}`);
+          } else if (geo && geo.type === 'MultiPolygon') {
+            const polys = geo.coordinates.map(ring => ring[0].map(c => [c[1], c[0]]));
+            const mp = L.polygon(polys, {color: colorForConfidence(conf), weight:2, fillOpacity:0.25}).addTo(map);
+            mp.bindPopup(`<strong>${item.parcel.parcel_number}</strong><br/>${item.parcel.owner_name || ''}<br/>${title.replace(/\n/g,'<br/>')}`);
+          } else {
+            // No geometry - place a marker near Ndola center for demo
+            const marker = L.circleMarker([-12.9640, 28.6367], {radius:6, color: colorForConfidence(conf)}).addTo(map);
+            marker.bindPopup(`<strong>${item.parcel ? item.parcel.parcel_number : 'Unknown'}</strong><br/>${title.replace(/\n/g,'<br/>')}`);
+          }
+        });
+      })
+      .catch(err => {
+        console.error('Failed to load conflicts JSON', err);
+        const el = L.control({position:'topright'});
+        el.onAdd = function(){
+          const d = L.DomUtil.create('div','legend'); d.innerHTML = '<strong>Error loading JSON</strong><br/>' + err;
+          return d;
+        }
+        el.addTo(map);
+      });
+  </script>
+</body>
+</html>

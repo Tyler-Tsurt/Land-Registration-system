@@ -1,0 +1,768 @@
+/* Ndola Land Registry System - Custom CSS */
+
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #0dcaf0;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --zambia-green: #198754;
+    --zambia-red: #dc3545;
+    --zambia-orange: #fd7e14;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.min-vh-50 {
+    min-height: 50vh;
+}
+
+/* Navigation Styles */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--zambia-green) 80%);
+    position: relative;
+    padding: 120px 0 80px;
+    margin-top: -1rem;
+    /* remove slanted bottom edge so hero has a straight horizontal bottom */
+    clip-path: none;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    min-height: 60vh;
+    margin-bottom: 2.5rem;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+/* Hero dark mode adjustments */
+html[data-theme="dark"] .hero-section {
+    background: linear-gradient(135deg, #0c4a6e 0%, #065f46 80%);
+}
+
+html[data-theme="dark"] .hero-overlay {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+/* Hero content spacing */
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+    padding: 2rem 1rem;
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 80px 0 60px;
+    }
+    .hero-section .display-4 {
+        font-size: 2.2rem;
+    }
+    .hero-section .lead {
+        font-size: 1.1rem;
+    }
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image {
+    text-align: center;
+}
+
+.hero-image i {
+    font-size: 12rem;
+    opacity: 0.25;
+    animation: float 3s ease-in-out infinite;
+    margin-top: 1rem;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Feature Cards */
+.feature-card {
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), var(--zambia-green));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.2rem;
+    box-shadow: 0 2px 8px rgba(13, 110, 253, 0.08);
+}
+
+.feature-icon i {
+    font-size: 2.2rem;
+    color: white;
+}
+
+.feature-card h4 {
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.feature-card p {
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+/* Statistics Section */
+.stat-card {
+    padding: 1.5rem 1rem;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.stat-number {
+    font-size: 2.7rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.stat-label {
+    color: var(--secondary-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+/* Call to Action Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--dark-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    text-align: center;
+    padding: 3rem 0 2.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+/* Dark-mode specific CTA adjustments: keep CTA visibly dark and readable */
+html[data-theme="dark"] .cta-section {
+    /* Use a deeper navy-to-green gradient to retain contrast in dark mode */
+    background: linear-gradient(135deg, #021122 0%, rgba(16,185,129,0.08) 100%);
+    color: var(--dark-color);
+}
+
+/* Buttons inside CTA should invert appropriately in dark mode */
+html[data-theme="dark"] .cta-section .btn-light {
+    background: transparent;
+    color: var(--dark-color);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+html[data-theme="dark"] .cta-section .btn-outline-light {
+    color: var(--dark-color);
+    border-color: rgba(255,255,255,0.06);
+}
+
+/* Form Styles */
+.form-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.form-section {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #f8f9fa;
+}
+
+.form-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.section-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.section-title i {
+    margin-right: 0.5rem;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.form-control, .form-select {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 0.75rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* File Upload Styles */
+.file-upload-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+
+.file-upload-input {
+    position: absolute;
+    left: -9999px;
+}
+
+.file-upload-label {
+    display: block;
+    padding: 0.75rem 1rem;
+    background-color: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file-upload-label:hover {
+    background-color: #e9ecef;
+    border-color: var(--primary-color);
+}
+
+.file-upload-label i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Button Styles */
+.btn {
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s cubic-bezier(.4,0,.2,1);
+    box-shadow: 0 2px 8px rgba(13,110,253,0.04);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), #0b5ed7);
+    border: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, var(--success-color), #157347);
+    border: none;
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(25, 135, 84, 0.4);
+}
+
+/* Alert Styles */
+.alert {
+    border: none;
+    border-radius: 8px;
+    border-left: 4px solid;
+    font-weight: 500;
+}
+
+.alert-success {
+    border-left-color: var(--success-color);
+    background-color: rgba(25, 135, 84, 0.1);
+    color: var(--success-color);
+}
+
+.alert-danger {
+    border-left-color: var(--danger-color);
+    background-color: rgba(220, 53, 69, 0.1);
+    color: var(--danger-color);
+}
+
+.alert-warning {
+    border-left-color: var(--warning-color);
+    background-color: rgba(255, 193, 7, 0.1);
+    color: #856404;
+}
+
+.alert-info {
+    border-left-color: var(--info-color);
+    background-color: rgba(13, 202, 240, 0.1);
+    color: var(--info-color);
+}
+
+/* Admin Dashboard Styles */
+.dashboard-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+}
+
+.dashboard-stat {
+    text-align: center;
+}
+
+.dashboard-stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.dashboard-stat-label {
+    color: var(--secondary-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Table Styles */
+.table-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.table {
+    margin: 0;
+}
+
+.table thead th {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* Badge Styles */
+.badge {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 20px;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 50px 0 30px;
+        min-height: 40vh;
+    }
+    .hero-image i {
+        font-size: 7rem;
+    }
+    .display-4 {
+        font-size: 1.7rem;
+    }
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    .dashboard-stat-number {
+        font-size: 1.5rem;
+    }
+    .feature-card {
+        padding: 1.2rem 0.7rem;
+    }
+    .cta-section {
+        padding: 2rem 0 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .feature-card {
+        padding: 1.5rem;
+    }
+    
+    .form-card {
+        padding: 1.5rem;
+    }
+    
+    .btn {
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Utility Classes */
+.text-zambia-green {
+    color: var(--zambia-green) !important;
+}
+
+.bg-zambia-green {
+    background-color: var(--zambia-green) !important;
+}
+
+.border-zambia-green {
+    border-color: var(--zambia-green) !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.shadow {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.shadow-lg {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Dark mode variables and overrides */
+html[data-theme="dark"] {
+    --primary-color: #60a5fa; /* lighter blue */
+    --secondary-color: #9ca3af;
+    --success-color: #34d399;
+    --danger-color: #f87171;
+    --warning-color: #fbbf24;
+    --info-color: #60f0ff;
+    --light-color: #0f172a;
+    --dark-color: #e6eef8;
+    --zambia-green: #10b981;
+    --zambia-red: #fb7185;
+    --zambia-orange: #fb923c;
+}
+
+html[data-theme="dark"] body {
+    background: #071028;
+    color: #dbeafe;
+}
+
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .form-card,
+html[data-theme="dark"] .feature-card,
+html[data-theme="dark"] .table-container,
+html[data-theme="dark"] .dashboard-card {
+    background: #071a2b;
+    color: var(--dark-color);
+    box-shadow: 0 8px 20px rgba(2,6,23,0.6);
+}
+
+html[data-theme="dark"] .form-control,
+html[data-theme="dark"] .form-select {
+    background: #0b2233;
+    color: var(--dark-color);
+    border-color: rgba(255,255,255,0.10);
+}
+
+/* Improve focus / contrast in dark mode for inputs */
+html[data-theme="dark"] .form-control:focus,
+html[data-theme="dark"] .form-select:focus {
+    outline: none;
+    border-color: rgba(255,255,255,0.18);
+    box-shadow: 0 0 0 0.2rem rgba(96,165,250,0.12);
+}
+
+/* Placeholder and select-option contrast in dark mode */
+html[data-theme="dark"] .form-control::-webkit-input-placeholder,
+html[data-theme="dark"] .form-select::-webkit-input-placeholder,
+html[data-theme="dark"] textarea::-webkit-input-placeholder { color: rgba(230,238,248,0.70) !important; opacity: 1 !important; }
+
+html[data-theme="dark"] .form-control::-moz-placeholder,
+html[data-theme="dark"] .form-select::-moz-placeholder,
+html[data-theme="dark"] textarea::-moz-placeholder { color: rgba(230,238,248,0.70) !important; opacity: 1 !important; }
+
+html[data-theme="dark"] .form-control:-ms-input-placeholder,
+html[data-theme="dark"] .form-select:-ms-input-placeholder,
+html[data-theme="dark"] textarea:-ms-input-placeholder { color: rgba(230,238,248,0.70) !important; opacity: 1 !important; }
+
+html[data-theme="dark"] .form-control::placeholder,
+html[data-theme="dark"] .form-select::placeholder,
+html[data-theme="dark"] textarea::placeholder { color: rgba(230,238,248,0.70) !important; opacity: 1 !important; }
+
+/* Ensure select option text is visible when dropdown is opened in dark mode */
+html[data-theme="dark"] .form-select option {
+    color: var(--dark-color) !important;
+    background: #071a2b;
+}
+
+
+html[data-theme="dark"] .navbar,
+html[data-theme="dark"] .navbar-brand,
+html[data-theme="dark"] .navbar-nav .nav-link {
+    color: var(--dark-color) !important;
+}
+
+html[data-theme="dark"] .table thead th {
+    background-color: rgba(255,255,255,0.06);
+    color: var(--dark-color);
+}
+
+html[data-theme="dark"] footer {
+    background: #021122;
+    color: var(--secondary-color);
+}
+
+/* Make utility background classes adapt in dark mode so sections don't stay white */
+html[data-theme="dark"] .bg-light,
+html[data-theme="dark"] .bg-white,
+html[data-theme="dark"] .section.bg-light {
+    background-color: transparent !important;
+    color: var(--dark-color) !important;
+}
+
+/* Ensure full-height light-bg sections (e.g., login/register) use dark background in dark mode */
+html[data-theme="dark"] section.bg-light.min-vh-100 {
+    background-color: #071028 !important;
+}
+
+/* Ensure form-card stands out even when wrapped by a light-bg container */
+html[data-theme="dark"] .form-card {
+    background: #071a2b !important;
+    color: var(--dark-color) !important;
+}
+
+/* Statistics cards: make them adapt to dark mode */
+html[data-theme="dark"] .stat-card {
+    background: #071a2b;
+    color: var(--dark-color);
+    box-shadow: 0 8px 24px rgba(2,6,23,0.6);
+}
+
+html[data-theme="dark"] .stat-number {
+    /* keep accent but ensure contrast */
+    color: var(--primary-color) !important;
+}
+
+html[data-theme="dark"] .stat-label {
+    color: var(--secondary-color) !important;
+}
+
+
+/* Alerts in dark mode: slightly stronger backgrounds and visible left border */
+html[data-theme="dark"] .alert {
+    background-color: rgba(255,255,255,0.03);
+    color: var(--dark-color);
+    border-left-color: rgba(255,255,255,0.12);
+}
+
+html[data-theme="dark"] .alert-success {
+    border-left-color: var(--zambia-green);
+    background-color: rgba(16,185,129,0.06);
+    color: var(--zambia-green);
+}
+
+html[data-theme="dark"] .alert-danger {
+    border-left-color: var(--zambia-red);
+    background-color: rgba(251,113,133,0.06);
+    color: var(--zambia-red);
+}
+
+html[data-theme="dark"] .alert-warning {
+    border-left-color: var(--zambia-orange);
+    background-color: rgba(251,146,60,0.04);
+    color: var(--zambia-orange);
+}
+
+/* utilities for theme toggler */
+.theme-toggle-btn { background: transparent; border: 1px solid rgba(255,255,255,0.06); color: inherit; padding: 6px 10px; border-radius: 8px }
+
+/* Improve contrast for key text elements in dark mode */
+html[data-theme="dark"] .hero-section h1,
+html[data-theme="dark"] .hero-section .display-4,
+html[data-theme="dark"] .hero-section .lead,
+html[data-theme="dark"] .feature-card h4,
+html[data-theme="dark"] .feature-card p,
+html[data-theme="dark"] .stat-label,
+html[data-theme="dark"] .stat-number,
+html[data-theme="dark"] .cta-section h2,
+html[data-theme="dark"] .cta-section p,
+html[data-theme="dark"] .navbar-nav .nav-link {
+    color: var(--dark-color) !important;
+}
+
+/* Utility to force fully white text where needed in dark mode */
+.text-bright { color: #ffffff !important; }
+
+/* Additional dark-mode contrast fixes for components that have inline/light styles */
+html[data-theme="dark"] .custom-file-label,
+html[data-theme="dark"] .file-upload-label,
+html[data-theme="dark"] .card-preview {
+    background: #071a2b !important;
+    border-color: rgba(255,255,255,0.06) !important;
+    color: var(--dark-color) !important;
+}
+
+html[data-theme="dark"] .custom-file-label .file-name-preview,
+html[data-theme="dark"] .file-upload-label,
+html[data-theme="dark"] .file-upload-label i {
+    color: var(--dark-color) !important;
+}
+
+/* Payment tiles (register page) often use white backgrounds inline — make them visible in dark mode */
+html[data-theme="dark"] .pay-tile {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border: 1px solid rgba(255,255,255,0.04) !important;
+    color: var(--dark-color) !important;
+    box-shadow: 0 6px 16px rgba(2,6,23,0.5);
+}
+
+html[data-theme="dark"] .pay-tile:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 26px rgba(2,6,23,0.6);
+}
+
+html[data-theme="dark"] .pay-tile.selected {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 12px 28px rgba(2,6,23,0.7) !important;
+}
+
+/* Ensure small helper text and muted text have sufficient contrast */
+html[data-theme="dark"] .form-text,
+html[data-theme="dark"] .small,
+html[data-theme="dark"] .text-muted {
+    color: rgba(230,238,248,0.80) !important;
+}
+
+/* Make inline labels that were white in light mode darker-backed and readable */
+html[data-theme="dark"] .pay-tile .small,
+html[data-theme="dark"] .custom-file-label .file-name-preview {
+    color: rgba(230,238,248,0.95) !important;
+}
+
+/* Improve contrast for very small UI elements like badges in dark mode */
+html[data-theme="dark"] .badge {
+    background: rgba(255,255,255,0.06) !important;
+    color: var(--dark-color) !important;
+}
+
+/* Ensure dashboard stat numbers using utility color classes remain visible in dark mode */
+html[data-theme="dark"] .dashboard-stat-number.text-warning { color: var(--warning-color) !important; }
+html[data-theme="dark"] .dashboard-stat-number.text-success { color: var(--success-color) !important; }
+html[data-theme="dark"] .dashboard-stat-number.text-danger  { color: var(--danger-color)  !important; }
+html[data-theme="dark"] .dashboard-stat-number.text-info    { color: var(--info-color)    !important; }
+
+/* If the dashboard card uses bg-light (which becomes transparent in dark mode), ensure the stat label remains readable */
+html[data-theme="dark"] .dashboard-card .dashboard-stat-label { color: rgba(230,238,248,0.85) !important; }
+
+/* Fix for filter tabs in dark mode */
+html[data-theme="dark"] .filter-tab {
+    background: #0b2233;
+    color: var(--dark-color);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+html[data-theme="dark"] .filter-tab:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: rgba(96, 165, 250, 0.1);
+}
+
+html[data-theme="dark"] .filter-tab.active {
+    background: var(--primary-color);
+    color: #071028;
+    border-color: var(--primary-color);
+    font-weight: bold;
+}

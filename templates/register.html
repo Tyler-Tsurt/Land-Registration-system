@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Ndola Land Registry System</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <i class="fas fa-map-marker-alt me-2"></i>
+                Ndola Land Registry
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="{{ url_for('index') }}">
+                    <i class="fas fa-home me-1"></i>Home
+                </a>
+                <a class="nav-link" href="{{ url_for('login') }}">
+                    <i class="fas fa-sign-in-alt me-1"></i>Sign In
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Registration Section -->
+    <section class="py-5 bg-light min-vh-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="form-card">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-user-plus text-success" style="font-size: 3rem;"></i>
+                            <h2 class="mt-3 mb-1">Create Your Account</h2>
+                            <p class="text-muted">Join the Ndola Land Registry System</p>
+                        </div>
+
+                        <!-- Display flash messages -->
+                        {% with messages = get_flashed_messages(with_categories=true) %}
+                            {% if messages %}
+                                {% for category, message in messages %}
+                                    <div class="alert alert-{{ 'danger' if category == 'error' else category }} alert-dismissible fade show">
+                                        {{ message }}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        {% endwith %}
+
+                        <form method="POST" id="registerForm" novalidate>
+                            <!-- Personal Information Section -->
+                            <div class="form-section">
+                                <h4 class="section-title">
+                                    <i class="fas fa-user"></i>Personal Information
+                                </h4>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="first_name" class="form-label">First Name *</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                            <input type="text" class="form-control" id="first_name" name="first_name" required>
+                                            <div class="invalid-feedback">Please provide your first name.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="last_name" class="form-label">Last Name *</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                            <input type="text" class="form-control" id="last_name" name="last_name" required>
+                                            <div class="invalid-feedback">Please provide your last name.</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Email Address *</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                            <input type="email" class="form-control" id="email" name="email" required>
+                                            <div class="invalid-feedback">Please provide a valid email address.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="phone_number" class="form-label">Phone Number *</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                                            <input type="tel" class="form-control" id="phone_number" name="phone_number" 
+                                                   placeholder="+260971234567" required>
+                                            <div class="invalid-feedback">Please provide a valid phone number.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Account Information Section -->
+                            <div class="form-section">
+                                <h4 class="section-title">
+                                    <i class="fas fa-key"></i>Account Information
+                                </h4>
+                                
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+                                        <label for="username" class="form-label">Username *</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-user-circle"></i></span>
+                                            <input type="text" class="form-control" id="username" name="username" 
+                                                   placeholder="Choose a unique username" required>
+                                            <div class="invalid-feedback">Please choose a username (3-20 characters).</div>
+                                        </div>
+                                        <small class="form-text text-muted">Username must be 3-20 characters long and unique.</small>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="password" class="form-label">Password *</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                            <input type="password" class="form-control" id="password" name="password" required>
+                                            <button type="button" class="btn btn-outline-secondary" id="togglePassword">
+                                                <i class="fas fa-eye" id="toggleIcon"></i>
+                                            </button>
+                                        </div>
+                                        <div class="invalid-feedback">Password must be at least 8 characters long.</div>
+                                        <small class="form-text text-muted">
+                                            Password must contain at least 8 characters with uppercase, lowercase, and numbers.
+                                        </small>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="confirm_password" class="form-label">Confirm Password *</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                            <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
+                                            <button type="button" class="btn btn-outline-secondary" id="toggleConfirmPassword">
+                                                <i class="fas fa-eye" id="toggleConfirmIcon"></i>
+                                            </button>
+                                        </div>
+                                        <div class="invalid-feedback">Passwords do not match.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Terms and Privacy Section -->
+                            <div class="form-section">
+                                <h4 class="section-title">
+                                    <i class="fas fa-shield-alt"></i>Terms and Privacy
+                                </h4>
+                                
+                                <div class="alert alert-info">
+                                    <h6><i class="fas fa-info-circle me-2"></i>Account Information</h6>
+                                    <ul class="mb-0 small">
+                                        <li>Your account will be created as a <strong>Citizen</strong> account</li>
+                                        <li>You can submit and track land registration applications</li>
+                                        <li>Your personal information is protected and secure</li>
+                                        <li>Admin accounts are created by system administrators only</li>
+                                    </ul>
+                                </div>
+
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="agree_terms" name="agree_terms" required>
+                                    <label class="form-check-label" for="agree_terms">
+                                        I agree to the <a href="#" class="text-primary">Terms of Service</a> and 
+                                        <a href="#" class="text-primary">Privacy Policy</a> *
+                                    </label>
+                                    <div class="invalid-feedback">You must agree to the terms and conditions.</div>
+                                </div>
+
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="email_notifications" name="email_notifications" checked>
+                                    <label class="form-check-label" for="email_notifications">
+                                        I want to receive email notifications about my applications
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-success btn-lg me-3">
+                                    <i class="fas fa-user-plus me-2"></i>Create Account
+                                </button>
+                                <a href="{{ url_for('login') }}" class="btn btn-outline-secondary btn-lg">
+                                    <i class="fas fa-arrow-left me-2"></i>Back to Login
+                                </a>
+                            </div>
+
+                        </form>
+
+                        <!-- Already have account -->
+                        <div class="text-center mt-4">
+                            <hr class="my-4">
+                            <p class="text-muted">Already have an account?</p>
+                            <a href="{{ url_for('login') }}" class="btn btn-outline-primary">
+                                <i class="fas fa-sign-in-alt me-2"></i>Sign In Instead
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Ndola Land Registry System</h5>
+                    <p class="mb-0">Powered by AI and GIS Technology</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">&copy; 2025 Ministry of Lands, Zambia. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Password toggle functionality
+        function setupPasswordToggle(passwordFieldId, toggleButtonId, toggleIconId) {
+            document.getElementById(toggleButtonId).addEventListener('click', function() {
+                const passwordField = document.getElementById(passwordFieldId);
+                const toggleIcon = document.getElementById(toggleIconId);
+                
+                if (passwordField.type === 'password') {
+                    passwordField.type = 'text';
+                    toggleIcon.classList.remove('fa-eye');
+                    toggleIcon.classList.add('fa-eye-slash');
+                } else {
+                    passwordField.type = 'password';
+                    toggleIcon.classList.remove('fa-eye-slash');
+                    toggleIcon.classList.add('fa-eye');
+                }
+            });
+        }
+
+        // Setup password toggles
+        setupPasswordToggle('password', 'togglePassword', 'toggleIcon');
+        setupPasswordToggle('confirm_password', 'toggleConfirmPassword', 'toggleConfirmIcon');
+
+        // Form validation
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            const form = this;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+            const username = document.getElementById('username').value;
+            
+            let isValid = true;
+
+            // Password strength validation
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/;
+            const passwordField = document.getElementById('password');
+            
+            if (!passwordRegex.test(password)) {
+                passwordField.setCustomValidity('Password must be at least 8 characters with uppercase, lowercase, and numbers');
+                isValid = false;
+            } else {
+                passwordField.setCustomValidity('');
+            }
+
+            // Password match validation
+            const confirmPasswordField = document.getElementById('confirm_password');
+            if (password !== confirmPassword) {
+                confirmPasswordField.setCustomValidity('Passwords do not match');
+                isValid = false;
+            } else {
+                confirmPasswordField.setCustomValidity('');
+            }
+
+            // Username validation
+            const usernameField = document.getElementById('username');
+            if (username.length < 3 || username.length > 20) {
+                usernameField.setCustomValidity('Username must be 3-20 characters long');
+                isValid = false;
+            } else {
+                usernameField.setCustomValidity('');
+            }
+
+            // Phone number validation
+            const phoneField = document.getElementById('phone_number');
+            const phonePattern = /^\+260\d{9}$/;
+            if (!phonePattern.test(phoneField.value)) {
+                phoneField.setCustomValidity('Phone format should be: +260971234567');
+                isValid = false;
+            } else {
+                phoneField.setCustomValidity('');
+            }
+
+            if (!form.checkValidity() || !isValid) {
+                e.preventDefault();
+                e.stopPropagation();
+            } else {
+                // Show loading state
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<span class="loading me-2"></span>Creating Account...';
+                submitBtn.disabled = true;
+                
+                // Re-enable after 5 seconds if form is still on page
+                setTimeout(() => {
+                    if (document.body.contains(submitBtn)) {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    }
+                }, 5000);
+            }
+
+            form.classList.add('was-validated');
+        });
+
+        // Real-time password match validation
+        document.getElementById('confirm_password').addEventListener('input', function() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = this.value;
+            
+            if (confirmPassword && password !== confirmPassword) {
+                this.setCustomValidity('Passwords do not match');
+            } else {
+                this.setCustomValidity('');
+            }
+        });
+
+        // Real-time username validation
+        document.getElementById('username').addEventListener('input', function() {
+            const username = this.value;
+            if (username.length > 0 && (username.length < 3 || username.length > 20)) {
+                this.setCustomValidity('Username must be 3-20 characters long');
+            } else {
+                this.setCustomValidity('');
+            }
+        });
+
+        // Auto-focus first name field
+        document.getElementById('first_name').focus();
+
+        // Password strength indicator
+        document.getElementById('password').addEventListener('input', function() {
+            const password = this.value;
+            const strengthIndicator = document.getElementById('password-strength');
+            
+            if (password.length === 0) return;
+            
+            let strength = 0;
+            let feedback = [];
+            
+            // Length check
+            if (password.length >= 8) strength++;
+            else feedback.push('at least 8 characters');
+            
+            // Uppercase check
+            if (/[A-Z]/.test(password)) strength++;
+            else feedback.push('uppercase letter');
+            
+            // Lowercase check  
+            if (/[a-z]/.test(password)) strength++;
+            else feedback.push('lowercase letter');
+            
+            // Number check
+            if (/\d/.test(password)) strength++;
+            else feedback.push('number');
+            
+            // Update strength indicator if it exists
+            if (strengthIndicator) {
+                const strengthLevels = ['Weak', 'Fair', 'Good', 'Strong'];
+                const strengthColors = ['danger', 'warning', 'info', 'success'];
+                
+                strengthIndicator.className = `small text-${strengthColors[Math.min(strength - 1, 3)]}`;
+                strengthIndicator.textContent = `Password strength: ${strengthLevels[Math.min(strength - 1, 3)]}`;
+                
+                if (feedback.length > 0) {
+                    strengthIndicator.textContent += ` (missing: ${feedback.join(', ')})`;
+                }
+            }
+        });
+    </script>
+        <script>
+            // Apply stored theme on pages that don't extend base.html
+            (function(){try{var s=localStorage.getItem('ndola_theme'); if(s==='dark'||(!s&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.setAttribute('data-theme','dark');}catch(e){} })();
+        </script>
+</body>
+</html>

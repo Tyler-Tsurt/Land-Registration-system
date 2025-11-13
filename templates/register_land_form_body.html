@@ -1,0 +1,342 @@
+<!-- Personal -->
+<section class="card p-3 mb-4" aria-labelledby="personalHeading">
+  <h2 id="personalHeading" class="h5 mb-3"><i class="fas fa-user text-primary me-2"></i>Personal information</h2>
+  <div class="row g-3">
+    <div class="col-md-6">
+      <label for="applicant_name" class="form-label">Full name <span class="required-star">*</span></label>
+        <input id="applicant_name" name="applicant_name" class="form-control form-control-lg" placeholder="Jane Doe" required aria-required="true" value="{{ application.applicant_name if application else '' }}">
+      <div class="invalid-feedback">Please enter your full name.</div>
+    </div>
+    <div class="col-md-6">
+      <label for="nrc_number" class="form-label">NRC number <span class="required-star">*</span></label>
+      <input id="nrc_number" name="nrc_number" class="form-control form-control-lg" placeholder="123456/78/9" required aria-describedby="nrcHelp" maxlength="11" value="{{ application.nrc_number if application else '' }}">
+      <div id="nrcHelp" class="form-text">Format: 6 digits / 2 digits / 1 digit (e.g., 123456/78/9)</div>
+      <div class="invalid-feedback" id="nrcFeedback">Enter a valid NRC number.</div>
+    </div>
+
+    <div class="col-md-6">
+      <label for="tpin_number" class="form-label">TPIN number <span class="required-star">*</span></label>
+      <input id="tpin_number" name="tpin_number" class="form-control form-control-lg" placeholder="1234567890" required maxlength="10" inputmode="numeric" value="{{ application.tpin_number if application else '' }}">
+      <div id="tpinHelp" class="form-text">Enter 10 digits</div>
+      <div class="invalid-feedback" id="tpinFeedback">Enter a valid 10-digit TPIN.</div>
+    </div>
+
+    <div class="col-md-6">
+      <label for="phone_number" class="form-label">Phone <span class="required-star">*</span></label>
+      <input id="phone_number" name="phone_number" class="form-control form-control-lg" placeholder="260971234567 or 0971234567" required inputmode="numeric" maxlength="12" value="{{ application.phone_number if application else '' }}">
+      <div class="form-text">Enter 10 digits (e.g., 0971234567) or 12 digits with country code (e.g., 260971234567)</div>
+      <div class="invalid-feedback" id="phoneFeedback">Please enter a valid phone number (10 or 12 digits).</div>
+    </div>
+
+    <div class="col-12">
+      <label for="email" class="form-label">Email <span class="required-star">*</span></label>
+      <input id="email" name="email" type="email" class="form-control form-control-lg" placeholder="name@example.com" required aria-describedby="emailFeedback" value="{{ application.email if application else '' }}">
+      <div id="emailFeedback" class="invalid-feedback">Please enter a valid email address.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Land & Map -->
+<section class="card p-3 mb-4" aria-labelledby="landHeading">
+  <h2 id="landHeading" class="h5 mb-3"><i class="fas fa-map text-primary me-2"></i>Land information & map</h2>
+  <div class="mb-3">
+  <label for="land_location" class="form-label">Location description <span class="required-star">*</span></label>
+  <textarea id="land_location" name="land_location" class="form-control" rows="2" placeholder="Plot number, street, ward..." required>{{ application.land_location if application else '' }}</textarea>
+    <div class="invalid-feedback">Describe the location of the land.</div>
+  </div>
+
+  <div class="d-flex flex-column flex-md-row align-items-start gap-3 mb-3">
+    <input id="searchBox" class="form-control me-0 me-md-2" style="max-width:420px" placeholder="Search place or address" aria-label="Search place">
+    <div class="d-flex gap-2">
+      <button type="button" id="btnLocate" class="btn btn-outline-primary">Use my location</button>
+      <button type="button" id="btnResetMap" class="btn btn-outline-secondary">Clear</button>
+    </div>
+  </div>
+
+  <div id="map" class="mb-3" role="application" aria-label="Map for drawing parcel"></div>
+  <input type="hidden" id="land_geometry" name="land_geometry" required>
+
+  <div class="row g-3">
+    <div class="col-md-6">
+      <label for="land_size" class="form-label">Land size (hectares)</label>
+      <input id="land_size" name="land_size" class="form-control" readonly aria-readonly="true" value="{{ application.land_size if application else '' }}">
+    </div>
+    <div class="col-md-6">
+      <label for="land_use" class="form-label">Intended use <span class="required-star">*</span></label>
+      <select id="land_use" name="land_use" class="form-select" required>
+        <option value="">Choose use</option>
+        <option value="residential" {% if application and application.land_use=='residential' %}selected{% endif %}>Residential</option>
+        <option value="commercial" {% if application and application.land_use=='commercial' %}selected{% endif %}>Commercial</option>
+        <option value="industrial" {% if application and application.land_use=='industrial' %}selected{% endif %}>Industrial</option>
+        <option value="agricultural" {% if application and application.land_use=='agricultural' %}selected{% endif %}>Agricultural</option>
+        <option value="mixed" {% if application and application.land_use=='mixed' %}selected{% endif %}>Mixed use</option>
+        <option value="institutional" {% if application and application.land_use=='institutional' %}selected{% endif %}>Institutional</option>
+      </select>
+    </div>
+  </div>
+</section>
+
+<!-- Registration type & fee (moved above required documents) -->
+<section class="card p-3 mb-4">
+  <div class="row g-3 align-items-center">
+    <div class="col-md-6">
+      <label for="registration_type" class="form-label">Registration type <span class="required-star">*</span></label>
+      <select id="registration_type" name="registration_type" class="form-select" required>
+        <option value="">Select type</option>
+        <option value="transfer">Transfer of Land (Conveyance)</option>
+        <option value="lease">Lease Registration / Lodgement</option>
+        <option value="mortgage">Mortgage / Charge Registration</option>
+        <option value="title_issue">Certificate of Title Issuance / New Title</option>
+        <option value="subdivision">Sub-division / Amalgamation</option>
+        <option value="replacement">Replacement / Lost Title</option>
+        <option value="change_ownership">Change of Ownership / Assignment</option>
+        <option value="caveat">Caveat Registration / Withdrawal</option>
+      </select>
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Registration fee (ZMW)</label>
+      <input id="registration_fee" name="registration_fee" class="form-control" readonly aria-readonly="true" value="{{ application.processing_fee if application else '' }}">
+      <input type="hidden" id="payment_amount" name="payment_amount" value="0.00">
+    </div>
+    <div class="col-12 mt-2">
+      <label for="declared_value" class="form-label">Declared Property Value (ZMW)</label>
+      <input id="declared_value" name="declared_value" class="form-control" placeholder="0.00" inputmode="decimal" pattern="^\d+(\.\d{1,2})?$" value="{{ application.declared_value if application else '' }}">
+      <div class="form-text">Enter declared market value. Required for Transfers, Mortgages and some other types. PTT and registration fees are calculated automatically.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Documents -->
+<section class="card p-3 mb-4" aria-labelledby="docsHeading">
+  <h2 id="docsHeading" class="h5 mb-3"><i class="fas fa-file-upload text-primary me-2"></i>Required documents</h2>
+  <p class="text-muted small mb-2">Required documents will update based on the selected registration type.</p>
+  <div id="requiredDocs" class="row g-3">
+    <!-- Individual document inputs (we will set required dynamically) -->
+    <div class="col-md-6 doc-field" data-doc="nrc_copy">
+      <label class="form-label">NRC copy <span class="required-star">*</span></label>
+      <label class="custom-file-label" for="nrc_copy"><i class="fas fa-id-card"></i> <span class="file-name-preview" data-default="Upload NRC/ID">Upload NRC/ID</span></label>
+      <input id="nrc_copy" name="nrc_copy" type="file" accept=".pdf,.jpg,.png" class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="tpin_certificate">
+      <label class="form-label">TPIN certificate <span class="required-star">*</span></label>
+      <label class="custom-file-label" for="tpin_certificate"><i class="fas fa-certificate"></i> <span class="file-name-preview" data-default="Upload TPIN">Upload TPIN</span></label>
+      <input id="tpin_certificate" name="tpin_certificate" type="file" accept=".pdf,.jpg,.png" class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="survey_map">
+      <label class="form-label">Survey map <span class="required-star">*</span></label>
+      <label class="custom-file-label" for="survey_map"><i class="fas fa-map-pin"></i> <span class="file-name-preview" data-default="Upload survey map">Upload survey map</span></label>
+      <input id="survey_map" name="survey_map" type="file" accept=".pdf,.jpg,.png" multiple class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="allocation_letter">
+      <label class="form-label">Allocation letter <span class="required-star">*</span></label>
+      <label class="custom-file-label" for="allocation_letter"><i class="fas fa-file-signature"></i> <span class="file-name-preview" data-default="Upload allocation letter">Upload allocation letter</span></label>
+      <input id="allocation_letter" name="allocation_letter" type="file" accept=".pdf,.jpg,.png" multiple class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="agreement_letter">
+      <label class="form-label">Agreement / Transfer document</label>
+      <label class="custom-file-label" for="agreement_letter"><i class="fas fa-file-contract"></i> <span class="file-name-preview" data-default="Upload agreement or transfer document">Upload agreement</span></label>
+      <input id="agreement_letter" name="agreement_letter" type="file" accept=".pdf,.jpg,.png" multiple class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="seller_id">
+      <label class="form-label">Seller NRC / Passport copy</label>
+      <label class="custom-file-label" for="seller_id"><i class="fas fa-id-card"></i> <span class="file-name-preview" data-default="Upload seller ID">Upload seller ID</span></label>
+      <input id="seller_id" name="seller_id" type="file" accept=".pdf,.jpg,.png" class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="buyer_id">
+      <label class="form-label">Buyer NRC / Passport copy</label>
+      <label class="custom-file-label" for="buyer_id"><i class="fas fa-id-card"></i> <span class="file-name-preview" data-default="Upload buyer ID">Upload buyer ID</span></label>
+      <input id="buyer_id" name="buyer_id" type="file" accept=".pdf,.jpg,.png" class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="seller_tpin">
+      <label class="form-label">Seller TPIN (copy)</label>
+      <label class="custom-file-label" for="seller_tpin"><i class="fas fa-certificate"></i> <span class="file-name-preview" data-default="Upload seller TPIN">Upload seller TPIN</span></label>
+      <input id="seller_tpin" name="seller_tpin" type="file" accept=".pdf,.jpg,.png" class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="buyer_tpin">
+      <label class="form-label">Buyer TPIN (copy)</label>
+      <label class="custom-file-label" for="buyer_tpin"><i class="fas fa-certificate"></i> <span class="file-name-preview" data-default="Upload buyer TPIN">Upload buyer TPIN</span></label>
+      <input id="buyer_tpin" name="buyer_tpin" type="file" accept=".pdf,.jpg,.png" class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="sale_agreement">
+      <label class="form-label">Sale Agreement (PDF)</label>
+      <label class="custom-file-label" for="sale_agreement"><i class="fas fa-file-contract"></i> <span class="file-name-preview" data-default="Upload sale agreement">Upload sale agreement</span></label>
+      <input id="sale_agreement" name="sale_agreement" type="file" accept=".pdf,.jpg,.png" multiple class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="current_title_deed">
+      <label class="form-label">Copy of Title Deed</label>
+      <label class="custom-file-label" for="current_title_deed"><i class="fas fa-file-alt"></i> <span class="file-name-preview" data-default="Upload title deed">Upload title deed</span></label>
+      <input id="current_title_deed" name="current_title_deed" type="file" accept=".pdf,.jpg,.png" multiple class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="offer_letter">
+      <label class="form-label">Offer Letter from Ministry/Council</label>
+      <label class="custom-file-label" for="offer_letter"><i class="fas fa-envelope"></i> <span class="file-name-preview" data-default="Upload offer letter">Upload offer letter</span></label>
+      <input id="offer_letter" name="offer_letter" type="file" accept=".pdf,.jpg,.png" multiple class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="lease_agreement">
+      <label class="form-label">Lease Agreement (3 copies)</label>
+      <label class="custom-file-label" for="lease_agreement"><i class="fas fa-file-signature"></i> <span class="file-name-preview" data-default="Upload lease agreement">Upload lease agreement</span></label>
+      <input id="lease_agreement" name="lease_agreement" type="file" accept=".pdf,.jpg,.png" multiple class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="proof_rent">
+      <label class="form-label">Proof of Annual Rent / Ground Rent</label>
+      <label class="custom-file-label" for="proof_rent"><i class="fas fa-receipt"></i> <span class="file-name-preview" data-default="Upload proof of rent">Upload proof</span></label>
+      <input id="proof_rent" name="proof_rent" type="file" accept=".pdf,.jpg,.png" multiple class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="mortgage_deed">
+      <label class="form-label">Mortgage Deed (PDF)</label>
+      <label class="custom-file-label" for="mortgage_deed"><i class="fas fa-file-contract"></i> <span class="file-name-preview" data-default="Upload mortgage deed">Upload mortgage deed</span></label>
+      <input id="mortgage_deed" name="mortgage_deed" type="file" accept=".pdf,.jpg,.png" multiple class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="lender_name_tpin">
+      <label class="form-label">Lender name & TPIN (document)</label>
+      <label class="custom-file-label" for="lender_name_tpin"><i class="fas fa-building"></i> <span class="file-name-preview" data-default="Upload lender TPIN">Upload lender TPIN</span></label>
+      <input id="lender_name_tpin" name="lender_name_tpin" type="file" accept=".pdf,.jpg,.png" class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="borrower_id">
+      <label class="form-label">Borrower NRC/Passport (copy)</label>
+      <label class="custom-file-label" for="borrower_id"><i class="fas fa-id-card"></i> <span class="file-name-preview" data-default="Upload borrower ID">Upload borrower ID</span></label>
+      <input id="borrower_id" name="borrower_id" type="file" accept=".pdf,.jpg,.png" class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="original_title_copy">
+      <label class="form-label">Original Title Copy</label>
+      <label class="custom-file-label" for="original_title_copy"><i class="fas fa-file-alt"></i> <span class="file-name-preview" data-default="Upload original title">Upload original title</span></label>
+      <input id="original_title_copy" name="original_title_copy" type="file" accept=".pdf,.jpg,.png" class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="application_letter">
+      <label class="form-label">Application Letter</label>
+      <label class="custom-file-label" for="application_letter"><i class="fas fa-file-alt"></i> <span class="file-name-preview" data-default="Upload application letter">Upload application letter</span></label>
+      <input id="application_letter" name="application_letter" type="file" accept=".pdf,.jpg,.png" multiple class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="police_report">
+      <label class="form-label">Police Report (Loss)</label>
+      <label class="custom-file-label" for="police_report"><i class="fas fa-file-medical"></i> <span class="file-name-preview" data-default="Upload police report">Upload police report</span></label>
+      <input id="police_report" name="police_report" type="file" accept=".pdf,.jpg,.png" multiple class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="statutory_declaration">
+      <label class="form-label">Statutory Declaration (Affidavit)</label>
+      <label class="custom-file-label" for="statutory_declaration"><i class="fas fa-file-signature"></i> <span class="file-name-preview" data-default="Upload affidavit">Upload affidavit</span></label>
+      <input id="statutory_declaration" name="statutory_declaration" type="file" accept=".pdf,.jpg,.png" multiple class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="gazette_notice">
+      <label class="form-label">Gazette Notice (if available)</label>
+      <label class="custom-file-label" for="gazette_notice"><i class="fas fa-newspaper"></i> <span class="file-name-preview" data-default="Upload gazette notice">Upload gazette notice</span></label>
+      <input id="gazette_notice" name="gazette_notice" type="file" accept=".pdf,.jpg,.png" multiple class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="assignment_deed">
+      <label class="form-label">Assignment Deed</label>
+      <label class="custom-file-label" for="assignment_deed"><i class="fas fa-file-contract"></i> <span class="file-name-preview" data-default="Upload assignment deed">Upload assignment deed</span></label>
+      <input id="assignment_deed" name="assignment_deed" type="file" accept=".pdf,.jpg,.png" multiple class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="old_title_copy">
+      <label class="form-label">Old Title Copy</label>
+      <label class="custom-file-label" for="old_title_copy"><i class="fas fa-file-alt"></i> <span class="file-name-preview" data-default="Upload old title copy">Upload old title</span></label>
+      <input id="old_title_copy" name="old_title_copy" type="file" accept=".pdf,.jpg,.png" multiple class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="caveat_document">
+      <label class="form-label">Caveat Document (PDF)</label>
+      <label class="custom-file-label" for="caveat_document"><i class="fas fa-file-alt"></i> <span class="file-name-preview" data-default="Upload caveat document">Upload caveat document</span></label>
+      <input id="caveat_document" name="caveat_document" type="file" accept=".pdf,.jpg,.png" multiple class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="proof_of_interest">
+      <label class="form-label">Proof of interest or court order</label>
+      <label class="custom-file-label" for="proof_of_interest"><i class="fas fa-gavel"></i> <span class="file-name-preview" data-default="Upload proof of interest">Upload proof</span></label>
+      <input id="proof_of_interest" name="proof_of_interest" type="file" accept=".pdf,.jpg,.png" multiple class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="withdrawal_letter">
+      <label class="form-label">Withdrawal Letter (for removal)</label>
+      <label class="custom-file-label" for="withdrawal_letter"><i class="fas fa-file-signature"></i> <span class="file-name-preview" data-default="Upload withdrawal letter">Upload withdrawal letter</span></label>
+      <input id="withdrawal_letter" name="withdrawal_letter" type="file" accept=".pdf,.jpg,.png" multiple class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="business_registration">
+      <label class="form-label">Business registration (for commercial)</label>
+      <label class="custom-file-label" for="business_registration"><i class="fas fa-briefcase"></i> <span class="file-name-preview" data-default="Upload business registration">Upload business reg.</span></label>
+      <input id="business_registration" name="business_registration" type="file" accept=".pdf,.jpg,.png" multiple class="form-control visually-hidden">
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="secured_amount">
+      <label class="form-label">Secured amount (ZMW)</label>
+      <input id="secured_amount" name="secured_amount" type="number" step="0.01" min="0" class="form-control" placeholder="0.00">
+      <div class="form-text">Enter amount secured by the mortgage. Used to calculate registration fee (2% of secured amount).</div>
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="annual_rent" style="display:none;">
+      <label class="form-label">Annual Rent / Ground Rent (ZMW)</label>
+      <input id="annual_rent" name="annual_rent" type="number" step="0.01" min="0" class="form-control" placeholder="0.00">
+      <div class="form-text">Enter the annual rent amount. Used to calculate registration fee (2% of annual rent).</div>
+    </div>
+
+    <div class="col-md-6 doc-field" data-doc="subdivision_plan">
+      <label class="form-label">Subdivision plan</label>
+      <label class="custom-file-label" for="subdivision_plan"><i class="fas fa-map"></i> <span class="file-name-preview" data-default="Upload subdivision plan">Upload subdivision plan</span></label>
+      <input id="subdivision_plan" name="subdivision_plan" type="file" accept=".pdf,.jpg,.png" multiple class="form-control visually-hidden">
+    </div>
+
+    <div class="col-12 doc-field" data-doc="additional_docs">
+      <label class="form-label">Additional documents (optional)</label>
+      <label class="custom-file-label" for="additional_docs"><i class="fas fa-folder-plus"></i> <span class="file-name-preview" data-default="Optional supporting documents">Optional supporting documents</span></label>
+      <input id="additional_docs" name="additional_docs" type="file" accept=".pdf,.jpg,.png" multiple class="form-control visually-hidden">
+    </div>
+  </div>
+</section>
+
+<!-- Payment -->
+<section class="card p-3 mb-4" aria-labelledby="paymentHeading">
+  <h2 id="paymentHeading" class="h5 mb-3"><i class="fas fa-receipt text-primary me-2"></i>Upload Payment Receipt</h2>
+  <p class="text-muted small">Please upload a clear photo or PDF of your payment receipt. Your application will be marked as 'pending' until an administrator verifies the payment.</p>
+  
+  <div class="col-12 doc-field" data-doc="payment_receipt">
+      <label class="form-label">Proof of Payment <span class="required-star">*</span></label>
+      <label class="custom-file-label" for="payment_receipt"><i class="fas fa-receipt"></i> <span class="file-name-preview" data-default="Upload payment receipt">Upload receipt</span></label>
+      <input id="payment_receipt" name="payment_receipt" type="file" accept=".pdf,.jpg,.png" class="form-control visually-hidden" required>
+      <div class="invalid-feedback">Please upload your payment receipt.</div>
+  </div>
+
+  <!-- hidden fields for client-side payment result -->
+  <input type="hidden" id="payment_status" name="payment_status" value="pending">
+</section>
+
+<!-- Fee summary -->
+<section class="card p-3 mb-4">
+  <h3 class="h6 mb-2">Fee summary</h3>
+  <div id="feeSummary" class="small">
+    <div id="feeDescription" class="text-muted mb-2" style="font-style: italic;"></div>
+    <div id="declaredValueRow" style="display:none;">Declared Value: <strong id="sumDeclared">ZMW 0.00</strong></div>
+    <div>Registration Fee: <strong id="sumReg">ZMW 0.00</strong></div>
+    <div class="mt-2"><strong>Total Payable: <span id="sumTotal">ZMW 0.00</span></strong></div>
+  </div>
+</section>
+
+<div class="d-flex gap-3 justify-content-center mb-5">
+  <button id="submitBtn" type="submit" class="btn btn-success btn-lg px-4" aria-live="polite">
+    <i class="fas fa-paper-plane me-2"></i>{% if edit_mode %}Update Application{% else %}Submit Application{% endif %}
+  </button>
+  <a class="btn btn-outline-secondary btn-lg" href="{{ url_for('application_status') if edit_mode else url_for('index') }}">Cancel</a>
+</div>

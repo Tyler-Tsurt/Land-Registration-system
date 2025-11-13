@@ -1,0 +1,607 @@
+Plot_Number,Owner_Name,NRC_Number,Location,Plot_Size_sq_m,Land_Use,Title_Deed,Tenure,Registration_Date,Encumbrances,GPS_Coordinates,Ground_Rent_Status
+NDL-0001,Chileshe Mulilo,356787/38/2,Masala,478,Mixed Use,TDR-2023-7912,Freehold,2005-09-02,None,"-12.989159,28.653111",Paid
+NDL-0002,Brian Mwanza,539898/38/7,Northrise,350,Residential,TDR-2018-6574,Leasehold (65 yrs),2008-06-27,None,"-12.968987,28.625622",Paid
+NDL-0003,Memory Mulilo,946335/15/7,Mapalo,600,Residential,TDR-2007-5803,State Land,2024-11-10,Boundary_Dispute,"-12.976061,28.658751",Paid
+NDL-0004,Moses Phiri,996865/39/1,Chipulukusu,8000,Industrial,TDR-2016-3664,Leasehold (65 yrs),2012-12-20,None,"-12.987855,28.671516",Paid
+NDL-0005,Grace Mwanza,864544/41/2,Kitwe Road,3000,Agricultural,TDR-2022-4598,Leasehold (65 yrs),2023-11-27,Mortgaged,"-12.995874,28.665199",Paid
+NDL-0006,Patrick Zulu,694731/50/3,Twapia,20000,Agricultural,TDR-2019-3340,Leasehold (65 yrs),2008-02-18,None,"-12.976668,28.634451",Paid
+NDL-0007,Alice Lungu,329974/27/8,Twapia,250,Residential,TDR-2008-3504,Leasehold (99 yrs),2022-10-07,None,"-12.975336,28.641162",Paid
+NDL-0008,Patricia Mwanza,112038/97/1,Mapalo,5000,Industrial,TDR-2008-5808,Leasehold (50 yrs),2008-07-19,None,"-12.961755,28.668172",Paid
+NDL-0009,Grace Sichone,211579/90/4,Kabushi,707,Mixed Use,TDR-2009-7126,Leasehold (99 yrs),2017-02-05,Auctioned,"-12.962948,28.670517",Paid
+NDL-0010,Esther Lungu,972064/49/3,Kansenshi,500,Commercial,TDR-2007-2403,Leasehold (50 yrs),2023-04-21,None,"-12.969097,28.662121",Paid
+NDL-0011,Mercy Kapasa,377932/77/9,Railway Line,500,Commercial,TDR-2011-6107,Leasehold (50 yrs),2020-01-25,None,"-12.981352,28.648467",Paid
+NDL-0012,Chibwe Mwape,716886/80/3,Lubuto,300,Residential,TDR-2006-4750,Freehold,2005-09-15,Boundary_Dispute,"-12.995307,28.63309",Paid
+NDL-0013,Nchimunya Chola,704201/70/3,Twapia,2000,Agricultural,TDR-2008-2588,Leasehold (50 yrs),2012-12-12,None,"-12.980253,28.660099",Paid
+NDL-0014,Esther Banda,522179/53/1,Lubuto,250,Commercial,TDR-2022-8350,Leasehold (99 yrs),2014-06-19,None,"-12.98042,28.668097",Paid
+NDL-0015,Simon Mwanza,202664/16/8,Mushili,400,Residential,TDR-2010-7658,Leasehold (50 yrs),2015-10-19,None,"-12.98276,28.623225",Paid
+NDL-0016,Patricia Mumba,399105/64/8,Twapia,250,Commercial,TDR-2014-4566,Freehold,2017-12-28,Mortgaged,"-12.995684,28.637248",Paid
+NDL-0017,Nelson Sichone,265080/17/8,Chifubu,200,Commercial,TDR-2024-2113,Leasehold (99 yrs),2014-01-21,None,"-12.964169,28.633542",Paid
+NDL-0018,Joseph Chola,692683/76/5,Northrise,800,Commercial,TDR-2015-4910,Leasehold (65 yrs),2013-11-17,None,"-12.973471,28.645147",Arrears
+NDL-0019,Chileshe Mumba,751332/82/1,Chifubu,736,Mixed Use,TDR-2021-5345,Leasehold (99 yrs),2012-10-30,Boundary_Dispute,"-12.964588,28.640324",Paid
+NDL-0020,Brian Chanda,741390/93/8,Mushili,913,Mixed Use,TDR-2008-3200,Leasehold (65 yrs),2007-08-04,Boundary_Dispute,"-12.969788,28.62855",Paid
+NDL-0021,Chibwe Zulu,820892/91/4,Kabushi,3000,Agricultural,TDR-2006-2512,Leasehold (50 yrs),2023-08-09,None,"-12.997865,28.662412",Paid
+NDL-0022,Angela Mumba,678478/64/8,Mushili,300,Residential,TDR-2009-9938,Freehold,2023-09-21,None,"-12.977004,28.643638",Paid
+NDL-0023,Nelson Banda,475190/36/3,Masala,10000,Industrial,TDR-2018-3532,Leasehold (99 yrs),2024-05-23,None,"-12.967604,28.629738",Paid
+NDL-0024,Ndola Estate Resources,941204/95/3,Northrise,1200,Commercial,TDR-2008-7267,Freehold,2024-04-04,None,"-12.990416,28.670515",Paid
+NDL-0025,Simon Ndalama,333752/13/3,Chipulukusu,5000,Industrial,TDR-2007-5573,Leasehold (65 yrs),2019-05-23,None,"-12.972178,28.666401",Paid
+NDL-0026,UrbanDevelopers Co,708792/43/0,Masala,1189,Mixed Use,TDR-2016-6139,Leasehold (50 yrs),2018-08-07,Auctioned,"-12.993605,28.669473",Paid
+NDL-0027,Kansenshi Traders Ltd,645175/78/3,Garden,1500,Agricultural,TDR-2015-6143,Freehold,2021-02-22,Double_Allocation,"-12.978729,28.656679",Paid
+NDL-0028,Mercy Mulenga,301158/63/6,Itawa,1465,Mixed Use,TDR-2014-7653,State Land,2023-09-13,None,"-12.987097,28.643644",Paid
+NDL-0029,Samuel Mumba,563638/96/3,Kabushi,20000,Agricultural,TDR-2010-2389,Leasehold (65 yrs),2016-07-24,None,"-12.974468,28.625136",Arrears
+NDL-0030,Moses Ndalama,945742/35/2,Mushili,400,Residential,TDR-2020-2193,Leasehold (50 yrs),2014-04-19,Boundary_Dispute,"-12.976125,28.659509",Paid
+NDL-0031,Nchimunya Mwape,887443/23/6,Lubuto,1200,Commercial,TDR-2021-8611,Freehold,2017-07-03,None,"-12.965763,28.645105",Paid
+NDL-0032,Mercy Mwansa,891937/66/9,Kabushi,10000,Agricultural,TDR-2019-3607,Leasehold (50 yrs),2015-02-04,None,"-12.988605,28.655071",Paid
+NDL-0033,Michael Ndalama,387936/66/1,Industrial Area,300,Commercial,TDR-2015-6238,State Land,2006-10-23,None,"-12.989212,28.658167",Paid
+NDL-0034,Kansenshi Traders Industrial,668969/69/6,Kansenshi,1200,Commercial,TDR-2018-7381,State Land,2020-08-07,None,"-12.964535,28.651663",Paid
+NDL-0035,Moses Kaunda,994905/63/8,Mapalo,751,Mixed Use,TDR-2020-4595,Leasehold (65 yrs),2014-10-11,None,"-12.983223,28.656788",Paid
+NDL-0036,Peter Mumba,233827/89/8,Mushili,10000,Agricultural,TDR-2023-1444,Freehold,2019-06-02,None,"-12.96506,28.629995",Paid
+NDL-0037,Samuel Mwansa,453894/58/4,Railway Line,2000,Industrial,TDR-2020-1317,State Land,2006-03-03,Auctioned,"-12.984702,28.655758",Paid
+NDL-0038,Victor Mwape,359295/35/0,Ndeke,250,Commercial,TDR-2020-2874,State Land,2009-11-21,None,"-12.988263,28.640289",Paid
+NDL-0039,Brian Tembo,915573/30/4,Masala,352,Mixed Use,TDR-2014-7149,Leasehold (50 yrs),2021-01-14,None,"-12.9755,28.665681",Paid
+NDL-0040,Moses Tembo,934904/82/0,Garden,1177,Mixed Use,TDR-2016-2129,State Land,2019-07-11,None,"-12.965716,28.665228",Paid
+NDL-0041,Michael Mumba,841666/29/6,Itawa,1632,Mixed Use,TDR-2013-9817,Leasehold (50 yrs),2015-06-06,None,"-12.970221,28.634762",Arrears
+NDL-0042,Patrick Mulilo,572700/41/7,Chipulukusu,2000,Industrial,TDR-2020-6325,Leasehold (99 yrs),2015-12-09,None,"-12.967682,28.638719",Arrears
+NDL-0043,Patricia Mwanza,110644/76/3,Chifubu,800,Commercial,TDR-2018-9004,State Land,2022-01-02,None,"-12.979908,28.659151",Paid
+NDL-0044,UrbanDevelopers Enterprises,524045/98/3,Industrial Area,1055,Mixed Use,TDR-2020-9698,Leasehold (65 yrs),2014-07-18,Auctioned,"-12.977085,28.63935",Paid
+NDL-0045,Mukuka Tembo,856321/34/5,Masala,1860,Mixed Use,TDR-2010-4138,Leasehold (99 yrs),2021-07-26,None,"-12.970466,28.673713",Paid
+NDL-0046,Esther Zulu,410636/39/5,Itawa,2000,Industrial,TDR-2022-3073,Leasehold (65 yrs),2006-01-08,Auctioned,"-12.976972,28.658358",Paid
+NDL-0047,Linda Tembo,112861/83/4,Twapia,5000,Agricultural,TDR-2015-4020,Freehold,2010-08-31,Auctioned,"-12.979846,28.665216",Paid
+NDL-0048,Ndola Minerals Co,256445/82/4,Chifubu,200,Commercial,TDR-2022-7818,State Land,2018-05-16,Caveat,"-12.989424,28.648741",Paid
+NDL-0049,Simon Chola,549660/49/9,Kansenshi,1815,Mixed Use,TDR-2008-4404,Leasehold (99 yrs),2010-12-08,None,"-12.992032,28.62956",Paid
+NDL-0050,Lubuto Cooperative Group,405407/14/3,Industrial Area,8000,Industrial,TDR-2007-4824,Leasehold (65 yrs),2022-09-02,Caveat,"-12.975588,28.664215",Paid
+NDL-0051,GreenFields Co,378535/28/1,Kansenshi,1200,Commercial,TDR-2014-5728,Leasehold (50 yrs),2007-10-16,None,"-12.986445,28.642138",Paid
+NDL-0052,Samuel Phiri,727086/15/6,Chililabombwe Road,812,Mixed Use,TDR-2005-2496,Leasehold (99 yrs),2020-02-15,Caveat,"-12.976142,28.672293",Arrears
+NDL-0053,Patricia Chola,142185/32/7,Kabushi,3000,Agricultural,TDR-2010-8141,Leasehold (50 yrs),2007-01-18,None,"-12.982483,28.637658",Paid
+NDL-0054,Kansenshi Traders Group,402218/94/6,Mapalo,700,Residential,TDR-2007-6153,Leasehold (65 yrs),2012-04-02,None,"-12.968643,28.66757",Paid
+NDL-0055,PanAfrican Cement Group,533321/16/3,Kabushi,10000,Industrial,TDR-2020-8242,Freehold,2009-07-26,None,"-12.993021,28.635842",Arrears
+NDL-0056,Chileshe Ndalama,844261/30/4,Mapalo,800,Residential,TDR-2018-2527,Leasehold (99 yrs),2023-11-15,Double_Allocation,"-12.980465,28.626461",Paid
+NDL-0057,Brian Chanda,633590/44/6,Twapia,2000,Agricultural,TDR-2019-3369,Leasehold (50 yrs),2009-04-11,Double_Allocation,"-12.978687,28.668363",Arrears
+NDL-0058,Ruth Sitali,456385/74/4,Mushili,5000,Industrial,TDR-2023-9022,Leasehold (99 yrs),2015-01-07,None,"-12.984885,28.650355",Paid
+NDL-0059,Chibwe Zulu,831380/40/9,Chipulukusu,1200,Commercial,TDR-2018-1715,Leasehold (65 yrs),2021-09-14,None,"-12.96329,28.640968",Arrears
+NDL-0060,Michael Mulenga,619389/14/2,Kabushi,979,Mixed Use,TDR-2008-8213,Freehold,2016-10-18,Double_Allocation,"-12.997417,28.627929",Arrears
+NDL-0061,Patrick Kaluba,919488/43/5,Chipulukusu,500,Residential,TDR-2022-7226,Leasehold (65 yrs),2019-01-22,Mortgaged,"-12.969143,28.667981",Paid
+NDL-0062,UrbanDevelopers Enterprises,883041/21/6,Masala,700,Residential,TDR-2010-5906,Freehold,2006-01-12,None,"-12.995867,28.639715",Paid
+NDL-0063,Joseph Chola,814919/33/2,Itawa,1000,Residential,TDR-2017-4945,Leasehold (50 yrs),2018-01-30,None,"-12.980476,28.633969",Paid
+NDL-0064,Lubuto Cooperative Holdings,810526/79/2,Chifubu,3000,Agricultural,TDR-2023-5901,Leasehold (50 yrs),2020-06-26,None,"-12.965878,28.630957",Paid
+NDL-0065,Mukuka Kaunda,699704/55/9,Industrial Area,2000,Industrial,TDR-2017-5497,Freehold,2017-09-11,Boundary_Dispute,"-12.968424,28.673548",Arrears
+NDL-0066,Peter Chanda,913423/39/9,Garden,800,Commercial,TDR-2011-5106,Leasehold (99 yrs),2019-02-03,None,"-12.974157,28.622168",Paid
+NDL-0067,Ndola Estate Co,194511/47/5,Railway Line,250,Commercial,TDR-2009-9837,Leasehold (65 yrs),2016-11-27,None,"-12.987644,28.62905",Arrears
+NDL-0068,Ruth Chanda,882824/53/1,Kitwe Road,350,Residential,TDR-2012-7511,State Land,2013-03-16,None,"-12.983006,28.634545",Paid
+NDL-0069,Angela Mulilo,712955/58/5,Masala,400,Commercial,TDR-2005-6374,State Land,2009-12-19,None,"-12.973855,28.645535",Paid
+NDL-0070,Esther Mulenga,147549/14/4,Twapia,300,Residential,TDR-2012-9807,Leasehold (99 yrs),2013-09-19,None,"-12.972522,28.660873",Arrears
+NDL-0071,Angela Mulenga,535037/93/1,Twapia,1135,Mixed Use,TDR-2013-1536,Leasehold (65 yrs),2009-11-15,None,"-12.961879,28.66705",Paid
+NDL-0072,Mercy Lungu,163491/60/4,Town Centre,700,Residential,TDR-2007-4475,State Land,2005-06-24,None,"-12.985327,28.674385",Paid
+NDL-0073,Peter Mwanza,317220/85/3,Lubuto,3000,Industrial,TDR-2024-1046,Leasehold (65 yrs),2024-04-03,Auctioned,"-12.960474,28.649712",Paid
+NDL-0074,Ndola Minerals Co,115582/55/3,Chililabombwe Road,350,Residential,TDR-2013-1858,Leasehold (99 yrs),2021-08-21,None,"-12.993681,28.623496",Paid
+NDL-0075,George Tembo,573962/74/3,Kansenshi,917,Mixed Use,TDR-2019-1510,Freehold,2015-09-29,Boundary_Dispute,"-12.981802,28.625938",Paid
+NDL-0076,Beatrice Phiri,437758/87/2,Chifubu,300,Commercial,TDR-2024-9984,Leasehold (65 yrs),2013-07-18,Auctioned,"-12.977839,28.644954",Paid
+NDL-0077,ZamBuild Enterprises,550961/67/3,Railway Line,8000,Industrial,TDR-2017-7815,Freehold,2012-01-05,None,"-12.972726,28.640587",Paid
+NDL-0078,Patrick Phiri,972176/20/1,Railway Line,500,Residential,TDR-2009-1982,State Land,2017-08-06,None,"-12.972539,28.642594",Arrears
+NDL-0079,Joseph Banda,401601/86/4,Garden,1000,Residential,TDR-2021-4485,Leasehold (99 yrs),2019-09-24,None,"-12.965804,28.639256",Paid
+NDL-0080,UrbanDevelopers Enterprises,946432/64/8,Mapalo,1000,Residential,TDR-2013-1474,Leasehold (99 yrs),2011-02-17,Mortgaged,"-12.986259,28.63869",Paid
+NDL-0081,George Kaunda,172965/28/0,Chifubu,740,Mixed Use,TDR-2017-7878,Leasehold (50 yrs),2012-08-24,None,"-12.986158,28.637841",Arrears
+NDL-0082,Beatrice Banda,263137/30/9,Kansenshi,450,Residential,TDR-2019-7947,Leasehold (50 yrs),2018-08-14,None,"-12.98762,28.661522",Paid
+NDL-0083,Moses Chola,610271/77/4,Kansenshi,400,Commercial,TDR-2024-1897,Freehold,2009-08-02,None,"-12.989973,28.627548",Paid
+NDL-0084,Chileshe Kaluba,883301/65/2,Ndeke,10000,Agricultural,TDR-2012-9196,State Land,2023-09-10,None,"-12.984542,28.641839",Paid
+NDL-0085,Samuel Phiri,428267/83/6,Chipulukusu,3000,Agricultural,TDR-2008-7636,Freehold,2012-04-14,None,"-12.961991,28.645305",Paid
+NDL-0086,Joseph Tembo,355135/65/9,Chipulukusu,461,Mixed Use,TDR-2017-6083,Leasehold (65 yrs),2009-12-21,None,"-12.991611,28.648077",Paid
+NDL-0087,Beatrice Lungu,468154/92/2,Lubuto,350,Residential,TDR-2013-4232,Leasehold (99 yrs),2018-07-06,None,"-12.969152,28.624144",Arrears
+NDL-0088,Samuel Chola,896788/84/7,Chililabombwe Road,3000,Industrial,TDR-2019-2118,Leasehold (50 yrs),2014-12-02,None,"-12.967739,28.652528",Paid
+NDL-0089,Lubuto Cooperative Group,139434/17/5,Industrial Area,300,Residential,TDR-2024-9307,Leasehold (50 yrs),2015-05-19,None,"-12.961739,28.660641",Paid
+NDL-0090,George Zulu,437145/87/7,Kabushi,200,Commercial,TDR-2019-2695,Leasehold (65 yrs),2021-01-08,None,"-12.973447,28.622153",Paid
+NDL-0091,James Sichone,739427/30/5,Garden,8000,Industrial,TDR-2018-6543,State Land,2006-03-05,Caveat,"-12.973402,28.623625",Paid
+NDL-0092,Moses Mulilo,858889/94/9,Ndeke,2000,Industrial,TDR-2023-3317,Leasehold (65 yrs),2011-12-17,Auctioned,"-12.971458,28.641558",Paid
+NDL-0093,Moses Mwanza,494976/92/5,Ndeke,491,Mixed Use,TDR-2018-9331,Leasehold (65 yrs),2005-05-30,None,"-12.99115,28.631781",Arrears
+NDL-0094,Mukuka Mulenga,262471/19/4,Masala,1878,Mixed Use,TDR-2022-9626,Freehold,2019-11-06,None,"-12.96888,28.627208",Paid
+NDL-0095,Central Agro Co,856215/66/0,Railway Line,3000,Industrial,TDR-2019-5668,Leasehold (50 yrs),2010-04-01,None,"-12.98624,28.664474",Paid
+NDL-0096,Memory Chola,561999/69/4,Chipulukusu,1380,Mixed Use,TDR-2018-3655,Leasehold (99 yrs),2022-12-21,None,"-12.964826,28.62287",Paid
+NDL-0097,Nelson Tembo,845957/76/1,Industrial Area,350,Residential,TDR-2013-8361,State Land,2008-04-22,Caveat,"-12.994515,28.670078",Paid
+NDL-0098,Nelson Mwape,535050/16/6,Kabushi,3000,Industrial,TDR-2017-2337,Leasehold (65 yrs),2010-01-14,None,"-12.962629,28.666155",Paid
+NDL-0099,Nchimunya Banda,400814/70/2,Twapia,10000,Agricultural,TDR-2005-2298,Freehold,2010-09-28,None,"-12.992318,28.671712",Paid
+NDL-0100,Victor Chanda,349183/48/1,Kansenshi,400,Commercial,TDR-2024-8489,Freehold,2007-06-28,Caveat,"-12.979006,28.649483",Paid
+NDL-0101,Brian Mulenga,405420/64/0,Garden,500,Commercial,TDR-2018-4068,Freehold,2016-09-28,Auctioned,"-12.995428,28.648933",Paid
+NDL-0102,Mercy Mwape,509420/70/0,Chipulukusu,5000,Industrial,TDR-2005-6850,Freehold,2012-09-25,None,"-12.97303,28.625702",Paid
+NDL-0103,Nchimunya Banda,469412/79/5,Itawa,20000,Agricultural,TDR-2020-3986,Leasehold (99 yrs),2006-06-01,Mortgaged,"-12.962143,28.622034",Paid
+NDL-0104,Beatrice Banda,430926/49/8,Chipulukusu,1269,Mixed Use,TDR-2013-1599,Leasehold (99 yrs),2011-06-02,None,"-12.968328,28.667619",Paid
+NDL-0105,Ndola Estate Resources,519453/66/6,Chililabombwe Road,400,Commercial,TDR-2020-7018,State Land,2010-12-25,Caveat,"-12.970371,28.624341",Paid
+NDL-0106,Mercy Chanda,436814/23/1,Chililabombwe Road,5000,Industrial,TDR-2019-7981,Leasehold (99 yrs),2020-06-21,None,"-12.981009,28.659975",Arrears
+NDL-0107,Joseph Mulilo,770532/17/1,Chipulukusu,10000,Industrial,TDR-2010-1510,Leasehold (99 yrs),2024-01-14,None,"-12.96831,28.621914",Paid
+NDL-0108,Memory Lungu,501451/82/0,Ndeke,3000,Agricultural,TDR-2016-8273,Freehold,2017-11-15,None,"-12.984056,28.637291",Paid
+NDL-0109,Chileshe Kapasa,623285/76/6,Mapalo,450,Residential,TDR-2013-8311,Leasehold (99 yrs),2018-09-22,None,"-12.963174,28.647016",Paid
+NDL-0110,Samuel Kapasa,848022/66/1,Chililabombwe Road,2000,Industrial,TDR-2022-9882,Leasehold (65 yrs),2024-12-28,None,"-12.992015,28.659026",Paid
+NDL-0111,Ndola Estate Enterprises,227257/35/2,Lubuto,1500,Agricultural,TDR-2016-7044,Leasehold (50 yrs),2023-01-10,Auctioned,"-12.993069,28.668634",Paid
+NDL-0112,Brian Kaluba,651231/62/6,Chifubu,300,Commercial,TDR-2007-8372,Leasehold (50 yrs),2020-04-03,None,"-12.993123,28.665598",Paid
+NDL-0113,Victor Mulenga,553633/74/0,Masala,613,Mixed Use,TDR-2014-3697,Leasehold (99 yrs),2012-03-28,Double_Allocation,"-12.989432,28.672112",Paid
+NDL-0114,Patrick Mulilo,305837/91/8,Northrise,800,Commercial,TDR-2014-9740,Freehold,2016-04-10,None,"-12.975511,28.651936",Paid
+NDL-0115,Beatrice Mwansa,983456/82/0,Mushili,250,Residential,TDR-2023-5336,Leasehold (99 yrs),2022-03-15,None,"-12.974512,28.621666",Arrears
+NDL-0116,Michael Chanda,606404/41/6,Industrial Area,1500,Agricultural,TDR-2006-3589,Leasehold (50 yrs),2014-04-28,None,"-12.990247,28.653366",Paid
+NDL-0117,Angela Lungu,518084/26/5,Kabushi,517,Mixed Use,TDR-2015-4960,Leasehold (50 yrs),2007-10-01,None,"-12.988579,28.625325",Paid
+NDL-0118,Rose Sitali,360330/30/5,Chililabombwe Road,1200,Commercial,TDR-2010-9163,State Land,2015-06-22,None,"-12.986275,28.621275",Arrears
+NDL-0119,Mukuka Zulu,711680/55/0,Kansenshi,8000,Industrial,TDR-2024-8710,Leasehold (65 yrs),2017-01-14,None,"-12.993915,28.627366",Paid
+NDL-0120,Alice Lungu,147440/61/0,Mapalo,300,Commercial,TDR-2022-5728,Freehold,2013-08-31,None,"-12.968953,28.635385",Arrears
+NDL-0121,Esther Mulenga,201377/60/5,Chililabombwe Road,1048,Mixed Use,TDR-2009-4261,State Land,2016-06-02,None,"-12.99647,28.62214",Paid
+NDL-0122,James Mumba,256175/87/8,Ndeke,10000,Industrial,TDR-2015-3662,Leasehold (50 yrs),2018-10-30,Mortgaged,"-12.986629,28.638501",Paid
+NDL-0123,Brian Chola,414353/70/0,Garden,2000,Industrial,TDR-2018-6040,Freehold,2018-05-22,None,"-12.961251,28.66306",Paid
+NDL-0124,Angela Banda,711868/71/2,Kabushi,1886,Mixed Use,TDR-2017-3421,Leasehold (99 yrs),2005-09-16,None,"-12.97138,28.630493",Paid
+NDL-0125,Joseph Zulu,530311/74/9,Twapia,350,Residential,TDR-2021-4397,State Land,2012-04-16,Auctioned,"-12.979822,28.640725",Arrears
+NDL-0126,Mercy Mwansa,672808/55/4,Twapia,250,Commercial,TDR-2013-5890,Leasehold (99 yrs),2011-09-05,Mortgaged,"-12.971214,28.657963",Paid
+NDL-0127,Mercy Mulilo,401769/25/9,Mapalo,5000,Agricultural,TDR-2016-3399,Leasehold (65 yrs),2005-12-11,None,"-12.970863,28.63905",Paid
+NDL-0128,Linda Zulu,311883/78/4,Mapalo,3000,Industrial,TDR-2008-4920,Leasehold (99 yrs),2006-02-20,None,"-12.97782,28.655087",Paid
+NDL-0129,Brian Kaluba,205428/97/2,Mushili,623,Mixed Use,TDR-2018-8793,Leasehold (50 yrs),2019-08-05,None,"-12.961371,28.637664",Paid
+NDL-0130,Patrick Chola,343500/78/0,Itawa,2000,Agricultural,TDR-2006-7504,Leasehold (50 yrs),2009-03-07,Double_Allocation,"-12.961439,28.670932",Arrears
+NDL-0131,Central Agro PLC,451317/46/7,Mapalo,1311,Mixed Use,TDR-2009-9261,Leasehold (50 yrs),2011-02-14,None,"-12.993719,28.628937",Paid
+NDL-0132,Grace Mwape,872399/53/4,Town Centre,500,Commercial,TDR-2017-8007,State Land,2012-05-10,None,"-12.972568,28.630163",Paid
+NDL-0133,Mukuka Mwape,373453/59/3,Kitwe Road,5000,Industrial,TDR-2014-1187,Leasehold (65 yrs),2019-08-30,None,"-12.989021,28.656728",Paid
+NDL-0134,PanAfrican Cement Holdings,823821/25/4,Garden,752,Mixed Use,TDR-2012-3188,Leasehold (50 yrs),2008-06-08,None,"-12.960424,28.640549",Paid
+NDL-0135,Victor Mwanza,940952/95/3,Lubuto,1912,Mixed Use,TDR-2007-9609,Leasehold (50 yrs),2016-11-05,Mortgaged,"-12.995032,28.651029",Paid
+NDL-0136,James Zulu,700521/78/2,Itawa,10000,Industrial,TDR-2019-2904,Leasehold (99 yrs),2021-01-29,None,"-12.994544,28.648071",Paid
+NDL-0137,James Sitali,578987/82/0,Mapalo,20000,Agricultural,TDR-2014-1356,Leasehold (50 yrs),2010-09-16,Caveat,"-12.969659,28.651807",Paid
+NDL-0138,Patrick Mwanza,163182/18/7,Kansenshi,8000,Industrial,TDR-2010-3218,Leasehold (50 yrs),2013-05-26,Auctioned,"-12.983466,28.667829",Arrears
+NDL-0139,Faith Mwanza,239449/93/5,Masala,500,Commercial,TDR-2017-9664,Leasehold (99 yrs),2021-04-29,Auctioned,"-12.966277,28.66159",Arrears
+NDL-0140,Angela Mwanza,544730/78/6,Lubuto,400,Commercial,TDR-2016-3541,Leasehold (65 yrs),2009-03-25,Double_Allocation,"-12.970449,28.626206",Paid
+NDL-0141,Victor Mwape,352356/36/1,Masala,368,Mixed Use,TDR-2019-1797,Leasehold (99 yrs),2021-08-11,None,"-12.981319,28.649687",Paid
+NDL-0142,Nchimunya Sichone,403314/39/9,Chililabombwe Road,1524,Mixed Use,TDR-2015-4881,Leasehold (65 yrs),2024-08-27,None,"-12.972912,28.632157",Paid
+NDL-0143,Central Agro Co,756401/96/6,Mapalo,1500,Agricultural,TDR-2016-7244,State Land,2012-02-25,None,"-12.982486,28.636494",Paid
+NDL-0144,Mukuka Ndalama,415344/28/7,Kansenshi,1145,Mixed Use,TDR-2018-9683,Leasehold (99 yrs),2013-09-17,None,"-12.990273,28.655569",Arrears
+NDL-0145,Patrick Mwanza,859782/34/0,Northrise,20000,Agricultural,TDR-2024-1647,Freehold,2009-03-22,Caveat,"-12.975672,28.65693",Paid
+NDL-0146,Nelson Mwansa,417915/11/3,Town Centre,700,Residential,TDR-2012-4350,Leasehold (50 yrs),2010-05-15,None,"-12.96853,28.640936",Paid
+NDL-0147,Patricia Lungu,637727/73/7,Masala,3000,Agricultural,TDR-2011-7073,Leasehold (65 yrs),2014-04-14,None,"-12.965165,28.660769",Paid
+NDL-0148,George Chola,854987/63/4,Ndeke,300,Commercial,TDR-2012-7223,State Land,2023-09-10,None,"-12.977076,28.671891",Paid
+NDL-0149,Linda Kaluba,583214/31/5,Itawa,800,Commercial,TDR-2022-9000,Leasehold (99 yrs),2024-12-12,None,"-12.973611,28.62323",Paid
+NDL-0150,Peter Banda,901467/10/6,Ndeke,200,Commercial,TDR-2009-1149,Leasehold (99 yrs),2016-05-05,None,"-12.995703,28.655075",Arrears
+NDL-0151,Faith Kaluba,116495/10/8,Mapalo,1500,Agricultural,TDR-2005-9673,Leasehold (65 yrs),2017-01-06,Auctioned,"-12.997349,28.664724",Paid
+NDL-0152,Nelson Kapasa,212214/22/8,Ndeke,250,Commercial,TDR-2024-9625,Leasehold (65 yrs),2023-04-15,None,"-12.967792,28.624346",Arrears
+NDL-0153,Mukuka Ndalama,414546/97/1,Kansenshi,600,Residential,TDR-2017-7179,State Land,2015-09-05,None,"-12.997641,28.629426",Paid
+NDL-0154,Ruth Mwansa,693343/22/8,Kansenshi,250,Commercial,TDR-2023-8790,Leasehold (65 yrs),2006-01-17,Double_Allocation,"-12.971992,28.635421",Paid
+NDL-0155,Grace Mwansa,116418/36/9,Ndeke,1500,Agricultural,TDR-2014-3661,State Land,2010-05-24,None,"-12.965721,28.657237",Paid
+NDL-0156,Angela Mulenga,928897/98/1,Kabushi,2000,Industrial,TDR-2008-8161,Leasehold (99 yrs),2023-10-24,None,"-12.975004,28.653763",Paid
+NDL-0157,Chibwe Mwape,764926/44/7,Twapia,300,Commercial,TDR-2022-7150,Leasehold (50 yrs),2009-03-02,None,"-12.972894,28.624713",Paid
+NDL-0158,Brian Phiri,186023/44/2,Chipulukusu,800,Commercial,TDR-2017-6188,Leasehold (65 yrs),2007-05-23,None,"-12.962168,28.64446",Paid
+NDL-0159,ZamBuild Co,551914/67/8,Mapalo,1135,Mixed Use,TDR-2008-1430,Freehold,2012-12-09,None,"-12.975317,28.663144",Arrears
+NDL-0160,Kansenshi Traders Resources,917018/20/8,Lubuto,1367,Mixed Use,TDR-2010-7237,Leasehold (99 yrs),2008-02-12,None,"-12.987801,28.628026",Paid
+NDL-0161,Moses Kaluba,920685/19/5,Northrise,800,Commercial,TDR-2020-4203,Leasehold (50 yrs),2007-05-27,None,"-12.997743,28.641763",Paid
+NDL-0162,Simon Mwansa,561607/52/6,Ndeke,5000,Industrial,TDR-2024-4290,Leasehold (50 yrs),2012-01-18,None,"-12.982867,28.637553",Paid
+NDL-0163,George Ndalama,441716/58/4,Chipulukusu,2000,Industrial,TDR-2023-4273,State Land,2017-03-28,None,"-12.968831,28.62148",Paid
+NDL-0164,David Mumba,936433/47/1,Railway Line,2000,Agricultural,TDR-2014-4965,Leasehold (65 yrs),2019-10-10,None,"-12.981921,28.640734",Paid
+NDL-0165,George Kaunda,660324/74/6,Mapalo,500,Residential,TDR-2022-2392,Freehold,2022-04-01,None,"-12.972742,28.629149",Paid
+NDL-0166,Michael Kaunda,889245/52/6,Masala,300,Residential,TDR-2013-4637,State Land,2021-10-02,None,"-12.97594,28.651638",Paid
+NDL-0167,Victor Chola,823975/74/2,Garden,700,Residential,TDR-2008-5840,Leasehold (50 yrs),2006-12-05,None,"-12.962254,28.627792",Paid
+NDL-0168,David Sichone,606384/54/7,Masala,20000,Agricultural,TDR-2019-6225,Freehold,2011-09-26,None,"-12.97099,28.621242",Paid
+NDL-0169,Copperbelt Logistics Enterprises,641058/32/8,Itawa,10000,Industrial,TDR-2018-8570,Leasehold (99 yrs),2022-11-23,None,"-12.990991,28.655226",Paid
+NDL-0170,Central Agro Enterprises,571413/85/6,Chipulukusu,400,Residential,TDR-2011-5560,Freehold,2017-12-13,None,"-12.964865,28.630283",Paid
+NDL-0171,Patricia Kaluba,653349/91/5,Chipulukusu,1103,Mixed Use,TDR-2023-2871,Leasehold (65 yrs),2012-11-23,Boundary_Dispute,"-12.97454,28.664756",Paid
+NDL-0172,Rose Chola,188868/96/2,Chililabombwe Road,400,Residential,TDR-2014-2916,Leasehold (99 yrs),2013-05-17,None,"-12.978589,28.643003",Paid
+NDL-0173,Grace Kaluba,766371/78/2,Mapalo,400,Commercial,TDR-2014-3298,Leasehold (99 yrs),2012-01-22,Boundary_Dispute,"-12.974462,28.667604",Arrears
+NDL-0174,David Kaunda,688861/74/7,Railway Line,5000,Agricultural,TDR-2019-9006,Leasehold (99 yrs),2006-11-09,None,"-12.967757,28.632129",Paid
+NDL-0175,Moses Kapasa,918665/68/9,Twapia,1346,Mixed Use,TDR-2008-2871,Leasehold (65 yrs),2022-05-21,None,"-12.960346,28.649812",Paid
+NDL-0176,Samuel Mwanza,329157/64/1,Lubuto,2000,Industrial,TDR-2019-5305,Leasehold (65 yrs),2024-05-04,Caveat,"-12.981315,28.674668",Paid
+NDL-0177,Ruth Chola,822608/54/9,Railway Line,500,Commercial,TDR-2009-4385,Leasehold (99 yrs),2023-01-25,None,"-12.984669,28.63546",Paid
+NDL-0178,Brian Chanda,403387/83/4,Kabushi,350,Residential,TDR-2018-1971,Leasehold (65 yrs),2024-06-12,None,"-12.971346,28.627298",Paid
+NDL-0179,Mukuka Kaunda,613234/28/9,Northrise,5000,Agricultural,TDR-2019-2237,Freehold,2014-01-14,None,"-12.987427,28.671498",Paid
+NDL-0180,Chibwe Chola,102593/21/7,Garden,800,Residential,TDR-2017-4568,Leasehold (50 yrs),2023-07-03,None,"-12.987796,28.665559",Paid
+NDL-0181,George Kaluba,926596/53/0,Kansenshi,700,Residential,TDR-2005-3035,Leasehold (99 yrs),2014-11-25,None,"-12.96031,28.643529",Arrears
+NDL-0182,Beatrice Chanda,266699/45/1,Garden,2000,Industrial,TDR-2016-3711,Freehold,2013-11-21,None,"-12.970412,28.661538",Paid
+NDL-0183,ZamBuild Ltd,323788/71/1,Ndeke,763,Mixed Use,TDR-2021-8291,Freehold,2005-03-08,None,"-12.96695,28.674349",Paid
+NDL-0184,ZamBuild Enterprises,501677/21/1,Masala,5000,Industrial,TDR-2014-3246,Leasehold (50 yrs),2022-05-08,Caveat,"-12.964769,28.655287",Paid
+NDL-0185,Central Agro Ltd,739966/93/2,Kitwe Road,3000,Industrial,TDR-2009-7745,State Land,2020-05-26,None,"-12.989745,28.669313",Paid
+NDL-0186,Kansenshi Traders Industrial,550246/50/2,Lubuto,2000,Industrial,TDR-2012-5668,Freehold,2024-01-07,Boundary_Dispute,"-12.964719,28.6313",Paid
+NDL-0187,Alice Chanda,777558/16/3,Twapia,1500,Agricultural,TDR-2012-9185,State Land,2006-08-05,None,"-12.960848,28.674279",Arrears
+NDL-0188,Central Agro Resources,483162/79/2,Twapia,250,Residential,TDR-2023-2106,Freehold,2010-11-18,None,"-12.962942,28.672177",Paid
+NDL-0189,Brian Sichone,904373/63/6,Chipulukusu,800,Residential,TDR-2022-3501,Leasehold (65 yrs),2006-11-16,None,"-12.97857,28.631176",Paid
+NDL-0190,Alice Chola,765105/93/1,Industrial Area,20000,Agricultural,TDR-2012-1948,Leasehold (99 yrs),2006-12-08,Double_Allocation,"-12.993593,28.653676",Paid
+NDL-0191,Faith Kapasa,225245/11/2,Mushili,400,Commercial,TDR-2016-9568,State Land,2022-07-25,Caveat,"-12.988149,28.640453",Paid
+NDL-0192,Angela Tembo,908903/13/5,Railway Line,10000,Industrial,TDR-2007-5308,State Land,2019-01-28,None,"-12.980702,28.639807",Paid
+NDL-0193,Memory Kapasa,367508/23/9,Masala,800,Commercial,TDR-2021-1042,Freehold,2024-04-05,Boundary_Dispute,"-12.988707,28.645947",Paid
+NDL-0194,Ndola Minerals Resources,335421/51/3,Railway Line,5000,Industrial,TDR-2007-7108,Freehold,2016-04-05,None,"-12.995998,28.632275",Paid
+NDL-0195,Kansenshi Traders PLC,587686/46/4,Chililabombwe Road,800,Residential,TDR-2019-1130,Leasehold (65 yrs),2009-07-02,None,"-12.968189,28.660677",Paid
+NDL-0196,Linda Zulu,868043/79/3,Ndeke,600,Residential,TDR-2005-4817,State Land,2012-10-08,None,"-12.971648,28.620528",Paid
+NDL-0197,Alice Chanda,208998/36/8,Lubuto,5000,Agricultural,TDR-2006-3332,Leasehold (65 yrs),2007-02-02,None,"-12.989204,28.666503",Paid
+NDL-0198,Samuel Phiri,708982/22/8,Ndeke,1500,Agricultural,TDR-2023-2020,Leasehold (50 yrs),2019-11-10,Auctioned,"-12.989003,28.634355",Paid
+NDL-0199,Brian Mwansa,433507/67/4,Lubuto,400,Residential,TDR-2009-2785,Leasehold (99 yrs),2007-05-16,None,"-12.98029,28.642358",Paid
+NDL-0200,David Mumba,423284/69/4,Masala,350,Residential,TDR-2014-1660,Leasehold (99 yrs),2023-10-01,Boundary_Dispute,"-12.992364,28.659114",Arrears
+NDL-0201,Mary Chanda,372804/32/0,Chipulukusu,10000,Agricultural,TDR-2022-5093,Freehold,2015-05-14,None,"-12.967835,28.62668",Paid
+NDL-0202,Mukuka Mulenga,307757/61/5,Chifubu,1500,Mixed Use,TDR-2013-2228,Freehold,2006-06-13,None,"-12.973452,28.664511",Paid
+NDL-0203,Ruth Mwansa,228479/15/7,Kansenshi,500,Commercial,TDR-2018-7471,Leasehold (50 yrs),2005-08-30,None,"-12.981787,28.639467",Arrears
+NDL-0204,Samuel Mulenga,136332/88/9,Lubuto,8000,Industrial,TDR-2018-8848,Freehold,2006-12-20,None,"-12.992785,28.63097",Arrears
+NDL-0205,Michael Mwanza,933456/12/6,Garden,10000,Agricultural,TDR-2020-6636,State Land,2016-04-08,None,"-12.987723,28.621433",Paid
+NDL-0206,UrbanDevelopers Ltd,947935/70/8,Garden,776,Mixed Use,TDR-2010-2640,Leasehold (99 yrs),2019-09-26,None,"-12.97772,28.663518",Paid
+NDL-0207,Mukuka Chola,987624/59/5,Itawa,250,Commercial,TDR-2023-6210,Leasehold (65 yrs),2018-04-09,None,"-12.971379,28.672116",Paid
+NDL-0208,David Kaluba,668458/49/2,Twapia,300,Residential,TDR-2006-4811,State Land,2009-11-28,None,"-12.979836,28.638245",Paid
+NDL-0209,Chibwe Kapasa,941403/51/0,Mushili,500,Commercial,TDR-2009-2817,State Land,2024-04-21,None,"-12.995244,28.65875",Paid
+NDL-0210,Chibwe Chanda,438273/27/2,Railway Line,20000,Agricultural,TDR-2015-3854,State Land,2020-07-22,Boundary_Dispute,"-12.974679,28.639625",Paid
+NDL-0211,Alice Chanda,869649/98/4,Ndeke,800,Commercial,TDR-2005-7415,State Land,2005-09-23,None,"-12.985908,28.664484",Paid
+NDL-0212,Esther Kaluba,247475/52/1,Lubuto,5000,Industrial,TDR-2010-2453,Leasehold (65 yrs),2015-01-07,None,"-12.990032,28.658125",Paid
+NDL-0213,Angela Mwape,150486/59/7,Railway Line,400,Commercial,TDR-2020-7204,Leasehold (65 yrs),2017-04-01,None,"-12.966505,28.66338",Paid
+NDL-0214,Mukuka Kapasa,573209/19/0,Industrial Area,500,Residential,TDR-2013-2715,Freehold,2012-09-01,None,"-12.983733,28.660259",Paid
+NDL-0215,Patrick Mwansa,722886/88/7,Mushili,20000,Agricultural,TDR-2010-8113,Leasehold (99 yrs),2006-03-15,None,"-12.990189,28.630449",Paid
+NDL-0216,Angela Mwanza,378150/94/4,Industrial Area,200,Commercial,TDR-2006-7437,State Land,2017-04-30,Caveat,"-12.992164,28.639846",Paid
+NDL-0217,Faith Kaluba,309374/22/0,Town Centre,800,Commercial,TDR-2014-2342,Leasehold (50 yrs),2023-12-05,None,"-12.968175,28.645902",Arrears
+NDL-0218,Michael Mwanza,506351/33/5,Chipulukusu,3000,Industrial,TDR-2019-1731,Leasehold (65 yrs),2014-11-12,None,"-12.989403,28.634771",Paid
+NDL-0219,Faith Tembo,189870/95/5,Mapalo,10000,Agricultural,TDR-2012-1999,Leasehold (50 yrs),2023-05-11,None,"-12.961306,28.657789",Arrears
+NDL-0220,Mukuka Kaluba,413369/20/6,Kansenshi,1469,Mixed Use,TDR-2021-3415,Freehold,2021-12-25,None,"-12.961936,28.629194",Paid
+NDL-0221,Mary Sitali,182175/97/6,Town Centre,1200,Commercial,TDR-2024-5225,Leasehold (65 yrs),2021-04-23,Double_Allocation,"-12.995454,28.641345",Paid
+NDL-0222,Patricia Sichone,580412/11/9,Kabushi,1500,Agricultural,TDR-2018-3451,Leasehold (99 yrs),2017-09-16,None,"-12.969182,28.671681",Arrears
+NDL-0223,Esther Chanda,661652/54/6,Northrise,20000,Agricultural,TDR-2020-8750,Freehold,2008-11-11,None,"-12.992534,28.653476",Paid
+NDL-0224,Ndola Estate Enterprises,151685/70/4,Garden,500,Residential,TDR-2014-6094,Leasehold (65 yrs),2023-11-27,None,"-12.971545,28.625402",Arrears
+NDL-0225,Lubuto Cooperative Industrial,382507/63/9,Chifubu,400,Commercial,TDR-2011-7671,Leasehold (50 yrs),2022-01-13,None,"-12.983791,28.623091",Paid
+NDL-0226,PanAfrican Cement Resources,242239/77/9,Mushili,250,Commercial,TDR-2011-1944,Leasehold (99 yrs),2005-09-28,None,"-12.963115,28.658755",Paid
+NDL-0227,James Kaunda,766275/25/0,Lubuto,8000,Industrial,TDR-2024-8308,Leasehold (99 yrs),2024-07-10,None,"-12.977049,28.638934",Paid
+NDL-0228,Peter Phiri,398916/13/6,Kansenshi,1200,Commercial,TDR-2023-4511,Leasehold (99 yrs),2019-07-10,None,"-12.990144,28.655837",Paid
+NDL-0229,Victor Mwape,597126/26/2,Mushili,300,Commercial,TDR-2024-6004,Leasehold (65 yrs),2014-07-04,Boundary_Dispute,"-12.96564,28.645245",Paid
+NDL-0230,James Kaunda,712879/23/0,Kabushi,10000,Industrial,TDR-2024-5631,Leasehold (65 yrs),2020-05-08,None,"-12.995574,28.67436",Paid
+NDL-0231,Patricia Chanda,297509/29/8,Lubuto,1000,Residential,TDR-2017-6236,Leasehold (99 yrs),2021-03-06,None,"-12.9791,28.636258",Arrears
+NDL-0232,Angela Banda,711344/83/3,Chililabombwe Road,800,Commercial,TDR-2022-8794,Leasehold (65 yrs),2016-05-18,None,"-12.991541,28.656169",Paid
+NDL-0233,Linda Mulenga,876909/43/8,Itawa,2000,Industrial,TDR-2012-6820,Leasehold (99 yrs),2021-09-10,Boundary_Dispute,"-12.982022,28.668776",Paid
+NDL-0234,Samuel Tembo,593393/16/9,Chifubu,2000,Agricultural,TDR-2021-2963,Leasehold (50 yrs),2016-11-19,None,"-12.995946,28.666983",Paid
+NDL-0235,Joseph Chola,579798/28/5,Itawa,700,Residential,TDR-2015-3897,Leasehold (65 yrs),2019-03-26,None,"-12.980822,28.631516",Paid
+NDL-0236,Grace Kaluba,923353/21/2,Railway Line,5000,Agricultural,TDR-2018-8821,Leasehold (50 yrs),2005-02-08,None,"-12.990422,28.640521",Paid
+NDL-0237,Peter Sichone,299834/12/0,Lubuto,800,Commercial,TDR-2016-6113,Leasehold (99 yrs),2007-04-22,None,"-12.975631,28.629186",Paid
+NDL-0238,Moses Mumba,863187/76/9,Kabushi,8000,Industrial,TDR-2009-6615,Leasehold (50 yrs),2013-01-21,Mortgaged,"-12.991734,28.669879",Paid
+NDL-0239,GreenFields Co,321449/12/9,Kabushi,200,Commercial,TDR-2016-1612,Leasehold (50 yrs),2024-08-29,None,"-12.968693,28.654272",Paid
+NDL-0240,ZamBuild Ltd,150578/98/1,Railway Line,5000,Agricultural,TDR-2008-9966,Leasehold (65 yrs),2015-08-23,Mortgaged,"-12.990191,28.657716",Paid
+NDL-0241,Esther Sichone,383091/89/9,Ndeke,1500,Agricultural,TDR-2021-2928,Leasehold (65 yrs),2007-07-23,Caveat,"-12.979086,28.653495",Paid
+NDL-0242,David Lungu,837606/62/4,Itawa,800,Residential,TDR-2020-4402,Leasehold (50 yrs),2012-06-01,None,"-12.997516,28.624895",Paid
+NDL-0243,Linda Mulenga,194458/75/1,Masala,3000,Industrial,TDR-2019-5850,Leasehold (65 yrs),2015-06-01,None,"-12.967099,28.668078",Arrears
+NDL-0244,Faith Mwansa,546688/24/1,Kansenshi,350,Residential,TDR-2010-6384,Leasehold (65 yrs),2014-10-26,Auctioned,"-12.987804,28.660319",Paid
+NDL-0245,Esther Kaunda,519692/68/4,Chipulukusu,5000,Agricultural,TDR-2010-2852,Leasehold (99 yrs),2020-08-13,Mortgaged,"-12.9607,28.666439",Paid
+NDL-0246,Linda Chola,811346/66/2,Chipulukusu,10000,Industrial,TDR-2005-3140,Leasehold (50 yrs),2015-12-13,None,"-12.982371,28.622528",Paid
+NDL-0247,Brian Sichone,904812/83/9,Lubuto,10000,Industrial,TDR-2021-2560,Leasehold (50 yrs),2019-11-04,Mortgaged,"-12.979687,28.656504",Paid
+NDL-0248,PanAfrican Cement Ltd,112210/92/2,Kabushi,5000,Agricultural,TDR-2010-2226,Leasehold (50 yrs),2012-03-11,None,"-12.961134,28.622769",Paid
+NDL-0249,Alice Ndalama,182659/68/7,Kitwe Road,700,Residential,TDR-2019-6178,Freehold,2016-02-27,Mortgaged,"-12.997325,28.642189",Paid
+NDL-0250,Peter Phiri,930244/87/9,Industrial Area,1451,Mixed Use,TDR-2011-8474,Leasehold (65 yrs),2013-02-24,Caveat,"-12.96697,28.666437",Paid
+NDL-0251,Rose Kaluba,851470/94/5,Kitwe Road,300,Residential,TDR-2012-1035,Leasehold (65 yrs),2012-12-19,Caveat,"-12.961352,28.636059",Paid
+NDL-0252,Mary Kapasa,616342/27/6,Masala,10000,Industrial,TDR-2011-4072,Freehold,2024-02-12,None,"-12.980632,28.662978",Paid
+NDL-0253,Kansenshi Traders Ltd,764000/96/9,Masala,5000,Agricultural,TDR-2023-9260,Leasehold (99 yrs),2016-03-10,None,"-12.970024,28.650427",Paid
+NDL-0254,Nelson Sichone,919023/32/9,Itawa,200,Commercial,TDR-2017-6273,State Land,2024-10-08,None,"-12.960779,28.670375",Paid
+NDL-0255,Chibwe Chanda,574843/27/2,Railway Line,1733,Mixed Use,TDR-2021-5897,State Land,2024-04-21,None,"-12.970001,28.650447",Paid
+NDL-0256,Brian Chanda,819964/54/2,Itawa,1411,Mixed Use,TDR-2015-2890,Leasehold (65 yrs),2017-08-12,None,"-12.976316,28.656694",Paid
+NDL-0257,Peter Mwanza,399817/64/0,Kabushi,250,Residential,TDR-2017-3381,Freehold,2020-01-13,None,"-12.987855,28.663204",Arrears
+NDL-0258,Nchimunya Banda,824141/47/3,Mapalo,500,Residential,TDR-2019-2679,State Land,2024-06-20,None,"-12.976648,28.632337",Paid
+NDL-0259,James Chanda,826596/95/0,Chipulukusu,5000,Agricultural,TDR-2015-1881,Freehold,2021-09-06,None,"-12.974419,28.662951",Arrears
+NDL-0260,Nelson Lungu,891787/85/8,Town Centre,300,Commercial,TDR-2019-3906,Freehold,2009-03-12,Auctioned,"-12.970067,28.626564",Paid
+NDL-0261,Patricia Mulenga,268746/84/4,Mushili,8000,Industrial,TDR-2009-1654,Leasehold (99 yrs),2012-03-27,None,"-12.968601,28.654395",Paid
+NDL-0262,Ruth Chola,676884/55/1,Chililabombwe Road,750,Mixed Use,TDR-2010-9529,Freehold,2022-08-21,None,"-12.982195,28.649537",Paid
+NDL-0263,David Mwansa,447148/56/4,Town Centre,1386,Mixed Use,TDR-2020-1144,Freehold,2020-01-02,None,"-12.988867,28.655325",Arrears
+NDL-0264,Mary Mwansa,499898/24/6,Northrise,1782,Mixed Use,TDR-2014-1404,State Land,2023-06-10,Mortgaged,"-12.978456,28.64798",Paid
+NDL-0265,Michael Zulu,435872/75/1,Masala,1200,Commercial,TDR-2022-9736,Freehold,2019-01-23,None,"-12.972527,28.662547",Arrears
+NDL-0266,Esther Zulu,663876/99/6,Chifubu,200,Commercial,TDR-2019-6434,Freehold,2006-12-18,None,"-12.991236,28.633855",Paid
+NDL-0267,Nelson Mulilo,527433/59/7,Chipulukusu,3000,Agricultural,TDR-2005-7381,Freehold,2016-12-30,None,"-12.970629,28.623478",Paid
+NDL-0268,ZamBuild Industrial,627262/23/4,Industrial Area,477,Mixed Use,TDR-2014-8170,Leasehold (50 yrs),2013-11-11,Caveat,"-12.996829,28.628598",Paid
+NDL-0269,Ruth Mwanza,409307/91/2,Industrial Area,2000,Industrial,TDR-2022-3316,Freehold,2005-12-09,None,"-12.975327,28.649543",Arrears
+NDL-0270,Angela Lungu,322022/62/8,Ndeke,250,Commercial,TDR-2012-5140,Leasehold (99 yrs),2007-07-28,None,"-12.967613,28.666874",Arrears
+NDL-0271,Mercy Mumba,775990/80/1,Industrial Area,450,Residential,TDR-2008-4234,State Land,2015-12-06,Auctioned,"-12.984429,28.656921",Paid
+NDL-0272,Patrick Zulu,433222/72/7,Chililabombwe Road,1650,Mixed Use,TDR-2014-3496,State Land,2017-09-18,None,"-12.985979,28.643557",Paid
+NDL-0273,Mukuka Sitali,390119/56/2,Chililabombwe Road,5000,Agricultural,TDR-2019-6877,Leasehold (65 yrs),2015-12-04,None,"-12.991321,28.653365",Paid
+NDL-0274,Nchimunya Mwanza,305973/43/1,Chifubu,800,Residential,TDR-2005-7637,State Land,2009-10-09,Double_Allocation,"-12.977039,28.649891",Arrears
+NDL-0275,Victor Mulenga,483588/60/3,Industrial Area,400,Commercial,TDR-2021-9362,Freehold,2013-11-25,None,"-12.997598,28.633138",Arrears
+NDL-0276,Faith Kapasa,893988/75/2,Kitwe Road,250,Commercial,TDR-2023-3395,Leasehold (50 yrs),2013-01-18,None,"-12.969064,28.632746",Paid
+NDL-0277,Faith Zulu,643042/56/6,Twapia,1500,Agricultural,TDR-2006-6309,Freehold,2020-10-14,Auctioned,"-12.973924,28.635042",Paid
+NDL-0278,George Kapasa,494956/93/6,Garden,1638,Mixed Use,TDR-2007-9465,Leasehold (65 yrs),2013-06-10,Auctioned,"-12.98953,28.642321",Paid
+NDL-0279,Ruth Kaluba,733561/10/8,Ndeke,2000,Agricultural,TDR-2012-2263,State Land,2019-06-08,None,"-12.992291,28.628655",Paid
+NDL-0280,Faith Ndalama,534753/52/1,Twapia,5000,Agricultural,TDR-2011-3641,Leasehold (50 yrs),2005-07-03,None,"-12.99314,28.652579",Paid
+NDL-0281,Beatrice Chola,253999/17/2,Northrise,500,Commercial,TDR-2017-1305,Leasehold (65 yrs),2006-12-04,None,"-12.974952,28.645928",Paid
+NDL-0282,Joseph Mulenga,933215/84/2,Kabushi,3000,Industrial,TDR-2015-8429,State Land,2018-04-01,None,"-12.983628,28.627272",Paid
+NDL-0283,Nelson Sichone,817611/63/2,Masala,400,Commercial,TDR-2024-1639,State Land,2016-04-16,Mortgaged,"-12.994459,28.656267",Arrears
+NDL-0284,Chileshe Sitali,647403/63/5,Kansenshi,1178,Mixed Use,TDR-2012-8899,Leasehold (50 yrs),2012-11-11,None,"-12.969827,28.661885",Paid
+NDL-0285,Copperbelt Logistics Holdings,600318/39/1,Industrial Area,1413,Mixed Use,TDR-2018-5223,Leasehold (99 yrs),2005-02-14,Mortgaged,"-12.968002,28.651789",Paid
+NDL-0286,GreenFields Industrial,528705/56/1,Ndeke,20000,Agricultural,TDR-2023-5155,Leasehold (65 yrs),2024-03-05,None,"-12.976543,28.653653",Arrears
+NDL-0287,David Sitali,678923/81/7,Itawa,10000,Industrial,TDR-2022-8925,Leasehold (65 yrs),2011-11-18,None,"-12.968581,28.641897",Paid
+NDL-0288,Esther Ndalama,568288/99/2,Masala,500,Commercial,TDR-2017-6544,State Land,2018-10-10,None,"-12.971142,28.628841",Arrears
+NDL-0289,ZamBuild Co,594580/86/6,Chifubu,450,Residential,TDR-2012-7075,Freehold,2018-08-30,None,"-12.983396,28.674145",Paid
+NDL-0290,Brian Banda,911187/32/7,Kitwe Road,400,Residential,TDR-2021-5685,Leasehold (99 yrs),2005-10-03,Caveat,"-12.978599,28.658415",Paid
+NDL-0291,Memory Ndalama,786837/10/2,Chifubu,8000,Industrial,TDR-2016-7474,Leasehold (50 yrs),2018-02-23,None,"-12.997416,28.658699",Arrears
+NDL-0292,Angela Mwanza,711248/54/5,Northrise,500,Commercial,TDR-2011-8450,Leasehold (50 yrs),2017-11-23,None,"-12.991349,28.647843",Paid
+NDL-0293,Chibwe Tembo,941945/75/4,Mapalo,812,Mixed Use,TDR-2019-7178,State Land,2015-11-06,Mortgaged,"-12.969216,28.672868",Paid
+NDL-0294,George Mwape,605382/24/4,Chifubu,20000,Agricultural,TDR-2012-4767,Leasehold (65 yrs),2014-04-02,Auctioned,"-12.978373,28.620535",Paid
+NDL-0295,Patrick Kaunda,806423/53/1,Mapalo,400,Commercial,TDR-2015-6792,Leasehold (99 yrs),2017-11-13,None,"-12.96201,28.657571",Arrears
+NDL-0296,David Ndalama,871153/40/4,Town Centre,250,Commercial,TDR-2012-6833,Leasehold (99 yrs),2022-06-22,None,"-12.963033,28.65717",Paid
+NDL-0297,Victor Mwanza,144316/71/5,Chililabombwe Road,10000,Agricultural,TDR-2013-9041,Leasehold (99 yrs),2022-02-21,Double_Allocation,"-12.98735,28.632215",Paid
+NDL-0298,Kansenshi Traders Group,667036/14/8,Garden,20000,Agricultural,TDR-2010-8490,Freehold,2020-08-30,None,"-12.986005,28.620463",Paid
+NDL-0299,Esther Mwansa,479167/88/4,Itawa,838,Mixed Use,TDR-2012-5413,Leasehold (50 yrs),2018-10-02,None,"-12.991011,28.643317",Paid
+NDL-0300,Memory Kaunda,393212/67/2,Ndeke,1704,Mixed Use,TDR-2012-2636,Leasehold (65 yrs),2023-01-14,None,"-12.981576,28.640949",Paid
+NDL-0301,Nchimunya Kaluba,944804/11/2,Railway Line,2000,Agricultural,TDR-2021-9748,Leasehold (65 yrs),2022-08-13,None,"-12.988463,28.667218",Paid
+NDL-0302,Copperbelt Logistics Ltd,325933/42/7,Masala,20000,Agricultural,TDR-2015-5256,Leasehold (65 yrs),2013-01-30,None,"-12.96259,28.634174",Paid
+NDL-0303,Central Agro Enterprises,704875/83/8,Itawa,5000,Industrial,TDR-2015-9363,Leasehold (50 yrs),2022-05-18,Mortgaged,"-12.964194,28.640959",Paid
+NDL-0304,Nchimunya Kapasa,771697/53/6,Chipulukusu,300,Residential,TDR-2010-6629,Leasehold (99 yrs),2012-01-13,None,"-12.986928,28.634711",Paid
+NDL-0305,Samuel Lungu,884225/85/8,Kitwe Road,2000,Agricultural,TDR-2010-1378,Leasehold (99 yrs),2021-04-28,None,"-12.988437,28.660913",Paid
+NDL-0306,Alice Tembo,200195/18/7,Mapalo,250,Residential,TDR-2017-9584,Freehold,2007-05-02,None,"-12.9921,28.656016",Arrears
+NDL-0307,Mukuka Chanda,564687/90/2,Ndeke,649,Mixed Use,TDR-2005-1575,Leasehold (65 yrs),2024-04-19,Double_Allocation,"-12.965159,28.645696",Arrears
+NDL-0308,Mercy Mumba,241678/99/8,Itawa,1523,Mixed Use,TDR-2019-8126,State Land,2019-05-09,None,"-12.986233,28.639094",Paid
+NDL-0309,Samuel Chanda,483551/62/4,Ndeke,2000,Industrial,TDR-2005-9574,Leasehold (99 yrs),2012-09-18,None,"-12.977666,28.657827",Paid
+NDL-0310,Moses Mwape,903072/65/4,Lubuto,800,Residential,TDR-2016-4089,Leasehold (50 yrs),2024-10-14,None,"-12.982999,28.62898",Paid
+NDL-0311,Alice Ndalama,375754/20/6,Lubuto,1865,Mixed Use,TDR-2024-5454,Leasehold (65 yrs),2019-07-19,Mortgaged,"-12.967265,28.64271",Arrears
+NDL-0312,Moses Tembo,767830/68/9,Kitwe Road,10000,Industrial,TDR-2020-4076,Leasehold (65 yrs),2005-06-08,None,"-12.961151,28.621217",Arrears
+NDL-0313,Nchimunya Mumba,862427/11/3,Chifubu,200,Commercial,TDR-2020-4558,Leasehold (65 yrs),2014-06-05,None,"-12.96762,28.674888",Paid
+NDL-0314,Chibwe Phiri,984522/28/0,Northrise,1500,Agricultural,TDR-2022-8702,Leasehold (99 yrs),2009-04-24,Boundary_Dispute,"-12.988497,28.640987",Paid
+NDL-0315,Brian Ndalama,503489/66/3,Kansenshi,400,Commercial,TDR-2008-9538,Leasehold (99 yrs),2015-08-10,None,"-12.961474,28.671492",Paid
+NDL-0316,Angela Mwanza,646230/25/4,Twapia,3000,Industrial,TDR-2016-1853,Leasehold (99 yrs),2007-07-15,None,"-12.981502,28.620829",Paid
+NDL-0317,Alice Ndalama,109363/15/9,Twapia,617,Mixed Use,TDR-2016-2466,Leasehold (99 yrs),2008-07-15,None,"-12.971934,28.638613",Arrears
+NDL-0318,Mary Banda,472787/92/2,Mapalo,350,Residential,TDR-2020-4812,Leasehold (65 yrs),2017-07-11,Caveat,"-12.969245,28.664304",Paid
+NDL-0319,Brian Kaunda,475565/27/4,Kansenshi,20000,Agricultural,TDR-2019-5828,State Land,2020-08-20,None,"-12.976465,28.649899",Paid
+NDL-0320,Simon Mwanza,268132/18/8,Ndeke,3000,Agricultural,TDR-2013-9873,Leasehold (65 yrs),2015-03-09,None,"-12.973755,28.640847",Paid
+NDL-0321,Ndola Estate Enterprises,436272/18/8,Chipulukusu,500,Commercial,TDR-2020-3525,State Land,2011-05-09,None,"-12.973646,28.626076",Paid
+NDL-0322,Copperbelt Logistics Co,132792/35/1,Twapia,200,Commercial,TDR-2006-7366,Leasehold (50 yrs),2016-10-17,None,"-12.975569,28.6227",Paid
+NDL-0323,Chileshe Zulu,787603/72/1,Kitwe Road,500,Residential,TDR-2022-7814,Leasehold (65 yrs),2022-10-25,Mortgaged,"-12.966702,28.63462",Paid
+NDL-0324,UrbanDevelopers PLC,326387/76/1,Masala,500,Commercial,TDR-2017-4104,Leasehold (99 yrs),2016-10-20,None,"-12.976339,28.672113",Paid
+NDL-0325,Angela Tembo,903506/91/9,Garden,20000,Agricultural,TDR-2018-2705,Leasehold (99 yrs),2022-10-10,None,"-12.982741,28.638563",Paid
+NDL-0326,Samuel Lungu,430463/80/5,Garden,20000,Agricultural,TDR-2018-6299,State Land,2010-05-26,None,"-12.989871,28.662114",Arrears
+NDL-0327,Samuel Mumba,516379/10/0,Industrial Area,333,Mixed Use,TDR-2021-3213,Leasehold (65 yrs),2005-02-23,None,"-12.989568,28.667065",Paid
+NDL-0328,Brian Mulilo,680557/75/8,Ndeke,250,Residential,TDR-2019-6827,Leasehold (99 yrs),2008-02-08,None,"-12.964194,28.633742",Paid
+NDL-0329,George Kaunda,696707/37/1,Chililabombwe Road,2000,Agricultural,TDR-2020-2562,State Land,2019-05-29,None,"-12.97023,28.651696",Paid
+NDL-0330,Ndola Estate Industrial,956835/65/6,Masala,800,Commercial,TDR-2024-1187,Leasehold (50 yrs),2006-03-20,None,"-12.996435,28.649696",Paid
+NDL-0331,Mukuka Mulenga,152973/96/6,Kitwe Road,1478,Mixed Use,TDR-2021-2475,Leasehold (99 yrs),2014-09-09,None,"-12.983016,28.62727",Paid
+NDL-0332,Mary Mwanza,518582/43/1,Chipulukusu,1189,Mixed Use,TDR-2009-3209,Leasehold (50 yrs),2017-07-18,None,"-12.982978,28.651423",Paid
+NDL-0333,James Ndalama,354085/19/4,Railway Line,10000,Industrial,TDR-2007-2843,Leasehold (50 yrs),2014-07-02,None,"-12.990761,28.638949",Paid
+NDL-0334,Grace Lungu,746154/66/9,Ndeke,1500,Agricultural,TDR-2012-4271,Leasehold (65 yrs),2008-07-01,Mortgaged,"-12.965595,28.62618",Paid
+NDL-0335,Nelson Mulenga,972881/46/0,Chililabombwe Road,450,Residential,TDR-2019-8719,Freehold,2012-06-11,None,"-12.977556,28.631209",Paid
+NDL-0336,Linda Mulenga,828834/99/0,Chipulukusu,1658,Mixed Use,TDR-2021-1712,Leasehold (65 yrs),2008-10-27,None,"-12.990374,28.658309",Paid
+NDL-0337,Chileshe Phiri,507523/94/4,Garden,250,Residential,TDR-2014-7332,Leasehold (99 yrs),2013-07-16,None,"-12.971032,28.669713",Paid
+NDL-0338,Patrick Kapasa,308535/74/7,Mapalo,250,Residential,TDR-2012-9673,Leasehold (65 yrs),2012-06-25,None,"-12.969713,28.62101",Paid
+NDL-0339,Moses Ndalama,625600/45/0,Northrise,1500,Agricultural,TDR-2022-5590,Leasehold (99 yrs),2008-05-27,None,"-12.983072,28.627549",Paid
+NDL-0340,Faith Ndalama,537605/40/9,Ndeke,3000,Agricultural,TDR-2024-6395,Leasehold (50 yrs),2017-02-28,None,"-12.973206,28.651957",Paid
+NDL-0341,Nchimunya Chanda,821978/77/2,Railway Line,800,Commercial,TDR-2023-3589,Leasehold (65 yrs),2006-07-10,None,"-12.961953,28.626511",Paid
+NDL-0342,Angela Mwape,902616/50/6,Railway Line,8000,Industrial,TDR-2013-3489,Leasehold (99 yrs),2007-05-25,None,"-12.997004,28.674228",Paid
+NDL-0343,Rose Ndalama,725329/39/3,Mushili,2000,Industrial,TDR-2020-3196,State Land,2023-12-24,None,"-12.970943,28.640568",Arrears
+NDL-0344,Nchimunya Kapasa,302647/38/0,Railway Line,450,Residential,TDR-2018-4646,Leasehold (99 yrs),2021-12-30,None,"-12.991271,28.672508",Paid
+NDL-0345,Brian Mwansa,579770/41/6,Chipulukusu,1000,Residential,TDR-2017-6126,Leasehold (50 yrs),2018-09-19,Double_Allocation,"-12.976266,28.649489",Paid
+NDL-0346,Mary Sichone,214626/67/7,Kansenshi,500,Commercial,TDR-2022-7481,Freehold,2017-07-05,None,"-12.968924,28.672943",Paid
+NDL-0347,Beatrice Chanda,911259/46/7,Itawa,3000,Agricultural,TDR-2024-1893,State Land,2008-03-11,None,"-12.973448,28.624974",Paid
+NDL-0348,Central Agro Co,512160/62/5,Kitwe Road,350,Residential,TDR-2019-4308,Leasehold (50 yrs),2007-01-09,None,"-12.971715,28.669894",Paid
+NDL-0349,Esther Phiri,219710/67/5,Chifubu,1748,Mixed Use,TDR-2017-9383,State Land,2008-08-02,None,"-12.983537,28.662254",Arrears
+NDL-0350,Faith Mulenga,269999/28/2,Kansenshi,3000,Agricultural,TDR-2014-8311,Leasehold (65 yrs),2019-01-19,None,"-12.963855,28.672824",Paid
+NDL-0351,Chileshe Mumba,621800/73/8,Mushili,1310,Mixed Use,TDR-2012-4553,State Land,2019-10-17,None,"-12.982414,28.624367",Paid
+NDL-0352,Mercy Mulilo,749871/90/8,Town Centre,350,Residential,TDR-2009-1902,Leasehold (65 yrs),2005-10-28,None,"-12.996768,28.651795",Paid
+NDL-0353,Patrick Banda,214176/63/2,Itawa,10000,Industrial,TDR-2024-3906,Leasehold (50 yrs),2021-10-22,None,"-12.962604,28.625122",Paid
+NDL-0354,Alice Phiri,895284/64/8,Chifubu,8000,Industrial,TDR-2009-2999,Leasehold (65 yrs),2012-05-20,None,"-12.978063,28.658271",Paid
+NDL-0355,PanAfrican Cement PLC,607157/98/9,Industrial Area,10000,Agricultural,TDR-2015-5254,State Land,2017-11-25,Auctioned,"-12.984554,28.627134",Paid
+NDL-0356,Michael Kaluba,616428/33/9,Lubuto,3000,Industrial,TDR-2005-2936,Freehold,2015-06-06,None,"-12.993519,28.666644",Paid
+NDL-0357,Joseph Banda,450006/54/8,Town Centre,400,Residential,TDR-2014-5168,Freehold,2011-11-27,None,"-12.9771,28.662187",Paid
+NDL-0358,Alice Chola,745915/13/2,Town Centre,5000,Industrial,TDR-2020-8774,Freehold,2019-06-26,None,"-12.992095,28.645334",Arrears
+NDL-0359,Samuel Sitali,878656/17/8,Industrial Area,1784,Mixed Use,TDR-2015-9779,Freehold,2009-09-03,None,"-12.985395,28.67039",Paid
+NDL-0360,Copperbelt Logistics Holdings,981578/13/5,Chipulukusu,639,Mixed Use,TDR-2023-7382,Leasehold (99 yrs),2018-05-08,None,"-12.968271,28.636955",Arrears
+NDL-0361,Patricia Sitali,191014/73/3,Garden,3000,Agricultural,TDR-2011-9603,Leasehold (65 yrs),2008-12-04,None,"-12.968172,28.662778",Arrears
+NDL-0362,Chileshe Kaluba,624344/29/3,Chililabombwe Road,20000,Agricultural,TDR-2021-6084,Leasehold (65 yrs),2008-03-19,Mortgaged,"-12.994266,28.674025",Paid
+NDL-0363,David Banda,581682/59/8,Masala,450,Residential,TDR-2006-2426,Leasehold (65 yrs),2015-06-22,Boundary_Dispute,"-12.994082,28.66214",Paid
+NDL-0364,UrbanDevelopers Enterprises,436467/35/3,Industrial Area,10000,Industrial,TDR-2015-8227,Freehold,2011-02-12,None,"-12.987602,28.620839",Paid
+NDL-0365,David Mwanza,467335/80/5,Northrise,800,Commercial,TDR-2014-5011,Leasehold (99 yrs),2006-08-07,None,"-12.964095,28.649732",Paid
+NDL-0366,Ndola Minerals PLC,502233/16/1,Railway Line,2000,Agricultural,TDR-2024-8304,State Land,2012-12-23,None,"-12.966937,28.659209",Paid
+NDL-0367,Nelson Mumba,695370/26/1,Kitwe Road,700,Residential,TDR-2014-8625,Leasehold (50 yrs),2010-03-14,Auctioned,"-12.992539,28.669264",Paid
+NDL-0368,Grace Mwansa,927094/51/7,Twapia,300,Residential,TDR-2020-2849,Leasehold (65 yrs),2015-09-27,None,"-12.99151,28.662237",Paid
+NDL-0369,ZamBuild Resources,957266/23/5,Mapalo,450,Residential,TDR-2022-8552,Leasehold (50 yrs),2018-03-31,None,"-12.974407,28.650137",Arrears
+NDL-0370,Chibwe Zulu,953452/98/9,Railway Line,10000,Agricultural,TDR-2015-9921,Leasehold (99 yrs),2008-11-18,None,"-12.99504,28.671197",Paid
+NDL-0371,George Mumba,441183/81/1,Kitwe Road,300,Commercial,TDR-2017-2140,State Land,2007-06-10,None,"-12.975337,28.665093",Paid
+NDL-0372,Mary Phiri,328182/27/9,Mushili,800,Commercial,TDR-2009-8421,State Land,2011-07-16,None,"-12.976039,28.630762",Paid
+NDL-0373,George Chanda,555844/54/1,Mushili,1345,Mixed Use,TDR-2017-3089,Leasehold (65 yrs),2006-05-27,None,"-12.977142,28.622922",Paid
+NDL-0374,Memory Tembo,395917/13/3,Railway Line,1107,Mixed Use,TDR-2015-7271,Leasehold (50 yrs),2013-07-23,None,"-12.989974,28.629538",Paid
+NDL-0375,Peter Lungu,980764/63/2,Industrial Area,250,Commercial,TDR-2005-2175,Freehold,2008-03-25,Mortgaged,"-12.979505,28.64402",Arrears
+NDL-0376,Kansenshi Traders Group,927251/99/9,Railway Line,668,Mixed Use,TDR-2019-9346,Leasehold (50 yrs),2017-05-20,Caveat,"-12.983381,28.632416",Paid
+NDL-0377,Lubuto Cooperative Enterprises,846722/74/4,Railway Line,1480,Mixed Use,TDR-2016-1548,Freehold,2017-09-29,None,"-12.983994,28.651915",Arrears
+NDL-0378,PanAfrican Cement Holdings,587521/76/1,Kabushi,481,Mixed Use,TDR-2012-8740,Freehold,2020-05-05,None,"-12.967672,28.637187",Paid
+NDL-0379,Victor Mwape,591644/68/8,Twapia,1802,Mixed Use,TDR-2015-7897,Leasehold (65 yrs),2022-11-27,None,"-12.991635,28.658228",Paid
+NDL-0380,Ruth Chola,373094/17/7,Itawa,405,Mixed Use,TDR-2014-1447,Leasehold (65 yrs),2015-11-16,None,"-12.978787,28.666829",Paid
+NDL-0381,UrbanDevelopers Holdings,999529/42/0,Masala,657,Mixed Use,TDR-2023-3476,Leasehold (50 yrs),2013-04-18,Caveat,"-12.988072,28.658543",Paid
+NDL-0382,Simon Banda,459502/20/2,Ndeke,5000,Agricultural,TDR-2017-4898,Leasehold (50 yrs),2021-04-14,None,"-12.989987,28.66039",Paid
+NDL-0383,Victor Tembo,155074/31/7,Chipulukusu,3000,Agricultural,TDR-2020-9724,Leasehold (99 yrs),2013-07-09,None,"-12.983177,28.634444",Paid
+NDL-0384,Moses Mumba,500560/96/5,Kabushi,300,Residential,TDR-2022-6797,Leasehold (50 yrs),2018-09-11,Double_Allocation,"-12.965382,28.638423",Paid
+NDL-0385,Central Agro Resources,583507/96/3,Town Centre,991,Mixed Use,TDR-2010-6132,State Land,2005-03-28,None,"-12.966396,28.620658",Paid
+NDL-0386,Lubuto Cooperative Industrial,330074/46/4,Town Centre,250,Residential,TDR-2024-2506,Freehold,2018-04-30,None,"-12.966253,28.672277",Paid
+NDL-0387,Esther Phiri,998043/87/2,Chipulukusu,1944,Mixed Use,TDR-2010-2816,Leasehold (99 yrs),2010-09-07,None,"-12.972902,28.624164",Paid
+NDL-0388,Victor Sitali,825846/95/5,Northrise,1200,Commercial,TDR-2007-5543,Freehold,2013-08-02,None,"-12.960154,28.634203",Paid
+NDL-0389,ZamBuild Group,310416/88/6,Itawa,1500,Agricultural,TDR-2009-9857,Leasehold (50 yrs),2009-11-25,None,"-12.993963,28.644287",Paid
+NDL-0390,ZamBuild Holdings,914992/67/0,Twapia,800,Commercial,TDR-2005-1619,Leasehold (50 yrs),2010-12-23,None,"-12.985466,28.641523",Paid
+NDL-0391,Victor Kaluba,601365/65/6,Chifubu,762,Mixed Use,TDR-2005-7298,Leasehold (50 yrs),2007-09-20,None,"-12.962468,28.639741",Paid
+NDL-0392,Michael Phiri,483102/78/5,Chifubu,3000,Agricultural,TDR-2011-3893,State Land,2005-11-19,Auctioned,"-12.972892,28.636438",Paid
+NDL-0393,Ndola Estate Group,188984/90/7,Town Centre,200,Commercial,TDR-2011-1415,State Land,2010-05-08,None,"-12.995606,28.64973",Paid
+NDL-0394,Peter Mumba,117215/14/5,Kansenshi,2000,Industrial,TDR-2017-2936,Leasehold (99 yrs),2023-02-07,None,"-12.978121,28.671705",Arrears
+NDL-0395,Angela Chola,344303/19/0,Ndeke,20000,Agricultural,TDR-2005-8720,State Land,2006-01-11,None,"-12.973346,28.62079",Paid
+NDL-0396,Peter Tembo,578344/88/2,Chifubu,300,Residential,TDR-2020-4613,Freehold,2023-01-17,None,"-12.985181,28.665974",Paid
+NDL-0397,Esther Chola,672401/27/5,Town Centre,1000,Residential,TDR-2010-6496,Freehold,2007-09-17,None,"-12.969213,28.629243",Paid
+NDL-0398,GreenFields Ltd,239849/22/9,Chipulukusu,200,Commercial,TDR-2020-2322,Freehold,2005-03-01,None,"-12.994613,28.655847",Arrears
+NDL-0399,Ruth Kaluba,825990/26/3,Ndeke,10000,Industrial,TDR-2019-7750,Leasehold (99 yrs),2008-11-30,None,"-12.99657,28.6299",Paid
+NDL-0400,Michael Chanda,464750/63/0,Mapalo,250,Commercial,TDR-2008-9686,Freehold,2018-11-19,None,"-12.969077,28.649685",Paid
+NDL-0401,Faith Zulu,389854/16/3,Masala,800,Commercial,TDR-2020-9151,Leasehold (99 yrs),2008-08-01,None,"-12.996362,28.655467",Paid
+NDL-0402,Chibwe Mumba,145421/23/0,Mapalo,250,Commercial,TDR-2005-8947,State Land,2007-08-09,None,"-12.989059,28.644465",Paid
+NDL-0403,Angela Mwansa,341238/24/5,Lubuto,400,Residential,TDR-2018-4276,Leasehold (50 yrs),2024-12-29,None,"-12.980102,28.646642",Arrears
+NDL-0404,Central Agro Group,286710/59/5,Ndeke,20000,Agricultural,TDR-2011-6875,Leasehold (65 yrs),2009-07-15,None,"-12.99678,28.651277",Paid
+NDL-0405,Lubuto Cooperative Group,538539/31/5,Lubuto,10000,Industrial,TDR-2010-3784,State Land,2017-05-26,Boundary_Dispute,"-12.994714,28.667134",Paid
+NDL-0406,George Kaluba,977646/69/4,Mushili,20000,Agricultural,TDR-2012-5060,Leasehold (65 yrs),2014-09-28,None,"-12.964111,28.652547",Paid
+NDL-0407,Chileshe Sitali,146372/15/7,Kabushi,600,Residential,TDR-2021-7460,Leasehold (50 yrs),2023-03-01,Caveat,"-12.966791,28.644884",Paid
+NDL-0408,Chileshe Sitali,328596/26/5,Industrial Area,800,Commercial,TDR-2007-1260,Leasehold (50 yrs),2020-01-03,None,"-12.971274,28.667186",Paid
+NDL-0409,Lubuto Cooperative Group,909327/27/6,Itawa,8000,Industrial,TDR-2005-2158,Leasehold (50 yrs),2020-06-29,None,"-12.996757,28.643425",Paid
+NDL-0410,Mercy Chola,933071/36/1,Chililabombwe Road,800,Residential,TDR-2016-1844,Freehold,2013-08-04,None,"-12.974473,28.640106",Paid
+NDL-0411,Patrick Mwanza,843793/36/2,Chililabombwe Road,500,Commercial,TDR-2008-8839,State Land,2024-07-16,Auctioned,"-12.990028,28.660976",Paid
+NDL-0412,Patricia Sichone,813269/64/4,Kansenshi,500,Residential,TDR-2016-8412,Leasehold (50 yrs),2016-03-31,None,"-12.993337,28.65904",Paid
+NDL-0413,Moses Mumba,751114/57/1,Town Centre,1500,Agricultural,TDR-2007-7400,Leasehold (99 yrs),2011-06-21,Auctioned,"-12.995076,28.629062",Paid
+NDL-0414,Copperbelt Logistics Enterprises,645980/90/0,Industrial Area,20000,Agricultural,TDR-2022-3163,Leasehold (50 yrs),2012-10-11,None,"-12.969967,28.621182",Paid
+NDL-0415,GreenFields Industrial,531690/84/5,Chililabombwe Road,10000,Agricultural,TDR-2021-9986,Leasehold (50 yrs),2015-04-10,None,"-12.992986,28.663414",Paid
+NDL-0416,Linda Lungu,402143/16/2,Garden,8000,Industrial,TDR-2010-3634,State Land,2011-05-26,None,"-12.991336,28.658946",Arrears
+NDL-0417,Grace Ndalama,222596/15/5,Ndeke,3000,Agricultural,TDR-2016-4022,Leasehold (99 yrs),2017-08-13,Mortgaged,"-12.972709,28.673791",Paid
+NDL-0418,Grace Mwanza,416208/25/0,Chipulukusu,2000,Agricultural,TDR-2019-6246,Leasehold (99 yrs),2005-02-05,Auctioned,"-12.977246,28.647907",Paid
+NDL-0419,Beatrice Chanda,890795/83/2,Kitwe Road,2000,Industrial,TDR-2020-1656,Leasehold (99 yrs),2020-03-17,None,"-12.986293,28.64209",Paid
+NDL-0420,Patrick Mwansa,157706/87/3,Kabushi,1200,Commercial,TDR-2013-4206,Freehold,2006-11-16,None,"-12.981073,28.656936",Paid
+NDL-0421,David Kaluba,433193/87/9,Kabushi,500,Residential,TDR-2017-3423,Leasehold (50 yrs),2013-04-17,None,"-12.997537,28.638971",Paid
+NDL-0422,Mercy Phiri,326172/66/6,Kitwe Road,3000,Industrial,TDR-2018-7786,Leasehold (99 yrs),2023-09-28,None,"-12.994729,28.631428",Paid
+NDL-0423,Chibwe Phiri,719371/58/1,Mushili,20000,Agricultural,TDR-2013-7791,Leasehold (99 yrs),2017-06-20,None,"-12.976419,28.670318",Paid
+NDL-0424,Moses Mwanza,614416/15/4,Industrial Area,10000,Agricultural,TDR-2019-4678,Freehold,2022-09-30,None,"-12.988018,28.672581",Paid
+NDL-0425,Michael Chanda,537420/32/7,Lubuto,300,Residential,TDR-2013-9078,Freehold,2018-06-08,Mortgaged,"-12.97592,28.651107",Arrears
+NDL-0426,Linda Tembo,491330/75/9,Mushili,3000,Industrial,TDR-2023-1958,Leasehold (99 yrs),2012-03-03,None,"-12.971655,28.639656",Paid
+NDL-0427,Michael Lungu,151081/47/4,Kabushi,800,Residential,TDR-2011-4002,Freehold,2018-06-07,Mortgaged,"-12.977339,28.667984",Paid
+NDL-0428,Moses Mulilo,818739/99/5,Masala,1487,Mixed Use,TDR-2016-3354,Freehold,2008-01-27,None,"-12.983825,28.646669",Paid
+NDL-0429,Esther Zulu,262062/74/3,Town Centre,1556,Mixed Use,TDR-2021-9717,State Land,2020-10-01,Mortgaged,"-12.993669,28.645327",Paid
+NDL-0430,Nelson Mwape,602811/54/4,Garden,1200,Commercial,TDR-2019-9570,Leasehold (65 yrs),2008-11-11,Mortgaged,"-12.996907,28.664802",Paid
+NDL-0431,Nchimunya Ndalama,422361/26/3,Ndeke,600,Residential,TDR-2008-2273,Freehold,2022-05-18,None,"-12.981613,28.630799",Paid
+NDL-0432,George Banda,591868/25/4,Kansenshi,450,Residential,TDR-2005-2581,Freehold,2018-07-01,None,"-12.963755,28.630163",Paid
+NDL-0433,UrbanDevelopers Industrial,469311/30/8,Lubuto,1467,Mixed Use,TDR-2007-2623,State Land,2022-02-13,None,"-12.989754,28.630535",Paid
+NDL-0434,Mercy Mwape,860583/22/3,Kabushi,3000,Agricultural,TDR-2023-4033,Leasehold (50 yrs),2020-02-09,Auctioned,"-12.991128,28.639515",Paid
+NDL-0435,Mukuka Sitali,218327/50/1,Kitwe Road,800,Residential,TDR-2009-9123,Leasehold (65 yrs),2020-10-22,None,"-12.970559,28.624524",Paid
+NDL-0436,Samuel Chanda,820420/66/3,Mapalo,3000,Agricultural,TDR-2018-4093,Freehold,2023-11-12,Caveat,"-12.962315,28.640209",Paid
+NDL-0437,Faith Tembo,515623/66/8,Chifubu,350,Residential,TDR-2017-7563,State Land,2007-04-14,Mortgaged,"-12.964088,28.62928",Paid
+NDL-0438,David Kaunda,228725/39/6,Twapia,10000,Industrial,TDR-2023-5472,Leasehold (50 yrs),2012-12-27,None,"-12.97508,28.642244",Paid
+NDL-0439,Victor Mumba,213284/25/4,Twapia,2000,Agricultural,TDR-2009-1486,Freehold,2021-07-20,None,"-12.995407,28.657296",Arrears
+NDL-0440,Faith Mwansa,260155/48/9,Masala,800,Residential,TDR-2020-8635,Leasehold (99 yrs),2011-08-02,None,"-12.97937,28.634392",Paid
+NDL-0441,Mercy Mwape,901075/14/6,Masala,5000,Agricultural,TDR-2015-7165,Leasehold (50 yrs),2015-04-24,None,"-12.991279,28.656268",Paid
+NDL-0442,Grace Kaluba,551601/27/4,Chipulukusu,1500,Agricultural,TDR-2023-9037,State Land,2020-05-16,None,"-12.980147,28.650924",Paid
+NDL-0443,UrbanDevelopers Group,719755/58/9,Garden,5000,Industrial,TDR-2006-1461,State Land,2006-01-05,None,"-12.984076,28.664525",Paid
+NDL-0444,Michael Mwansa,499060/22/6,Garden,8000,Industrial,TDR-2016-1924,Leasehold (99 yrs),2010-07-22,None,"-12.98614,28.624672",Paid
+NDL-0445,Esther Mwansa,278026/12/8,Chililabombwe Road,700,Residential,TDR-2018-9433,Leasehold (50 yrs),2010-12-25,None,"-12.980151,28.621223",Paid
+NDL-0446,Chibwe Chola,202472/72/1,Town Centre,8000,Industrial,TDR-2021-6563,Leasehold (99 yrs),2018-10-16,None,"-12.961162,28.631097",Paid
+NDL-0447,Patrick Mwanza,324479/46/4,Kansenshi,10000,Industrial,TDR-2017-4700,State Land,2021-08-30,Auctioned,"-12.970727,28.651801",Paid
+NDL-0448,George Sichone,598355/64/3,Garden,450,Residential,TDR-2021-5913,Leasehold (50 yrs),2019-11-19,None,"-12.990397,28.642127",Paid
+NDL-0449,Victor Mwanza,289373/12/8,Itawa,1322,Mixed Use,TDR-2011-8656,Leasehold (65 yrs),2019-04-23,None,"-12.974652,28.662302",Paid
+NDL-0450,Michael Banda,647639/35/5,Kitwe Road,250,Commercial,TDR-2009-5919,Leasehold (50 yrs),2014-03-15,None,"-12.966452,28.623544",Paid
+NDL-0451,Peter Chanda,777424/30/4,Lubuto,2000,Agricultural,TDR-2008-3456,Leasehold (99 yrs),2005-08-15,None,"-12.966565,28.645529",Paid
+NDL-0452,Michael Banda,311802/30/4,Ndeke,450,Residential,TDR-2013-3883,Freehold,2021-03-16,None,"-12.997243,28.667277",Paid
+NDL-0453,Simon Phiri,526777/56/1,Chipulukusu,250,Commercial,TDR-2008-9196,Freehold,2016-09-15,None,"-12.975944,28.662631",Paid
+NDL-0454,Patrick Ndalama,728958/25/5,Chililabombwe Road,1809,Mixed Use,TDR-2017-4865,Leasehold (50 yrs),2009-11-21,None,"-12.991344,28.673346",Paid
+NDL-0455,George Banda,614178/78/5,Masala,10000,Industrial,TDR-2018-8780,Leasehold (99 yrs),2011-03-26,Boundary_Dispute,"-12.962395,28.639965",Paid
+NDL-0456,Chileshe Banda,982348/94/0,Lubuto,10000,Industrial,TDR-2017-6067,Leasehold (65 yrs),2023-03-21,None,"-12.977673,28.633001",Paid
+NDL-0457,Kansenshi Traders Holdings,415504/21/3,Industrial Area,1200,Commercial,TDR-2010-8190,Leasehold (65 yrs),2024-09-22,Caveat,"-12.973512,28.663412",Paid
+NDL-0458,Lubuto Cooperative Group,872739/62/5,Railway Line,350,Residential,TDR-2013-9295,Freehold,2012-11-22,None,"-12.970289,28.650125",Paid
+NDL-0459,Victor Banda,772528/92/2,Kitwe Road,200,Commercial,TDR-2017-4278,Leasehold (65 yrs),2012-01-15,None,"-12.993789,28.633728",Paid
+NDL-0460,Michael Mulenga,988102/86/6,Chililabombwe Road,5000,Agricultural,TDR-2009-5270,Leasehold (99 yrs),2020-06-02,None,"-12.985552,28.635499",Paid
+NDL-0461,Alice Kaunda,975224/83/3,Mushili,800,Residential,TDR-2024-4747,Freehold,2015-05-17,None,"-12.971352,28.629282",Paid
+NDL-0462,Patricia Mulenga,193387/57/2,Masala,800,Residential,TDR-2018-8433,Leasehold (50 yrs),2007-08-29,None,"-12.99028,28.672033",Paid
+NDL-0463,Angela Kaluba,500633/26/6,Town Centre,741,Mixed Use,TDR-2014-4102,Leasehold (50 yrs),2009-01-17,None,"-12.992454,28.635961",Paid
+NDL-0464,Nelson Ndalama,487593/84/7,Chifubu,700,Residential,TDR-2009-6296,Leasehold (50 yrs),2020-05-28,None,"-12.983427,28.643281",Paid
+NDL-0465,PanAfrican Cement Ltd,154644/52/3,Twapia,10000,Industrial,TDR-2024-1745,Freehold,2010-09-09,None,"-12.983524,28.673764",Paid
+NDL-0466,PanAfrican Cement Ltd,708684/32/4,Itawa,1309,Mixed Use,TDR-2015-8669,Leasehold (99 yrs),2007-01-05,None,"-12.977844,28.627799",Paid
+NDL-0467,Copperbelt Logistics Group,975355/45/5,Railway Line,5000,Industrial,TDR-2024-5321,State Land,2012-01-09,None,"-12.991731,28.660528",Paid
+NDL-0468,Mercy Mumba,155807/34/2,Kansenshi,250,Commercial,TDR-2006-8704,Leasehold (65 yrs),2008-09-01,Mortgaged,"-12.981416,28.674736",Arrears
+NDL-0469,Ndola Estate Group,579995/73/1,Ndeke,500,Residential,TDR-2007-4337,Leasehold (65 yrs),2009-01-19,Caveat,"-12.969502,28.665241",Paid
+NDL-0470,David Chola,104326/77/9,Itawa,1500,Agricultural,TDR-2012-9161,Freehold,2024-11-26,None,"-12.987197,28.673973",Paid
+NDL-0471,Nelson Tembo,977634/51/2,Mushili,700,Residential,TDR-2020-8439,Leasehold (65 yrs),2018-04-30,None,"-12.985482,28.622412",Paid
+NDL-0472,Angela Chola,235602/37/0,Industrial Area,2000,Industrial,TDR-2007-9964,State Land,2013-07-22,None,"-12.988304,28.633204",Paid
+NDL-0473,Chileshe Zulu,270855/59/6,Industrial Area,200,Commercial,TDR-2014-9042,Leasehold (50 yrs),2021-07-04,Caveat,"-12.986216,28.657673",Paid
+NDL-0474,Peter Lungu,637555/35/7,Kitwe Road,5000,Agricultural,TDR-2013-7931,Freehold,2021-12-20,None,"-12.984007,28.63025",Paid
+NDL-0475,PanAfrican Cement Industrial,586041/96/3,Ndeke,10000,Agricultural,TDR-2021-2375,Leasehold (65 yrs),2015-07-03,None,"-12.963526,28.646269",Paid
+NDL-0476,UrbanDevelopers Enterprises,648501/64/4,Kansenshi,456,Mixed Use,TDR-2006-9411,Freehold,2016-06-15,None,"-12.99441,28.656347",Paid
+NDL-0477,Patricia Chola,185741/74/0,Masala,2000,Agricultural,TDR-2010-7438,Freehold,2006-11-14,None,"-12.971234,28.637267",Paid
+NDL-0478,Samuel Mulilo,457915/33/3,Itawa,1000,Residential,TDR-2013-2742,Leasehold (50 yrs),2016-12-26,None,"-12.982993,28.620732",Paid
+NDL-0479,Alice Kaluba,417508/89/9,Garden,3000,Agricultural,TDR-2007-3049,Leasehold (99 yrs),2005-04-24,None,"-12.966993,28.658282",Paid
+NDL-0480,Lubuto Cooperative Co,781301/40/6,Mapalo,200,Commercial,TDR-2014-8592,Leasehold (99 yrs),2015-08-19,None,"-12.993575,28.669633",Paid
+NDL-0481,Linda Kaluba,120581/67/9,Lubuto,300,Commercial,TDR-2023-7418,Freehold,2012-06-27,None,"-12.974044,28.65922",Arrears
+NDL-0482,Angela Chola,724783/80/4,Kansenshi,5000,Agricultural,TDR-2020-9410,State Land,2021-04-03,None,"-12.972211,28.664918",Paid
+NDL-0483,James Mwape,542503/83/5,Mapalo,450,Residential,TDR-2018-8755,Freehold,2016-02-06,None,"-12.973445,28.644658",Paid
+NDL-0484,GreenFields Group,460550/66/3,Kabushi,500,Commercial,TDR-2015-8675,Leasehold (99 yrs),2024-10-22,None,"-12.970967,28.672789",Paid
+NDL-0485,Angela Lungu,934637/70/2,Town Centre,2000,Industrial,TDR-2020-3115,Leasehold (99 yrs),2009-06-23,None,"-12.979297,28.663642",Arrears
+NDL-0486,Mukuka Zulu,683879/16/0,Garden,5000,Industrial,TDR-2010-3862,State Land,2005-09-19,Caveat,"-12.985166,28.626268",Paid
+NDL-0487,Linda Mulilo,456855/55/0,Mapalo,3000,Industrial,TDR-2021-2706,Freehold,2014-10-27,Caveat,"-12.961419,28.661567",Arrears
+NDL-0488,Rose Tembo,963617/81/0,Kabushi,350,Residential,TDR-2008-4365,Leasehold (65 yrs),2008-07-10,Mortgaged,"-12.97109,28.661908",Paid
+NDL-0489,Nchimunya Lungu,450861/27/1,Town Centre,5000,Agricultural,TDR-2005-5019,Leasehold (50 yrs),2012-08-28,None,"-12.991492,28.634631",Paid
+NDL-0490,Michael Ndalama,258975/77/6,Lubuto,1200,Commercial,TDR-2018-7773,Leasehold (50 yrs),2015-04-17,Auctioned,"-12.978386,28.657521",Arrears
+NDL-0491,Victor Mwape,852485/76/1,Chifubu,5000,Industrial,TDR-2017-3692,Leasehold (50 yrs),2006-05-19,None,"-12.99659,28.670739",Paid
+NDL-0492,Michael Sichone,410089/63/6,Mapalo,5000,Industrial,TDR-2016-1129,Leasehold (65 yrs),2016-11-02,None,"-12.992419,28.642217",Paid
+NDL-0493,Rose Mumba,831351/54/6,Town Centre,2000,Industrial,TDR-2006-9805,Leasehold (65 yrs),2013-09-30,Mortgaged,"-12.969878,28.62693",Arrears
+NDL-0494,Patrick Sichone,678589/49/8,Chililabombwe Road,200,Commercial,TDR-2005-9846,State Land,2010-10-21,None,"-12.968582,28.659958",Arrears
+NDL-0495,Ndola Minerals Industrial,372374/90/8,Garden,250,Residential,TDR-2008-8352,Leasehold (65 yrs),2017-11-03,Mortgaged,"-12.98078,28.674062",Paid
+NDL-0496,George Mwanza,985517/86/3,Garden,5000,Industrial,TDR-2023-3293,Leasehold (50 yrs),2016-08-28,Mortgaged,"-12.994001,28.648405",Paid
+NDL-0497,Samuel Tembo,253672/64/6,Chifubu,250,Residential,TDR-2018-3130,Leasehold (50 yrs),2009-10-26,None,"-12.983967,28.648944",Paid
+NDL-0498,Alice Mulilo,712686/73/6,Kitwe Road,20000,Agricultural,TDR-2018-3668,Leasehold (99 yrs),2016-05-06,None,"-12.970976,28.627116",Paid
+NDL-0499,Esther Zulu,577555/70/0,Itawa,1056,Mixed Use,TDR-2008-7694,Freehold,2007-09-18,None,"-12.986996,28.648753",Paid
+NDL-0500,Memory Chanda,408261/72/0,Ndeke,1200,Commercial,TDR-2023-7910,Freehold,2011-11-05,Boundary_Dispute,"-12.989808,28.665052",Paid
+NDL-0501,Ndola Estate PLC,146852/63/7,Industrial Area,1226,Mixed Use,TDR-2015-7181,Leasehold (50 yrs),2023-09-19,Mortgaged,"-12.974983,28.661907",Paid
+NDL-0502,Samuel Mumba,256219/51/1,Railway Line,2000,Agricultural,TDR-2017-6554,State Land,2006-01-11,Auctioned,"-12.964178,28.660475",Paid
+NDL-0503,Brian Mwape,699780/90/4,Mapalo,800,Residential,TDR-2007-4152,State Land,2017-02-25,None,"-12.995991,28.651363",Paid
+NDL-0504,Beatrice Mwape,226126/94/8,Itawa,450,Residential,TDR-2011-5018,State Land,2014-12-19,None,"-12.977725,28.637624",Paid
+NDL-0505,Nelson Mwape,456470/65/2,Railway Line,800,Residential,TDR-2015-7258,Leasehold (65 yrs),2007-01-16,None,"-12.994225,28.629249",Paid
+NDL-0506,Patrick Mulenga,421697/62/2,Kansenshi,966,Mixed Use,TDR-2010-1445,Freehold,2011-09-08,None,"-12.985838,28.642705",Paid
+NDL-0507,Peter Tembo,154398/35/3,Lubuto,10000,Agricultural,TDR-2021-7308,Freehold,2011-01-16,None,"-12.980337,28.642389",Paid
+NDL-0508,Mukuka Mwape,382234/80/9,Masala,1200,Commercial,TDR-2022-3057,Leasehold (65 yrs),2017-09-30,None,"-12.994811,28.654969",Paid
+NDL-0509,Memory Mwanza,276358/41/8,Railway Line,1225,Mixed Use,TDR-2006-1016,Leasehold (50 yrs),2023-08-09,None,"-12.973184,28.629206",Paid
+NDL-0510,Patricia Mulilo,980266/97/6,Garden,500,Commercial,TDR-2021-5609,Freehold,2008-08-15,Mortgaged,"-12.976603,28.636535",Paid
+NDL-0511,Copperbelt Logistics Holdings,552945/36/9,Kabushi,5000,Industrial,TDR-2013-8417,Leasehold (65 yrs),2010-07-08,None,"-12.985778,28.631584",Arrears
+NDL-0512,Nelson Mulenga,777844/10/9,Twapia,250,Residential,TDR-2010-7769,State Land,2020-08-15,Mortgaged,"-12.969026,28.649597",Paid
+NDL-0513,Patrick Mwanza,132450/95/7,Masala,8000,Industrial,TDR-2024-6864,Leasehold (50 yrs),2008-12-22,Caveat,"-12.967149,28.674109",Paid
+NDL-0514,David Mumba,109818/38/0,Northrise,3000,Industrial,TDR-2007-5967,Leasehold (99 yrs),2010-04-04,Auctioned,"-12.961243,28.622024",Paid
+NDL-0515,Rose Zulu,107482/35/6,Masala,10000,Industrial,TDR-2021-9093,Leasehold (99 yrs),2017-05-18,None,"-12.969925,28.65697",Paid
+NDL-0516,Central Agro Co,882209/18/2,Northrise,766,Mixed Use,TDR-2021-5494,Leasehold (99 yrs),2024-01-06,None,"-12.960306,28.658114",Paid
+NDL-0517,Mercy Mumba,102049/64/0,Chililabombwe Road,5000,Agricultural,TDR-2013-2994,State Land,2015-06-20,None,"-12.978344,28.622391",Paid
+NDL-0518,Kansenshi Traders Group,431603/10/6,Town Centre,2000,Industrial,TDR-2023-1415,Leasehold (99 yrs),2020-06-19,None,"-12.995171,28.633749",Paid
+NDL-0519,Michael Tembo,129226/71/6,Mushili,1932,Mixed Use,TDR-2015-5102,Leasehold (99 yrs),2007-06-03,None,"-12.961565,28.665788",Paid
+NDL-0520,Mukuka Phiri,913432/86/9,Kitwe Road,700,Residential,TDR-2023-3045,Freehold,2006-05-13,Double_Allocation,"-12.983659,28.668955",Paid
+NDL-0521,Mary Mumba,157450/48/9,Railway Line,300,Residential,TDR-2006-1855,Leasehold (65 yrs),2024-01-24,None,"-12.994358,28.661358",Paid
+NDL-0522,Faith Mwape,575436/59/7,Railway Line,1568,Mixed Use,TDR-2008-6564,Freehold,2015-03-09,None,"-12.975663,28.62594",Paid
+NDL-0523,George Zulu,701056/26/8,Northrise,8000,Industrial,TDR-2020-8284,Leasehold (99 yrs),2010-06-15,None,"-12.996325,28.627022",Paid
+NDL-0524,Michael Lungu,426304/84/8,Ndeke,400,Commercial,TDR-2014-6618,Leasehold (65 yrs),2013-04-10,Auctioned,"-12.978328,28.656172",Paid
+NDL-0525,Peter Mwanza,157259/64/5,Town Centre,800,Commercial,TDR-2011-2120,Leasehold (65 yrs),2009-04-01,None,"-12.971598,28.674006",Paid
+NDL-0526,George Chola,451965/88/4,Railway Line,3000,Industrial,TDR-2008-8443,Freehold,2016-02-15,None,"-12.99786,28.632266",Paid
+NDL-0527,Mukuka Kaluba,870269/52/6,Town Centre,2000,Agricultural,TDR-2005-6944,Freehold,2006-08-28,None,"-12.976922,28.627832",Paid
+NDL-0528,Nelson Lungu,146037/13/3,Town Centre,3000,Industrial,TDR-2012-5292,Leasehold (99 yrs),2012-08-15,Boundary_Dispute,"-12.988653,28.630779",Paid
+NDL-0529,Esther Mwape,971834/96/2,Chipulukusu,500,Residential,TDR-2011-5998,Leasehold (50 yrs),2010-05-22,None,"-12.983851,28.629425",Paid
+NDL-0530,Rose Sitali,845476/18/1,Ndeke,1200,Commercial,TDR-2011-4140,State Land,2013-06-26,None,"-12.985918,28.643625",Paid
+NDL-0531,Victor Chola,298287/78/4,Ndeke,3000,Industrial,TDR-2006-5588,Leasehold (99 yrs),2024-02-06,None,"-12.975805,28.646894",Paid
+NDL-0532,Ruth Phiri,275566/75/6,Kabushi,8000,Industrial,TDR-2021-8606,Leasehold (99 yrs),2012-03-21,Mortgaged,"-12.978032,28.646581",Arrears
+NDL-0533,George Kaunda,769102/84/0,Town Centre,250,Commercial,TDR-2019-4840,Leasehold (50 yrs),2009-11-26,None,"-12.964229,28.651425",Arrears
+NDL-0534,Mercy Phiri,240855/20/4,Kitwe Road,1020,Mixed Use,TDR-2012-1674,Leasehold (50 yrs),2016-06-28,None,"-12.981808,28.645715",Paid
+NDL-0535,Chibwe Mulilo,500944/13/2,Kitwe Road,300,Commercial,TDR-2007-6883,Freehold,2011-08-10,Boundary_Dispute,"-12.978514,28.655401",Paid
+NDL-0536,Esther Tembo,174814/56/0,Mapalo,300,Commercial,TDR-2011-6394,Leasehold (65 yrs),2011-10-16,Mortgaged,"-12.968798,28.6665",Paid
+NDL-0537,Nchimunya Mwanza,373820/11/4,Industrial Area,8000,Industrial,TDR-2017-1194,Leasehold (50 yrs),2019-09-03,None,"-12.969076,28.62821",Paid
+NDL-0538,Angela Zulu,597484/39/8,Mapalo,20000,Agricultural,TDR-2019-6581,Freehold,2012-01-09,Boundary_Dispute,"-12.981706,28.671806",Paid
+NDL-0539,Simon Mwanza,131566/57/2,Ndeke,2000,Industrial,TDR-2020-6810,Leasehold (65 yrs),2010-01-22,None,"-12.971941,28.642185",Paid
+NDL-0540,Chibwe Chola,124368/82/0,Ndeke,300,Commercial,TDR-2023-7404,Leasehold (50 yrs),2009-07-31,Auctioned,"-12.995579,28.641254",Paid
+NDL-0541,Samuel Chanda,197770/31/1,Mapalo,200,Commercial,TDR-2024-9005,Freehold,2009-03-10,None,"-12.963369,28.641224",Paid
+NDL-0542,James Phiri,576749/17/5,Kabushi,350,Residential,TDR-2015-7731,Leasehold (50 yrs),2008-07-10,Auctioned,"-12.993093,28.643013",Paid
+NDL-0543,Beatrice Zulu,236243/36/4,Railway Line,2000,Agricultural,TDR-2024-6084,State Land,2009-07-21,None,"-12.971976,28.635149",Paid
+NDL-0544,ZamBuild Resources,734229/41/8,Chililabombwe Road,1305,Mixed Use,TDR-2019-8580,State Land,2005-11-17,Mortgaged,"-12.987059,28.668455",Paid
+NDL-0545,Brian Chanda,510087/88/2,Railway Line,250,Commercial,TDR-2024-8079,Leasehold (50 yrs),2013-08-18,Double_Allocation,"-12.991029,28.651274",Paid
+NDL-0546,Mukuka Kapasa,387075/90/8,Industrial Area,400,Residential,TDR-2020-7738,State Land,2007-09-21,Auctioned,"-12.995092,28.625787",Paid
+NDL-0547,Samuel Kapasa,365045/36/8,Kansenshi,1500,Agricultural,TDR-2007-8567,Leasehold (50 yrs),2012-09-16,Mortgaged,"-12.965481,28.641817",Paid
+NDL-0548,Copperbelt Logistics Industrial,802855/69/7,Kitwe Road,300,Residential,TDR-2022-4969,Leasehold (50 yrs),2008-02-23,None,"-12.987393,28.628875",Paid
+NDL-0549,Grace Chanda,230182/78/6,Itawa,250,Residential,TDR-2013-3514,Leasehold (50 yrs),2013-01-12,None,"-12.970852,28.669098",Paid
+NDL-0550,Mary Sichone,772149/94/1,Chipulukusu,8000,Industrial,TDR-2006-1076,Freehold,2022-04-29,None,"-12.990334,28.633733",Arrears
+NDL-0551,Chileshe Sitali,129301/11/5,Town Centre,400,Residential,TDR-2008-3750,Leasehold (99 yrs),2005-12-27,None,"-12.993908,28.637993",Paid
+NDL-0552,David Mwanza,514254/64/1,Lubuto,200,Commercial,TDR-2016-6298,Leasehold (99 yrs),2005-05-03,None,"-12.985983,28.641405",Paid
+NDL-0553,UrbanDevelopers Industrial,146073/18/3,Railway Line,10000,Industrial,TDR-2020-2668,State Land,2022-10-01,Auctioned,"-12.965682,28.62943",Arrears
+NDL-0554,Michael Kaunda,810830/98/2,Chililabombwe Road,800,Commercial,TDR-2015-8899,Freehold,2012-07-08,None,"-12.96334,28.64469",Paid
+NDL-0555,James Chola,838857/11/3,Mushili,1854,Mixed Use,TDR-2008-6060,Leasehold (99 yrs),2021-07-20,None,"-12.988745,28.624366",Paid
+NDL-0556,David Mulenga,494000/36/0,Lubuto,1208,Mixed Use,TDR-2015-3199,Leasehold (65 yrs),2012-02-15,None,"-12.969101,28.648648",Arrears
+NDL-0557,Moses Mwape,340134/52/5,Lubuto,500,Commercial,TDR-2006-5068,Leasehold (99 yrs),2018-08-22,Boundary_Dispute,"-12.978184,28.630095",Paid
+NDL-0558,Lubuto Cooperative PLC,301814/16/2,Town Centre,200,Commercial,TDR-2010-9992,Leasehold (99 yrs),2010-04-20,None,"-12.981803,28.645689",Paid
+NDL-0559,Joseph Kapasa,735281/41/4,Industrial Area,1218,Mixed Use,TDR-2011-5454,Leasehold (50 yrs),2006-10-18,Auctioned,"-12.984336,28.640774",Paid
+NDL-0560,Rose Sitali,897257/29/7,Mushili,5000,Agricultural,TDR-2007-5918,State Land,2017-01-18,None,"-12.970387,28.634151",Paid
+NDL-0561,Alice Mwanza,735463/71/1,Chililabombwe Road,800,Commercial,TDR-2020-4206,Leasehold (99 yrs),2009-04-03,None,"-12.965257,28.66017",Paid
+NDL-0562,Joseph Kaunda,878246/57/6,Twapia,10000,Industrial,TDR-2007-7697,Freehold,2007-10-17,None,"-12.976507,28.630683",Paid
+NDL-0563,Nelson Lungu,634363/72/5,Kansenshi,5000,Agricultural,TDR-2012-4970,Leasehold (50 yrs),2005-10-10,Double_Allocation,"-12.984266,28.658861",Paid
+NDL-0564,Nchimunya Mulilo,734845/68/2,Northrise,500,Commercial,TDR-2023-3644,Freehold,2007-08-15,Mortgaged,"-12.973513,28.670429",Paid
+NDL-0565,Beatrice Phiri,643725/34/6,Itawa,3000,Agricultural,TDR-2014-9202,State Land,2019-10-09,Boundary_Dispute,"-12.975729,28.660366",Paid
+NDL-0566,Simon Phiri,214582/91/9,Garden,300,Commercial,TDR-2011-7520,Leasehold (65 yrs),2005-02-22,Auctioned,"-12.966977,28.620087",Paid
+NDL-0567,James Sitali,786315/46/6,Itawa,300,Commercial,TDR-2010-3200,Leasehold (99 yrs),2015-11-30,None,"-12.961958,28.644786",Paid
+NDL-0568,Mary Kapasa,948485/34/4,Railway Line,20000,Agricultural,TDR-2024-2789,Leasehold (99 yrs),2006-10-16,None,"-12.983646,28.635222",Paid
+NDL-0569,Linda Kaluba,805486/22/0,Kansenshi,2000,Industrial,TDR-2023-1685,Freehold,2009-09-26,None,"-12.997724,28.653164",Arrears
+NDL-0570,Nelson Kaluba,596219/53/9,Railway Line,5000,Industrial,TDR-2015-6164,Leasehold (99 yrs),2013-02-07,None,"-12.983619,28.623148",Paid
+NDL-0571,Esther Mwape,579114/99/6,Ndeke,1000,Residential,TDR-2008-9693,Leasehold (65 yrs),2020-09-07,Mortgaged,"-12.988556,28.644855",Paid
+NDL-0572,James Sitali,792299/34/0,Chililabombwe Road,500,Residential,TDR-2006-6333,Leasehold (50 yrs),2010-03-29,None,"-12.982794,28.653693",Paid
+NDL-0573,Nelson Kaluba,790318/99/1,Chipulukusu,10000,Industrial,TDR-2011-3345,State Land,2024-08-27,None,"-12.965442,28.647755",Paid
+NDL-0574,Moses Mwanza,589478/31/7,Masala,20000,Agricultural,TDR-2022-4946,Leasehold (99 yrs),2009-09-30,None,"-12.96212,28.658495",Paid
+NDL-0575,Chileshe Kapasa,442360/59/4,Lubuto,8000,Industrial,TDR-2008-3224,State Land,2019-03-19,Mortgaged,"-12.994563,28.658048",Arrears
+NDL-0576,Victor Phiri,775268/53/6,Chipulukusu,1194,Mixed Use,TDR-2012-4662,Leasehold (65 yrs),2007-08-06,None,"-12.993767,28.638713",Paid
+NDL-0577,Esther Chola,485600/26/5,Chipulukusu,1809,Mixed Use,TDR-2005-6092,Freehold,2018-03-27,None,"-12.965809,28.673892",Paid
+NDL-0578,Faith Mulenga,644998/94/9,Lubuto,600,Residential,TDR-2005-9819,Leasehold (50 yrs),2012-02-02,None,"-12.96217,28.666047",Paid
+NDL-0579,Rose Chanda,252956/95/0,Chililabombwe Road,10000,Industrial,TDR-2008-5480,State Land,2015-09-24,None,"-12.989803,28.636032",Arrears
+NDL-0580,Ndola Estate Co,968100/36/3,Kansenshi,1200,Commercial,TDR-2020-7419,Leasehold (65 yrs),2023-04-13,None,"-12.965756,28.674508",Paid
+NDL-0581,Faith Kaluba,465226/60/6,Chifubu,1788,Mixed Use,TDR-2014-5626,Leasehold (99 yrs),2020-09-22,Boundary_Dispute,"-12.983037,28.6272",Paid
+NDL-0582,Ruth Banda,991090/48/7,Itawa,581,Mixed Use,TDR-2019-8904,Leasehold (65 yrs),2008-04-01,None,"-12.967434,28.630761",Paid
+NDL-0583,Simon Chola,206900/96/2,Chipulukusu,20000,Agricultural,TDR-2010-1922,Freehold,2012-12-22,Auctioned,"-12.991174,28.622886",Arrears
+NDL-0584,George Sitali,255785/90/6,Lubuto,300,Residential,TDR-2012-7498,Leasehold (50 yrs),2011-10-16,None,"-12.961727,28.655904",Paid
+NDL-0585,Ruth Phiri,915509/69/6,Northrise,3000,Agricultural,TDR-2005-2966,Freehold,2006-11-08,None,"-12.973626,28.669966",Paid
+NDL-0586,George Kaluba,387021/98/1,Itawa,5000,Agricultural,TDR-2018-5888,State Land,2007-10-23,None,"-12.995587,28.669988",Paid
+NDL-0587,Peter Mwape,512925/81/8,Kabushi,1500,Agricultural,TDR-2021-9830,Freehold,2021-11-25,Mortgaged,"-12.961304,28.669368",Paid
+NDL-0588,Grace Mwape,681667/67/5,Masala,350,Residential,TDR-2023-4378,Leasehold (99 yrs),2006-12-21,None,"-12.965645,28.621925",Arrears
+NDL-0589,Memory Mwanza,279938/64/0,Lubuto,2000,Industrial,TDR-2021-5807,State Land,2014-12-24,None,"-12.979363,28.637211",Arrears
+NDL-0590,Rose Mwanza,635392/36/1,Kansenshi,200,Commercial,TDR-2011-3321,Leasehold (65 yrs),2024-03-15,Caveat,"-12.961618,28.653118",Paid
+NDL-0591,Nchimunya Sitali,177971/80/4,Northrise,20000,Agricultural,TDR-2010-7554,Leasehold (50 yrs),2006-11-14,Auctioned,"-12.972292,28.671711",Paid
+NDL-0592,Michael Mulilo,763874/99/3,Garden,1646,Mixed Use,TDR-2021-3687,Leasehold (50 yrs),2023-06-06,None,"-12.960287,28.643849",Paid
+NDL-0593,Patrick Mulilo,230674/78/1,Mapalo,1500,Agricultural,TDR-2015-2457,Leasehold (65 yrs),2012-06-25,Mortgaged,"-12.992439,28.663895",Paid
+NDL-0594,GreenFields Resources,210103/25/2,Kabushi,10000,Industrial,TDR-2020-2565,State Land,2012-10-29,Mortgaged,"-12.965115,28.650335",Paid
+NDL-0595,Grace Mwansa,888395/59/2,Garden,1429,Mixed Use,TDR-2024-7597,Leasehold (50 yrs),2018-04-15,None,"-12.997639,28.648246",Paid
+NDL-0596,Kansenshi Traders Holdings,155432/91/5,Lubuto,1156,Mixed Use,TDR-2019-3999,Leasehold (50 yrs),2012-12-09,Caveat,"-12.978915,28.63517",Paid
+NDL-0597,Beatrice Ndalama,420012/91/1,Industrial Area,3000,Agricultural,TDR-2007-2302,Freehold,2021-05-16,None,"-12.994442,28.651642",Paid
+NDL-0598,Nelson Kaluba,947613/11/6,Kabushi,400,Commercial,TDR-2020-9437,State Land,2020-08-27,None,"-12.997472,28.63046",Paid
+NDL-0599,Kansenshi Traders Industrial,356089/94/8,Kansenshi,1218,Mixed Use,TDR-2010-9577,Leasehold (99 yrs),2008-12-03,None,"-12.966102,28.648253",Arrears
+NDL-0600,Alice Kapasa,491416/24/5,Lubuto,1869,Mixed Use,TDR-2008-5752,Leasehold (65 yrs),2015-11-02,None,"-12.989903,28.660591",Paid
+NDL-0050,Moses Sichone,965837/14/7,Twapia,250,Residential,TDR-2016-1096,State Land,2015-04-30,Double_Allocation,"-12.985515,28.639464",Paid
+NDL-0123,Angela Kapasa,521598/55/0,Masala,600,Residential,TDR-2020-4236,Freehold,2016-11-13,Double_Allocation,"-12.978456,28.628454",Paid
+NDL-0200,Chileshe Mulenga,906824/94/4,Lubuto,700,Residential,TDR-2017-7132,Leasehold (65 yrs),2013-03-05,Double_Allocation,"-12.981723,28.63002",Arrears
+NDL-0450,Lubuto Cooperative Group,269695/27/5,Railway Line,250,Residential,TDR-2016-4251,Freehold,2009-04-02,Double_Allocation,"-12.987174,28.627352",Arrears
+NDL-0100,Beatrice Banda,268099/95/3,Twapia,450,Residential,TDR-2008-7899,Leasehold (50 yrs),2017-05-04,Double_Allocation,"-12.979168,28.657496",Paid
+NDL-0350,Victor Kaunda,626236/59/2,Masala,300,Residential,TDR-2005-3066,Leasehold (99 yrs),2012-09-20,Double_Allocation,"-12.979,28.662206",Paid

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Error - Ndola Land Registry System</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <i class="fas fa-map-marker-alt me-2"></i>
+                Ndola Land Registry
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="{{ url_for('index') }}">
+                    <i class="fas fa-home me-1"></i>Back to Home
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 500 Error Section -->
+    <section class="py-5 bg-light min-vh-100">
+        <div class="container">
+            <div class="row justify-content-center align-items-center min-vh-75">
+                <div class="col-lg-8 text-center">
+                    <div class="error-illustration mb-4">
+                        <i class="fas fa-exclamation-triangle text-danger" style="font-size: 8rem; opacity: 0.3;"></i>
+                    </div>
+                    <h1 class="display-1 fw-bold text-danger">500</h1>
+                    <h2 class="mb-4">Internal Server Error</h2>
+                    <p class="lead mb-4">
+                        Oops! Something went wrong on our end. We're working to fix this issue as quickly as possible.
+                    </p>
+                    
+                    <div class="alert alert-warning mb-4">
+                        <i class="fas fa-info-circle me-2"></i>
+                        <strong>What happened?</strong> Our server encountered an unexpected error while processing your request.
+                        The technical team has been automatically notified and is investigating the issue.
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-md-4 mb-3">
+                            <div class="text-center">
+                                <i class="fas fa-clock text-primary fa-2x mb-2"></i>
+                                <h6>Temporary Issue</h6>
+                                <small class="text-muted">This is likely a temporary problem that will be resolved soon</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="text-center">
+                                <i class="fas fa-tools text-warning fa-2x mb-2"></i>
+                                <h6>Being Fixed</h6>
+                                <small class="text-muted">Our technical team is working on resolving this issue</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="text-center">
+                                <i class="fas fa-refresh text-success fa-2x mb-2"></i>
+                                <h6>Try Again</h6>
+                                <small class="text-muted">Please try refreshing the page or come back later</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center gap-3 mb-4">
+                        <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg">
+                            <i class="fas fa-home me-2"></i>Go Home
+                        </a>
+                        <button onclick="location.reload()" class="btn btn-success btn-lg">
+                            <i class="fas fa-sync-alt me-2"></i>Try Again
+                        </button>
+                        <button onclick="history.back()" class="btn btn-outline-secondary btn-lg">
+                            <i class="fas fa-arrow-left me-2"></i>Go Back
+                        </button>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title text-primary">
+                                        <i class="fas fa-life-ring me-2"></i>Need Immediate Assistance?
+                                    </h6>
+                                    <p class="card-text small mb-3">
+                                        If this error persists or if you need immediate assistance with your land registration,
+                                        please contact our support team directly:
+                                    </p>
+                                    <div class="row text-center small">
+                                        <div class="col-md-4 mb-2">
+                                            <i class="fas fa-phone text-success"></i>
+                                            <strong>Phone:</strong><br>
+                                            +260 212 123 456
+                                        </div>
+                                        <div class="col-md-4 mb-2">
+                                            <i class="fas fa-envelope text-info"></i>
+                                            <strong>Email:</strong><br>
+                                            support@ndolalands.gov.zm
+                                        </div>
+                                        <div class="col-md-4 mb-2">
+                                            <i class="fas fa-map-marker-alt text-warning"></i>
+                                            <strong>Office:</strong><br>
+                                            Ministry of Lands, Ndola
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 small text-muted">
+                                        <strong>Office Hours:</strong> Monday - Friday, 8:00 AM - 5:00 PM
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Error ID for support reference -->
+                    <div class="mt-4">
+                        <small class="text-muted">
+                            <i class="fas fa-hashtag me-1"></i>Error ID: {{ moment().format('YYYYMMDD-HHmmss') }}-500
+                            <br>Please reference this ID when contacting support
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Ndola Land Registry System</h5>
+                    <p class="mb-0">Powered by AI and GIS Technology</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">&copy; 2025 Ministry of Lands, Zambia. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <script>
+            // Apply stored theme on pages that don't extend base.html
+            (function(){try{var s=localStorage.getItem('ndola_theme'); if(s==='dark'||(!s&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.setAttribute('data-theme','dark');}catch(e){} })();
+        </script>
+</body>
+</html>

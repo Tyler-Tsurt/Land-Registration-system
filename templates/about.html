@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Ndola Land Registry System</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <style>
+        .logo-section {
+            background: linear-gradient(135deg, #0d6efd 0%, #198754 100%);
+            padding: 3rem 0;
+        }
+        .resource-card {
+            transition: transform 0.3s;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+        }
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .quick-link-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            transition: all 0.3s;
+        }
+        .quick-link-card:hover {
+            background: #f8f9fa;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='images/zm.png') }}" alt="Zambia Coat of Arms" height="35" class="me-2">
+                Ndola Land Registry
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('index') }}">
+                            <i class="fas fa-home me-1"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('about') }}">
+                            <i class="fas fa-info-circle me-1"></i>About
+                        </a>
+                    </li>
+                    <li class="nav-item" id="auth-nav"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    <!-- Logo Section -->
+    <section class="logo-section text-white text-center">
+        <div class="container">
+            <img src="{{ url_for('static', filename='images/zambia.jpg') }}" alt="Zambia" class="img-fluid mb-3" style="max-height: 150px; border-radius: 8px;">
+            <h1 class="display-4 mb-2"><i class="fas fa-info-circle me-3"></i>About Ndola Land Registry</h1>
+            <p class="lead mb-0">Ministry of Lands and Natural Resources | Ndola City Council</p>
+        </div>
+    </section>
+
+    <!-- Ministry of Lands Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <h2 class="display-6 text-center mb-4">Ministry of Lands and Natural Resources</h2>
+                    <p class="lead text-center mb-4">The Ministry of Lands and Natural Resources is responsible for land administration, forest management, and climate change programmes coordination in Zambia.</p>
+                    
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title text-primary"><i class="fas fa-building me-2"></i>About the Ministry</h4>
+                            <p>The Ministry was realigned in 2016 through Government Gazette Number 836 of 2016. The Ministry consists of eight (8) departments:</p>
+                            <ul>
+                                <li>Human Resource and Administration</li>
+                                <li>Lands Department</li>
+                                <li>Survey Department</li>
+                                <li>Lands and Deeds Registry</li>
+                                <li>Forestry Department</li>
+                                <li>Climate Change and Natural Resource Management</li>
+                                <li>Finance and Planning</li>
+                                <li>Information Department</li>
+                            </ul>
+                            <p class="mb-0"><strong>Statutory Bodies:</strong> The Ministry is responsible for the Zambia Forestry College, Lands Tribunal, and Survey Control Board.</p>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title text-primary"><i class="fas fa-landmark me-2"></i>Land Registry System</h4>
+                            <p>Zambia operates two main land registries: <strong>Lusaka</strong> and <strong>Ndola</strong>. These registries are responsible for registering documents related to granting, conveying, or transferring land within timeframes stipulated by the Lands and Deeds Registry Act.</p>
+                            <p><strong>Benefits of Land Registration:</strong></p>
+                            <ul class="mb-0">
+                                <li>Provides conclusive evidence of land ownership</li>
+                                <li>Aids in dispute resolution and conflict management</li>
+                                <li>Enables land to be used as security for credit facilities</li>
+                                <li>Promotes transparency in land transactions</li>
+                                <li>Supports economic development through secure property rights</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ndola City Council Section -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h2 class="display-6 text-center mb-4">Ndola City Council</h2>
+                    <p class="lead text-center mb-4">The local authority serving the City of Ndola in the Copperbelt Province</p>
+                    
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title text-primary"><i class="fas fa-city me-2"></i>About Ndola</h4>
+                            <p>Ndola is the third largest city in Zambia and the capital of the Copperbelt Province. The city is a major industrial and commercial center, playing a crucial role in land administration and development planning in the region.</p>
+                            <p><strong>Role in Land Administration:</strong></p>
+                            <ul class="mb-0">
+                                <li>Processing land applications within Ndola municipal boundaries</li>
+                                <li>Coordinating with the Ministry of Lands for title deed issuance</li>
+                                <li>Managing urban planning and land use regulations</li>
+                                <li>Maintaining cadastral records and survey maps</li>
+                                <li>Facilitating public consultations on land matters</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <h2 class="display-6 mb-3"><i class="fas fa-file-pdf me-2"></i>Important Documents & Resources</h2>
+                    <p class="lead text-muted">Download official forms and legal documentation</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="resource-card card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-file-pdf text-danger fa-3x me-3"></i>
+                                <div>
+                                    <h5 class="card-title mb-1">Land Application Form</h5>
+                                    <small class="text-muted">Official application form (Annexure A)</small>
+                                </div>
+                            </div>
+                            <p class="card-text">Download the official land application form required for all land registration submissions to the Ministry of Lands.</p>
+                            <a href="{{ url_for('static', filename='documents/LAND-APPLICATION-FORM-ANNEXUREA-PDF.pdf') }}" class="btn btn-primary" download>
+                                <i class="fas fa-download me-2"></i>Download PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="resource-card card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-gavel text-primary fa-3x me-3"></i>
+                                <div>
+                                    <h5 class="card-title mb-1">Lands and Deeds Registry Act</h5>
+                                    <small class="text-muted">Legal framework for land registration</small>
+                                </div>
+                            </div>
+                            <p class="card-text">Complete legal text governing land registration procedures, title certificates, and property rights in Zambia.</p>
+                            <a href="{{ url_for('static', filename='documents/Lands and Deeds Registry Act.pdf') }}" class="btn btn-primary" download>
+                                <i class="fas fa-download me-2"></i>Download PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <h2 class="display-6 mb-3"><i class="fas fa-link me-2"></i>Quick Links</h2>
+                    <p class="lead text-muted">Important government resources and services</p>
+                </div>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <a href="https://zamportal.gov.zm" target="_blank" class="text-decoration-none">
+                        <div class="quick-link-card">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-globe text-primary fa-2x me-3"></i>
+                                <div>
+                                    <h6 class="mb-0">ZamPortal</h6>
+                                    <small class="text-muted">Government Services Portal</small>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://zamportal.gov.zm/news/" target="_blank" class="text-decoration-none">
+                        <div class="quick-link-card">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-newspaper text-info fa-2x me-3"></i>
+                                <div>
+                                    <h6 class="mb-0">Government News</h6>
+                                    <small class="text-muted">Latest updates</small>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://zamportal.gov.zm/tag/lands/" target="_blank" class="text-decoration-none">
+                        <div class="quick-link-card">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-map me-2 text-success fa-2x me-3"></i>
+                                <div>
+                                    <h6 class="mb-0">Lands Services</h6>
+                                    <small class="text-muted">Ground rent & more</small>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://www.businesslicenses.gov.zm/business-procedures/details/land-ownership-procedure" target="_blank" class="text-decoration-none">
+                        <div class="quick-link-card">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-book text-warning fa-2x me-3"></i>
+                                <div>
+                                    <h6 class="mb-0">Land Ownership Guide</h6>
+                                    <small class="text-muted">Procedures & requirements</small>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://www.mlgzambia.com/" target="_blank" class="text-decoration-none">
+                        <div class="quick-link-card">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-certificate text-danger fa-2x me-3"></i>
+                                <div>
+                                    <h6 class="mb-0">Title Deeds Program</h6>
+                                    <small class="text-muted">National Land Titling</small>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://www.ndolacouncil.gov.zm" target="_blank" class="text-decoration-none">
+                        <div class="quick-link-card">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-city text-primary fa-2x me-3"></i>
+                                <div>
+                                    <h6 class="mb-0">Ndola City Council</h6>
+                                    <small class="text-muted">Official website</small>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Information -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title text-primary text-center mb-4"><i class="fas fa-laptop-code me-2"></i>About This System</h3>
+                            <p>The Ndola Land Registry System is a cutting-edge digital platform that combines artificial intelligence, Geographic Information Systems (GIS), and modern web technologies to provide secure, transparent, and efficient land registration services.</p>
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <h5><i class="fas fa-check-circle text-success me-2"></i>Key Features</h5>
+                                    <ul>
+                                        <li>AI-powered conflict detection</li>
+                                        <li>Satellite map integration</li>
+                                        <li>Secure document management</li>
+                                        <li>24/7 online application tracking</li>
+                                        <li>Automated certificate generation</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5><i class="fas fa-shield-alt text-primary me-2"></i>Security</h5>
+                                    <ul>
+                                        <li>End-to-end encryption</li>
+                                        <li>Secure authentication</li>
+                                        <li>Comprehensive audit trails</li>
+                                        <li>Role-based access control</li>
+                                        <li>Data backup and recovery</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="text-center mt-4">
+                                <p class="text-muted mb-0"><i class="fas fa-code me-2"></i>Developed by <strong>Ty-Tech</strong> | Powered by AI & GIS Technology</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5><i class="fas fa-building me-2"></i>Ndola City Council</h5>
+                    <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>Civic Centre, Independence Way<br>P.O. Box 70197, Ndola, Zambia</p>
+                    <p class="mb-2"><i class="fas fa-phone me-2"></i>+260 212 613 001 / +260 212 680 668</p>
+                    <p class="mb-0"><i class="fas fa-envelope me-2"></i>info@ndolacouncil.gov.zm</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5><i class="fas fa-link me-2"></i>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://zamportal.gov.zm" class="text-white-50 text-decoration-none" target="_blank"><i class="fas fa-angle-right me-2"></i>ZamPortal</a></li>
+                        <li><a href="https://zamportal.gov.zm/news/" class="text-white-50 text-decoration-none" target="_blank"><i class="fas fa-angle-right me-2"></i>Government News</a></li>
+                        <li><a href="https://www.ndolacouncil.gov.zm" class="text-white-50 text-decoration-none" target="_blank"><i class="fas fa-angle-right me-2"></i>Ndola City Council</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5><i class="fas fa-info-circle me-2"></i>System Information</h5>
+                    <p class="mb-1">Ndola Land Registry System</p>
+                    <p class="mb-1">Powered by AI & GIS Technology</p>
+                    <p class="mb-0">Developed by <strong>Ty-Tech</strong></p>
+                </div>
+            </div>
+            <hr class="my-3 bg-secondary">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Ministry of Lands and Natural Resources, Zambia. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const authNav = document.getElementById('auth-nav');
+            fetch('/api/check-auth', { method: 'GET', credentials: 'same-origin' })
+            .then(response => response.json())
+            .then(data => {
+                if (data.authenticated) {
+                    authNav.innerHTML = `<a class="nav-link" href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt me-1"></i>Logout</a>`;
+                } else {
+                    authNav.innerHTML = `<a class="nav-link" href="{{ url_for('login') }}"><i class="fas fa-sign-in-alt me-1"></i>Login</a>`;
+                }
+            })
+            .catch(() => {
+                authNav.innerHTML = `<a class="nav-link" href="{{ url_for('login') }}"><i class="fas fa-sign-in-alt me-1"></i>Login</a>`;
+            });
+        });
+
+        // Apply stored theme
+        (function(){
+            try{
+                var s = localStorage.getItem('ndola_theme');
+                if (s === 'dark' || (!s && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)){
+                    document.documentElement.setAttribute('data-theme','dark');
+                }
+            }catch(e){}
+        })();
+    </script>
+</body>
+</html>

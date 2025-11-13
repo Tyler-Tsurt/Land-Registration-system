@@ -1,0 +1,26 @@
+
+.payment-card img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.payment-card span {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.payment-card input[type="radio"]:checked + img,
+.payment-card input[type="radio"]:checked ~ span {
+  color: #007bff;
+}
+
+.payment-card input[type="radio"]:checked + img {
+  filter: drop-shadow(0px 0px 4px #007bff);
+}
+
+.payment-field {
+  margin-top: 10px;
+}
+

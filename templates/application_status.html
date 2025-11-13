@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Status</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <style>
+        .application-summary:hover {
+            cursor: pointer;
+            background-color: #f8f9fa;
+        }
+        .collapse-enter {
+            opacity: 0;
+            max-height: 0;
+            transition: all 0.5s ease;
+        }
+        .collapse-enter.show {
+            opacity: 1;
+            max-height: 2000px; /* Arbitrary large value to allow full expansion */
+        }
+    </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='images/zm.png') }}" alt="Zambia Coat of Arms" height="35" class="me-2">
+            Ndola Land Registry
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}"><i class="fas fa-home me-1"></i>Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}"><i class="fas fa-info-circle me-1"></i>About</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{{ url_for('application_status') }}"><i class="fas fa-file-alt me-1"></i>Application Status</a></li>
+                <li class="nav-item" id="auth-nav"></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-3">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+</div>
+
+<section class="bg-primary text-white py-4">
+    <div class="container">
+        <h1 class="display-5 mb-2"><i class="fas fa-search me-3"></i>Application Status</h1>
+        <p class="lead mb-0">Track your land registration applications</p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        {% if applications %}
+        <div class="accordion" id="applicationsAccordion">
+            {% for application in applications %}
+            <div class="accordion-item mb-3 shadow-sm rounded">
+                <h2 class="accordion-header" id="heading{{ loop.index }}">
+                    <button class="accordion-button collapsed application-summary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ loop.index }}" aria-expanded="false" aria-controls="collapse{{ loop.index }}">
+                        <div class="d-flex justify-content-between w-100">
+                            <span><i class="fas fa-file-alt me-2"></i>{{ application.reference_number }} - {{ application.land_location }}</span>
+                            <span class="badge {{ application.get_status_badge_class() }} fs-6 px-3 py-2">{{ application.status.title().replace('_',' ') }}</span>
+                        </div>
+                    </button>
+                </h2>
+                <div id="collapse{{ loop.index }}" class="accordion-collapse collapse collapse-enter" aria-labelledby="heading{{ loop.index }}" data-bs-parent="#applicationsAccordion">
+                    <div class="accordion-body">
+                        <!-- Timeline -->
+                        <div class="form-card mb-4">
+                            <h4 class="section-title"><i class="fas fa-clock"></i> Application Timeline</h4>
+                            <div class="timeline">
+                                <!-- Submitted -->
+                                <div class="timeline-item completed">
+                                    <div class="timeline-marker"><i class="fas fa-check"></i></div>
+                                    <div class="timeline-content">
+                                        <h6>Application Submitted</h6>
+                                        <p>Your application has been received and is in the system.</p>
+                                        <small class="text-muted">{{ application.submitted_at.strftime('%B %d, %Y at %I:%M %p') }}</small>
+                                    </div>
+                                </div>
+                                <!-- Document Review -->
+                                <div class="timeline-item {% if application.status in ['under_review','approved','rejected'] %}completed{% else %}pending{% endif %}">
+                                    <div class="timeline-marker">
+                                        {% if application.status in ['under_review','approved','rejected'] %} <i class="fas fa-check"></i> {% else %} <i class="fas fa-clock"></i> {% endif %}
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h6>Document Review</h6>
+                                        <p>Documents are being reviewed by our team.</p>
+                                        {% if application.reviewed_at %} <small class="text-muted">{{ application.reviewed_at.strftime('%B %d, %Y at %I:%M %p') }}</small> {% endif %}
+                                    </div>
+                                </div>
+                                <!-- AI Analysis -->
+                                <div class="timeline-item {% if application.ai_processed %}completed{% elif application.status in ['under_review','approved','rejected'] %}pending{% else %}waiting{% endif %}">
+                                    <div class="timeline-marker">
+                                        {% if application.ai_processed %} <i class="fas fa-check"></i> {% elif application.status in ['under_review','approved','rejected'] %} <i class="fas fa-robot"></i> {% else %} <i class="fas fa-clock"></i> {% endif %}
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h6>AI Conflict Analysis</h6>
+                                        <p>AI system checking for potential conflicts and duplicates.</p>
+                                        {% if application.ai_conflict_score > 0 %}
+                                            <small class="text-info"><i class="fas fa-info-circle me-1"></i> Conflict Score: {{ "%.1f"|format(application.ai_conflict_score * 100) }}%</small>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <!-- Final Decision -->
+                                <div class="timeline-item {% if application.status == 'approved' %}completed{% elif application.status == 'rejected' %}rejected{% else %}waiting{% endif %}">
+                                    <div class="timeline-marker">
+                                        {% if application.status == 'approved' %} <i class="fas fa-check"></i> {% elif application.status == 'rejected' %} <i class="fas fa-times"></i> {% else %} <i class="fas fa-clock"></i> {% endif %}
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h6>
+                                            {% if application.status == 'approved' %}Application Approved
+                                            {% elif application.status == 'rejected' %}Application Rejected
+                                            {% else %}Final Decision Pending{% endif %}
+                                        </h6>
+                                        <p>
+                                            {% if application.status == 'approved' %}
+                                                Congratulations! Your land registration has been approved.
+                                            {% elif application.status == 'rejected' %}
+                                                Unfortunately, your application has been rejected.
+                                            {% else %}
+                                                Awaiting final decision from the reviewing officer.
+                                            {% endif %}
+                                        </p>
+                                        {% if application.approved_at %} <small class="text-muted">{{ application.approved_at.strftime('%B %d, %Y at %I:%M %p') }}</small>
+                                        {% elif application.reviewed_at and application.status == 'rejected' %} <small class="text-muted">{{ application.reviewed_at.strftime('%B %d, %Y at %I:%M %p') }}</small> {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Application Details -->
+                        <div class="form-card mb-4">
+                            <h4 class="section-title"><i class="fas fa-info-circle"></i> Application Details</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6 class="text-primary">Personal Information</h6>
+                                    <p><strong>Full Name:</strong> {{ application.applicant_name }}</p>
+                                    <p><strong>NRC Number:</strong> {{ application.nrc_number }}</p>
+                                    <p><strong>TPIN Number:</strong> {{ application.tpin_number }}</p>
+                                    <p><strong>Phone:</strong> {{ application.phone_number }}</p>
+                                    <p><strong>Email:</strong> {{ application.email }}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-primary">Land Information</h6>
+                                    <p><strong>Location:</strong> {{ application.land_location }}</p>
+                                    <p><strong>Size:</strong> {{ application.land_size }} hectares</p>
+                                    <p><strong>Intended Use:</strong> {{ application.land_use.title() }}</p>
+                                    <p><strong>Processing Fee:</strong> ZMW {{ "%.2f"|format(application.processing_fee) }}</p>
+                                    <p><strong>Payment Status:</strong>
+                                        <span class="badge {% if application.payment_status == 'paid' %}bg-success{% elif application.payment_status == 'failed' %}bg-danger{% else %}bg-warning{% endif %}">
+                                            {{ application.payment_status.title() }}
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            {% if application.land_description %}
+                                <div class="mt-3">
+                                    <h6 class="text-primary">Additional Description</h6>
+                                    <p>{{ application.land_description }}</p>
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <!-- Uploaded Documents -->
+                        <div class="form-card mb-4">
+                            <h4 class="section-title"><i class="fas fa-file-upload"></i> Uploaded Documents</h4>
+                            {% if application.documents %}
+                            <div class="row">
+                                {% for document in application.documents %}
+                                <div class="col-md-4 mb-3">
+                                    <div class="document-card p-2 border rounded d-flex align-items-center gap-2">
+                                        <div class="document-icon fs-3">
+                                            {% if document.mime_type.startswith('image/') %} <i class="fas fa-image"></i>
+                                            {% else %} <i class="fas fa-file-pdf"></i> {% endif %}
+                                        </div>
+                                                <div class="document-info">
+                                                    <h6 class="mb-0">{{ document.document_type.replace('_',' ').title() }}</h6>
+                                                    <small class="text-muted">{{ document.original_filename }}</small>
+                                                    <div class="mt-1">
+                                                        {% if document.is_verified %}
+                                                            <span class="badge bg-success"><i class="fas fa-check me-1"></i>Verified</span>
+                                                        {% else %}
+                                                            <span class="badge bg-warning"><i class="fas fa-clock me-1"></i>Pending</span>
+                                                        {% endif %}
+                                                    </div>
+                                                    <div class="mt-2">
+                                                        <a class="btn btn-sm btn-link" href="{{ url_for('view_document', user_id=application.user_id, app_id=application.id, filename=document.filename) }}" target="_blank">Download</a>
+                                                    </div>
+                                                </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                                <p class="text-muted">No documents uploaded.</p>
+                            {% endif %}
+                        </div>
+
+                        <!-- Admin Comments -->
+                        {% if application.admin_comments or application.rejection_reason %}
+                        <div class="form-card mb-4">
+                            <h4 class="section-title"><i class="fas fa-comment"></i> {% if application.status == 'rejected' %}Rejection Reason{% else %}Admin Comments{% endif %}</h4>
+                            <div class="alert {% if application.status == 'rejected' %}alert-danger{% else %}alert-info{% endif %}">
+                                {{ application.rejection_reason or application.admin_comments }}
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        <!-- AI Conflict Summary -->
+                        {% if application.conflicts and application.conflicts|length > 0 %}
+                        <div class="form-card mb-4">
+                            <h4 class="section-title text-danger">
+                                <i class="fas fa-exclamation-triangle me-2"></i>AI Detected Conflicts ({{ application.conflicts|length }})
+                            </h4>
+                            <div class="alert alert-warning mb-3">
+                                <strong><i class="fas fa-info-circle me-2"></i>Attention Required:</strong> 
+                                Your application has been flagged by our AI system for potential conflicts. Please review the details below carefully.
+                            </div>
+                            <div class="accordion" id="conflictsAccordionApp{{ application.id }}">
+                                {% for conflict in application.conflicts %}
+                                <div class="accordion-item mb-2">
+                                    <h2 class="accordion-header" id="conflictHeadingApp{{ application.id }}_{{ conflict.id }}">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#conflictCollapseApp{{ application.id }}_{{ conflict.id }}" aria-expanded="false">
+                                            <div class="d-flex justify-content-between w-100 align-items-center me-3">
+                                                <div>
+                                                    <strong>{{ conflict.title or ("Conflict #" ~ conflict.id) }}</strong>
+                                                    <br><small class="text-muted">{{ conflict.conflict_type.replace('_', ' ').title() }}</small>
+                                                </div>
+                                                <div class="text-end">
+                                                    {% if conflict.confidence_score %}
+                                                    <span class="badge bg-{{ 'danger' if conflict.confidence_score > 0.7 else 'warning' }}">{{ "%.0f"|format(conflict.confidence_score * 100) }}% Match</span>
+                                                    {% endif %}
+                                                    {% if conflict.severity %}
+                                                    <span class="badge bg-{{ 'danger' if conflict.severity == 'high' else 'warning' if conflict.severity == 'medium' else 'info' }} ms-1">
+                                                        {{ conflict.severity.upper() }}
+                                                    </span>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </h2>
+                                    <div id="conflictCollapseApp{{ application.id }}_{{ conflict.id }}" class="accordion-collapse collapse" data-bs-parent="#conflictsAccordionApp{{ application.id }}">
+                                        <div class="accordion-body">
+                                            <div class="card border-{{ 'danger' if conflict.severity == 'high' else 'warning' }}">
+                                                <div class="card-body">
+                                                    <div class="conflict-description" style="white-space: pre-line; font-family: monospace; font-size: 0.9em;">
+                                                        {{ conflict.description }}
+                                                    </div>
+                                                    
+                                                    <hr>
+                                                    
+                                                    <div class="mt-3">
+                                                        <h6 class="text-muted">Conflict Details:</h6>
+                                                        <ul class="list-unstyled">
+                                                            <li><strong>Detection Date:</strong> {{ conflict.created_at.strftime('%Y-%m-%d %H:%M') }}</li>
+                                                            <li><strong>Status:</strong> 
+                                                                <span class="badge bg-{{ 'success' if conflict.status == 'resolved' else 'danger' }}">
+                                                                    {{ conflict.status.title() }}
+                                                                </span>
+                                                            </li>
+                                                            {% if conflict.overlap_percentage %}
+                                                            <li><strong>Geographic Overlap:</strong> {{ "%.2f"|format(conflict.overlap_percentage * 100) }}%</li>
+                                                            {% endif %}
+                                                        </ul>
+                                                    </div>
+                                                    
+                                                    {% if conflict.status != 'resolved' %}
+                                                    <div class="alert alert-info mt-3">
+                                                        <strong><i class="fas fa-lightbulb me-2"></i>What You Should Do:</strong>
+                                                        <p class="mb-0">Please contact the Ndola Land Registry Office at the address below or call us for assistance in resolving this conflict.</p>
+                                                    </div>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            
+                            <div class="alert alert-primary mt-3">
+                                <strong><i class="fas fa-phone me-2"></i>Need Help?</strong><br>
+                                Contact us: +260 212 613 001 | Email: info@ndolacouncil.gov.zm<br>
+                                Visit us: Ndola City Council, Civic Centre, Independence Way, Ndola
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        <!-- Actions -->
+                        <div class="text-center mb-5">
+                            <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg me-3"><i class="fas fa-home me-2"></i>Back to Home</a>
+                            {% if application.status == 'approved' %}
+                            <a href="{{ url_for('download_certificate', app_id=application.id) }}" class="btn btn-success btn-lg me-3" target="_blank">
+                                <i class="fas fa-certificate me-2"></i>Download Certificate
+                            </a>
+                            {% endif %}
+                            {% if application.status == 'rejected' %}
+                            <a href="{{ url_for('register_land') }}" class="btn btn-success btn-lg"><i class="fas fa-plus-circle me-2"></i>Submit New Application</a>
+                            {% endif %}
+                            {% if application.status != 'approved' %}
+                            <a href="{{ url_for('edit_application', app_id=application.id) }}" class="btn btn-outline-secondary btn-lg ms-2"><i class="fas fa-edit me-2"></i>Edit Application</a>
+                            {% endif %}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="alert alert-info text-center">
+            <i class="fas fa-info-circle me-2"></i> You have not submitted any applications yet.
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Ndola Land Registry System</h5>
+                <p class="mb-0">Powered by AI and GIS Technology</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <p class="mb-0">&copy; 2025 Ministry of Lands, Zambia. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Optional: Smooth collapse animation
+    const collapseElements = document.querySelectorAll('.accordion-collapse');
+    collapseElements.forEach(el => {
+        el.addEventListener('show.bs.collapse', function () {
+            el.classList.add('show');
+        });
+        el.addEventListener('hide.bs.collapse', function () {
+            el.classList.remove('show');
+        });
+    });
+</script>
+<script>
+  // Apply stored theme on pages that don't extend base.html
+  (function(){try{var s=localStorage.getItem('ndola_theme'); if(s==='dark'||(!s&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.setAttribute('data-theme','dark');}catch(e){} })();
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "total_samples": 200,
+  "normal_samples": 140,
+  "conflict_samples": 60,
+  "conflict_types": {
+    "owner_duplicate": 26,
+    "location_duplicate": 16,
+    "spatial_overlap": 18
+  }
+}
